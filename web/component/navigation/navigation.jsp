@@ -5,14 +5,15 @@
         <span class="navigationtitle">
             <h3>AutoTotaalDienst</h3>
         </span>
-        <c:if test="${not empty current_user}">
+    <c:if test="${not empty current_user}">
+        <form action="navigation" id="navigation" method="post">
         <span class="navigationitem">
             <input type="submit" name="button" value="Contact"/>
         </span>
         <span class="navigationitem">
             <input type="submit" name="button" value="Uitloggen"/>
         </span>
-    </form>
+        </form>
     </c:if>
 </div>
 

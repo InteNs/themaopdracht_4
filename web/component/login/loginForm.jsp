@@ -2,7 +2,7 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <link rel="stylesheet" href="<c:url value="/component/form.css"/>"/>
 
-<div class="containerform">
+<div class="container">
     <form action="/login" id="login" method="post">
         <fieldset name="Login">
             <legend>Login</legend>
