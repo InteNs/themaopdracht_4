@@ -18,13 +18,13 @@ public class UserControllerTest {
 public void testAdres(){
     Customer customer = new Customer();
     customer.setAddress( Nijmegen );
-    customer.getAddress();
+    assertEquals(customer.getAddress(),  Nijmegen );
 }
     @Test
         public void testDateOfBirth(){
             Customer customer = new Customer();
             customer.setDateOfBirth(LocalDate.of(year));
-            customer.getDateOfBirth();
+        assertEquals(customer.getDateOfBirth(), 2015);
     }
 
 
@@ -32,28 +32,28 @@ public void testAdres(){
     public void testEmail(){
         Customer customer = new Customer();
         customer.setEmail( a@hotmail.com );
-        customer.getEmail();
+        assertEquals(customer.getEmail(),  a#hotmail.com );
     }
 
     @Test
     public void testPassword(){
         Customer customer = new Customer();
         customer.setPassword( 1234 );
-        customer.getPassword();
+        assertEquals(customer.getPassword(),   1234 );
     }
 
     @Test
     public void testPhonenumber(){
         Customer customer = new Customer();
         customer.setPhoneNumber( 0612345678 );
-        customer.getPhoneNumber();
+        assertEquals(customer.getPhoneNumber(),0612345678);
     }
 
     @Test
     public void testPostal(){
         Customer customer = new Customer();
-        customer.setPostal( Utrecht );
-        customer.getPostal();
+        customer.setPostal( 3555AA );
+        assertEquals(customer.getPostal(), 3555AA);
     }
 
 
@@ -61,10 +61,6 @@ public void testAdres(){
     public void testRealname(){
         Customer customer = new Customer();
         customer.setRealName("Jan");
-        customer.getRealName();
+        assertEquals(customer.getRealName(),  Jan );
     }
-
-
-
-
 }
