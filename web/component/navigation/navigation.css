@@ -1,19 +1,17 @@
-body {
-    padding-top: 120px;
-}
-
 .container {
     width: 100%;
-    padding: 1%;
-    position: absolute;
+    height: 50px;
+    padding: 5px;
+    position: fixed;
     top: 0;
     left: 0;
     border-bottom: solid 1px black;
 }
 .navigationitem {
+    display: inline;
     margin: 1%;
 }
-
 .navigationtitle {
+    display: inline;
     margin-bottom: 3px;
 }
