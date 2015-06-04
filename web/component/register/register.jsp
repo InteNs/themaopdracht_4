@@ -5,7 +5,8 @@
 
 <div class="containerform">
     <form action="register" id="register" method="post">
-        <fieldset>
+        <fieldset name="Registreren">
+            <legend>Registreren</legend>
             <div class="p">
                 <label class="formlabel" for="email">Email:</label>
                 <input class="text" type="text" name="email" id="email" placeholder="Vul email in"/>

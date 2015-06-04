@@ -2,9 +2,10 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <link rel="stylesheet" href="<c:url value="/component/form.css"/>"/>
 
-<div class="containerForm">
+<div class="containerform">
     <form action="/login" id="login" method="post">
-        <fieldset>
+        <fieldset name="Login">
+            <legend>Login</legend>
             <div class="p">
                 <label class="formlabel" for="email">Email:</label>
                 <input class="text" type="email" name="email" id="email" placeholder="Vul hier uw email in."/>

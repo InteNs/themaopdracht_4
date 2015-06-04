@@ -1,21 +1,16 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <link rel="stylesheet" href="<c:url value="/component/navigation/navigation.css"/>"/>
-<div class="container">
-
-    <%--container--%>
+<div class="containernavigation">
         <span class="navigationtitle">
             <h3>AutoTotaalDienst</h3>
         </span>
-        <%----------------------------------%>
-        <c:if test="${not empty username}">
+        <c:if test="${not empty current_user}">
         <span class="navigationitem">
-            <%--contact--%>
-            <input type="submit" name="button" value="contact"/>
+            <input type="submit" name="button" value="Contact"/>
         </span>
         <span class="navigationitem">
-            <%--logout button--%>
-            <input type="submit" name="button" value="uitloggen"/>
+            <input type="submit" name="button" value="Uitloggen"/>
         </span>
     </form>
     </c:if>
