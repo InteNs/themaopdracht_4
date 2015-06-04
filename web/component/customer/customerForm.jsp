@@ -2,7 +2,7 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <link rel="stylesheet" href="<c:url value="/component/customer/customerform.css"/>"/>
 <div class="container">
-  <form action="customerForm" id="customerform" method="post">
+  <form action="register" id="register" method="post">
     <fieldset>
       <div class="p">
         <input type="button" name="button" value="Nieuw"/>
@@ -11,24 +11,49 @@
       </div>
 
       <div class="p">
-        <label class="formlabel" for="name">Naam:</label><input class="text" type="text" name="name" id="name" placeholder="Vul hier uw naam in."/>
+        <label class="formlabel" for="email">email:</label><input class="text" type="text" name="email" id="email" placeholder="Vul hier uw email."/>
       </div>
-      <%--TODO geboortedatum--%>
+
+        <div class="p">
+            <label class="formlabel" for="email_repeat">email nogmaals:</label><input class="text" type="text" name="email_repeat" id="email_repeat" placeholder="Vul hier uw email nogmaals."/>
+        </div>
+
       <div class="p">
-        <label class="formlabel" for="address">Adres:</label><input class="text" type="text" name="address" id="address" placeholder="Vul hier uw adres."/>
-      </div>
-      <div class="p">
-        <label class="formlabel" for="postalcode">Postcode:</label><input class="text" type="text" name="postalcode" id="postalcode" placeholder="Vul hier uw postcode."/>
-      </div>
-      <div class="p">
-        <label class="formlabel" for="city">Plaats:</label><input class="text" type="text" name="city" id="city" placeholder="Vul hier uw woonplaats."/>
+        <label class="formlabel" for="password">wachtwoord:</label><input class="text" type="text" name="password" id="password" placeholder="Vul hier uw wachtwoord."/>
       </div>
       <div class="p">
+        <label class="formlabel" for="password_repeat">wachtwoord nogmaals:</label><input class="text" type="text" name="password_repeat" id="password_repeat" placeholder="Vul hier uw wachtwoord nogmaals."/>
+      </div>
+      <div class="p">
+        <label class="formlabel" for="realname">naam:</label><input class="text" type="text" name="realname" id="realname" placeholder="Vul hier uw naam."/>
+      </div>
+
+        <div class="p">
+            <label class="formlabel" for="date">Geboortedatum:</label>
+            <input  class="text" type="date" name="date" id="date" value=""  />
+            <link rel="stylesheet" href="jquery.ui.datepicker.mobile.css" />
+            <script src="jQuery.ui.datepicker.js"></script>
+            <script src="jquery.ui.datepicker.mobile.js"></script>
+            <script>
+                //reset type=date inputs to text
+                $( document ).bind( "mobileinit", function(){
+                    $.mobile.page.prototype.options.degradeInputs.date = true;
+                });
+            </script>
+        </div>
+
+        <div class="p">
+            <label class="formlabel" for="address">adres:</label><input class="text" type="text" name="address" id="address" placeholder="Vul hier uw adres in."/>
+        </div>
+
+        <div class="p">
+            <label class="formlabel" for="postal">postcode:</label><input class="text" type="text" name="postal" id="postal" placeholder="Vul hier uw postcode in."/>
+        </div>
+
+        <div class="p">
         <label class="formlabel" for="phonenumber">Telefoon:</label><input class="text" type="text" name="phonenumber" id="phonenumber" placeholder="Vul hier uw telefoonnummer in."/>
       </div>
-      <div class="p">
-        <label class="formlabel" for="email">Email:</label><input class="text" type="text" name="email" id="email" placeholder="Vul hier uw email."/>
-      </div>
+
       <c:if test="${userrole == 'manager'}">
         <div class="p">
           <label class="formlabel" for="blacklist">Blacklist:</label><input type="checkbox" name="blacklist" id="blacklist"/>
@@ -42,15 +67,3 @@
     </fieldset>
   </form>
 </div>
-
-<%--<div class="p"><label class="formlabel" for="" for="date">Geboortedatum:</label>--%>
-<%--<input type="date" name="date" id="date" value=""  />--%>
-<%--<link rel="stylesheet" href="jquery.ui.datepicker.mobile.css" />--%>
-<%--<script src="jQuery.ui.datepicker.js"></script>--%>
-<%--<script src="jquery.ui.datepicker.mobile.js"></script>--%>
-<%--<script>--%>
-<%--//reset type=date inputs to text--%>
-<%--$( document ).bind( "mobileinit", function(){--%>
-<%--$.mobile.page.prototype.options.degradeInputs.date = true;--%>
-<%--});--%>
-<%--</script></div>--%>
