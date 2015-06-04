@@ -1,5 +1,6 @@
 package servlets;
 
+import domain.User;
 import listeners.Data;
 import services.UserController;
 import services.exceptions.LoginException;
@@ -29,11 +30,10 @@ public class LoginServlet extends HttpServlet {
                 String password = req.getParameter("password");
 
                 try {
-                    System.out.println(userController.getUsers());
                     userController.isLoginValid(email, password);
-                    System.out.println("login succes");
                     req.getSession().setAttribute("current_user", userController.findUser(email));
-                    requestDispatcher = req.getRequestDispatcher("/secure/welcome.jsp");
+                    if (userController.findUser(email).getUserType() == User.userType.CUSTOMER)requestDispatcher = req.getRequestDispatcher("/secure/customer.jsp");
+                    if (userController.findUser(email).getUserType() == User.userType.OWNER)requestDispatcher = req.getRequestDispatcher("/secure/admin.jsp");
                     if (req.getAttribute("keep_email") != null) resp.addCookie(new Cookie("c_email", email));
                 } catch (LoginException e) {
                     System.out.println("login failed");

@@ -2,7 +2,7 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <!DOCTYPE html>
 <head>
-    <link rel="stylesheet" href="<c:url value="/global.css"/>"
+    <link rel="stylesheet" href="<c:url value="/global.css"/>
     <link rel="stylesheet" href="<c:url value="/component/form.css"/>"/>
 </head>
 <body>
