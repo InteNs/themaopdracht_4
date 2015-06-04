@@ -1,16 +1,10 @@
-<%--
-  Created by IntelliJ IDEA.
-  User: InteNs
-  Date: 04.jun.2015
-  Time: 16:01
-  To change this template use File | Settings | File Templates.
---%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
   <head>
     <title></title>
   </head>
   <body>
-
+    <jsp:include page="navigation.jsp"/>
   </body>
 </html>

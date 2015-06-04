@@ -1,0 +1,15 @@
+.container {
+    width: 100%;
+    padding: 1%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    border-bottom: solid 1px black;
+}
+.navigationItem {
+    margin: 1%;
+}
+
+.navigationTitle {
+    margin-bottom: 3px;
+}
