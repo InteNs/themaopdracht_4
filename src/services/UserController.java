@@ -22,7 +22,7 @@ public class UserController implements Serializable {
      */
     public UserController() {
         users = new ArrayList<>();
-        users.add(new User(User.userType.OWNER,"admin","admin","admin",LocalDate.now(),"admin","admin","admin"));
+        users.add(new User(User.userType.OWNER,"admin@admin.nl","admin","admin",LocalDate.now(),"admin","admin","admin"));
     }
     /**
      * @return an arraylist with all the users

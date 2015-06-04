@@ -6,7 +6,8 @@
             <h3>AutoTotaalDienst</h3>
         </span>
     <c:if test="${not empty current_user}">
-        <form action="navigation" id="navigation" method="post">
+        <span class="floatright">
+        <form action="/logout" id="navigation" method="post">
         <span class="navigationitem">
             <input type="submit" name="button" value="Contact"/>
         </span>
@@ -14,6 +15,7 @@
             <input type="submit" name="button" value="Uitloggen"/>
         </span>
         </form>
+            </span>
     </c:if>
 </div>
 

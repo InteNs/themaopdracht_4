@@ -8,7 +8,7 @@
 <body>
 <jsp:include page="/component/navigation/navigation.jsp"/>
 <c:if test="${empty current_page}">
-  <jsp:include page="/component/welcome/welcome.jsp"/>
+  <jsp:include page="/component/welcome/welcomePanel.jsp"/>
 </c:if>
 </body>
 </html>
