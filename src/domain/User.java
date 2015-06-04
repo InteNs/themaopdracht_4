@@ -1,8 +1,9 @@
 package domain;
 
+import java.io.Serializable;
 import java.time.LocalDate;
 
-public class User {
+public class User implements Serializable {
     private String email;
     private String password;
     private String realName;

@@ -1,9 +1,10 @@
 package domain;
 
+import java.io.Serializable;
 import java.time.LocalDate;
 import java.util.ArrayList;
 
-public class Customer extends User {
+public class Customer extends User implements Serializable {
     private LocalDate lastVisit;
     private LocalDate lastMaintenance;
     private boolean isOnBlackList;
