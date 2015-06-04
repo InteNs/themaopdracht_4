@@ -2,14 +2,14 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
-  <title>AutoTotaalDienst</title>
-  <link rel="stylesheet" href="<c:url value="/global.css"/>"/>
+    <title>AutoTotaalDienst</title>
+    <link rel="stylesheet" href="<c:url value="/global.css"/>"/>
 </head>
 <body>
-hoi gebruiker
+hoi admin
 <jsp:include page="/component/navigation/navigation.jsp"/>
 <c:if test="${empty current_page}">
-  <jsp:include page="/component/welcome/welcomePanel.jsp"/>
+    <jsp:include page="/component/welcome/welcomePanel.jsp"/>
 </c:if>
 </body>
 </html>

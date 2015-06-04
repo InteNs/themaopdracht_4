@@ -1,6 +1,7 @@
 package services;
 
 import domain.Customer;
+import domain.Owner;
 import domain.User;
 import services.exceptions.*;
 
@@ -22,7 +23,7 @@ public class UserController implements Serializable {
      */
     public UserController() {
         users = new ArrayList<>();
-        users.add(new User(User.userType.OWNER,"admin@admin.nl","admin","admin",LocalDate.now(),"admin","admin","admin"));
+
     }
     /**
      * @return an arraylist with all the users
@@ -111,7 +112,9 @@ public class UserController implements Serializable {
         if (address !=null)     customer.setAddress(address);
         if (phoneNumber != null)customer.setPhoneNumber(phoneNumber);
     }
-
+     public void newAdmin(){
+         users.add(new Owner("admin@admin.nl","admin","admin",LocalDate.now(),"admin","admin","admin"));
+     }
     /**
      * create a new customer
      *
@@ -176,7 +179,6 @@ public class UserController implements Serializable {
 
 
     }
-
     /**
      * remove customer by email
      *

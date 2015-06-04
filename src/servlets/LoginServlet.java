@@ -29,6 +29,7 @@ public class LoginServlet extends HttpServlet {
                 String password = req.getParameter("password");
 
                 try {
+                    System.out.println(userController.getUsers());
                     userController.isLoginValid(email, password);
                     System.out.println("login succes");
                     req.getSession().setAttribute("current_user", userController.findUser(email));

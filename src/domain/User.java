@@ -2,6 +2,8 @@ package domain;
 
 import java.io.Serializable;
 import java.time.LocalDate;
+import java.util.ArrayList;
+import java.util.List;
 
 public class User implements Serializable {
     public static enum userType{CUSTOMER,OWNER,MECHANIC}
@@ -30,7 +32,18 @@ public class User implements Serializable {
     public User.userType getUserType() {
         return userType;
     }
-
+    public List<String> getDetails(){
+        ArrayList<String> result = new ArrayList<>();
+        result.add(userType.toString());
+        result.add(email);
+        result.add(password);
+        result.add(realName);
+        result.add(address);
+        result.add(phoneNumber);
+        result.add(postal);
+        result.add(dateOfBirth.toString());
+        return result;
+    }
     public void setEmail(String email) {
         this.email = email;
     }
