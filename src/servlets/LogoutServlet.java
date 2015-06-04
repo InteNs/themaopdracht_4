@@ -12,6 +12,8 @@ import java.io.IOException;
 public class LogoutServlet extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        //TODO LogoutServlet
+        req.getSession().invalidate();
+        req.setAttribute("logout_info","U bent nu uitgelogd");
+        req.getRequestDispatcher("/index.jsp").forward(req,resp);
     }
 }

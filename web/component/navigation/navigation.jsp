@@ -9,7 +9,7 @@
         </span>
 
 
-    <c:if test="${empty username}">
+        <c:if test="${empty username}">
         <%--TODO login--%>
         <form action="login" id="login" method="post">
         <span class="navigationitem">
@@ -27,10 +27,14 @@
             <span class="navigationitem">
                  Registreren:
             </span>
+        </form>
+
+        <form action="register" id="register" method="post">
             <span class="navigationitem">
                  <input type="submit" name="button" value="registreren"/>
             </span>
-        </form>
+            </form>
+
     </c:if>
 
 
