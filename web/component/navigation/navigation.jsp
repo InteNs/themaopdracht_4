@@ -27,13 +27,10 @@
             <span class="navigationitem">
                  Registreren:
             </span>
-        </form>
-
-        <form action="register" id="register" method="post">
             <span class="navigationitem">
-                 <input type="submit" name="button" value="registreren"/>
+                <input type="submit" name="button" value="register"/>
             </span>
-            </form>
+        </form>
 
     </c:if>
 

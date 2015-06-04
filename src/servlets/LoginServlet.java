@@ -25,6 +25,7 @@ public class LoginServlet extends HttpServlet {
         UserController userController = ((Data) servletContext.getAttribute("Data")).getUserController();
         String email = req.getParameter("email");
         String password = req.getParameter("password");
+        String button = req.getParameter("button");
 
         try {
             userController.isLoginValid(email,password);

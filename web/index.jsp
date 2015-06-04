@@ -6,5 +6,8 @@
   </head>
   <body>
     <jsp:include page="component/navigation/navigation.jsp"/>
+<c:if test="${not empty register}">
+  <jsp:include page="component/customer/customerForm.jsp"/>
+  </c:if>
   </body>
 </html>

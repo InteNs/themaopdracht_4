@@ -1,7 +1,7 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <link rel="stylesheet" href="<c:url value="/component/customer/customerform.css"/>"/>
-<div class="container">
+<div class="containerform">
   <form action="register" id="register" method="post">
     <fieldset>
       <div class="p">
