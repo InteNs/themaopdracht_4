@@ -1,0 +1,25 @@
+.container {
+    width: 100%;
+    margin: auto auto;
+}
+
+fieldset {
+    width: 450px;
+    margin: auto auto;
+}
+
+.formlabel {
+    text-align: left;
+    width: 120px;
+    float: left;
+
+}
+.text {
+    width: 300px;
+    float: left;
+}
+
+fieldset .p {
+    clear: both;
+    padding: 10px;
+}
