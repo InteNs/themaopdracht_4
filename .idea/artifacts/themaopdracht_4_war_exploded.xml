@@ -7,6 +7,9 @@
         <element id="directory" name="classes">
           <element id="module-output" name="themaopdracht_4" />
         </element>
+        <element id="directory" name="lib">
+          <element id="library" level="project" name="taglibs-standard-spec-1.2.5" />
+        </element>
       </element>
     </root>
   </artifact>
