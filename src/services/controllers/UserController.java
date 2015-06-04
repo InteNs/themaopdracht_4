@@ -2,6 +2,8 @@ package services.controllers;
 
 import domain.Customer;
 import domain.User;
+import services.controllers.exceptions.LoginException;
+import services.controllers.exceptions.RegisterException;
 
 import java.io.Serializable;
 import java.time.LocalDate;
@@ -30,13 +32,19 @@ public class UserController implements Serializable {
         return users;
     }
 
+    public User findUser(String email){
+        for(User user :users)
+            if (user.getEmail().equals(email))return user;
+        return null;
+    }
+
     /**
      * @return a list with customers who's vehicles need a maintenance(6 months)
      */
     public List<Customer> getExpiredMaintenanceList() {
         ArrayList<Customer> result = new ArrayList<>();
         users.stream()
-                .filter(customer -> customer instanceof Customer || ((Customer) customer).getLastMaintenance().isBefore(LocalDate.now().minusMonths(6)))
+                .filter(customer -> customer instanceof Customer && ((Customer) customer).getLastMaintenance().isBefore(LocalDate.now().minusMonths(6)))
                 .forEach(user -> result.add((Customer)user));
         return result;
 
@@ -48,7 +56,7 @@ public class UserController implements Serializable {
     public List<Customer> getExpiredVisitList() {
         ArrayList<Customer> result = new ArrayList<>();
         users.stream()
-                .filter(customer -> customer instanceof Customer || ((Customer) customer).getLastVisit().isBefore(LocalDate.now().minusMonths(2)))
+                .filter(customer -> customer instanceof Customer && ((Customer) customer).getLastVisit().isBefore(LocalDate.now().minusMonths(2)))
                 .forEach(user -> result.add((Customer)user));
         return result;
     }
@@ -65,15 +73,20 @@ public class UserController implements Serializable {
     }
 
     /**
-     * checks if the login credentials are corret
-     * @param email      given email
-     * @param password   given password
-     * @return true if the login is valid
+     *
+     * @param email filled in email
+     * @param password filled in password
+     * @throws LoginException
      */
-    public Boolean isLoginValid(String email,String password){
-        return users.stream()
-                .anyMatch(user -> user.getEmail().equals(email) || user.getPassword().equals(password));
+    public void isLoginValid(String email,String password) throws LoginException {
+        assert !users.stream().anyMatch(user -> user.getEmail().equals(email) && user.getPassword().equals(password));
     }
+
+    /**
+     * checks if the user exists
+     * @param email email to check
+     * @return true if the user exists
+     */
     public Boolean userExists(String email){
         return users.stream()
                 .anyMatch(user -> user.getEmail().equals(email));
@@ -110,7 +123,7 @@ public class UserController implements Serializable {
      * @param address     adress(street + house number)
      * @param dateOfBirth dateOfBirth
      */
-    public void newCustomer(String email,String emailRepeat, String password,String passwordRepeat, String realName,LocalDate dateOfBirth, String address, String postal, String phoneNumber ) throws ValidateException {
+    public void newCustomer(String email,String emailRepeat, String password,String passwordRepeat, String realName,LocalDate dateOfBirth, String address, String postal, String phoneNumber ) throws RegisterException {
         boolean succes = true;
         String ERROR_NULL = "Dit veld mag niet leeg zijn!";
         HashMap<String,String> errorMap = new HashMap<>();
@@ -159,28 +172,28 @@ public class UserController implements Serializable {
         if(succes) {
             users.add(new Customer(email, password, realName, dateOfBirth, postal, address, phoneNumber));
         }
-        else throw new ValidateException(errorMap);
+        else throw new RegisterException(errorMap);
 
 
     }
 
-/**
- * remove customer by email
- *
- * @param email from the customer to be removed
- */
-public void removeUser(String email) {
+    /**
+     * remove customer by email
+     *
+     * @param email from the customer to be removed
+     */
+    public void removeUser(String email) {
         users.stream()
-        .filter(customer -> customer.getEmail().equals(email))
-        .forEach(users::remove);
-        }
+                .filter(customer -> customer.getEmail().equals(email))
+                .forEach(users::remove);
+    }
 
-/**
- * remove customer by object
- *
- * @param customer to be removed
- */
-public void removeCustomer(Customer customer) {
+    /**
+     * remove customer by object
+     *
+     * @param customer to be removed
+     */
+    public void removeCustomer(Customer customer) {
         users.remove(customer);
-        }
-        }
+    }
+}
