@@ -7,12 +7,12 @@
 </head>
 <body>
 
-<jsp:include page="component/navigation/navigation.jsp"/>
+<jsp:include page="/component/navigation/navigation.jsp"/>
 <c:if test="${empty current_user and empty register}">
-    <jsp:include page="component/login/loginForm.jsp"/>
+    <jsp:include page="/component/login/loginForm.jsp"/>
 </c:if>
 <c:if test="${register == 'register'}">
-    <jsp:include page="component/register/register.jsp"/>
+    <jsp:include page="/component/register/register.jsp"/>
 </c:if>
 <c:out value="${login_error}"/>
 </body>

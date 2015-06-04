@@ -3,7 +3,7 @@
 <link rel="stylesheet" href="<c:url value="/component/form.css"/>"/>
 
 
-<div class="containerform">
+<div class="container">
     <form action="register" id="register" method="post">
         <fieldset name="Registreren">
             <legend>Registreren</legend>
