@@ -22,8 +22,8 @@ public class UserController implements Serializable {
      */
     public UserController() {
         users = new ArrayList<>();
+        users.add(new User(User.userType.OWNER,"admin","admin","admin",LocalDate.now(),"admin","admin","admin"));
     }
-
     /**
      * @return an arraylist with all the users
      */
@@ -78,7 +78,8 @@ public class UserController implements Serializable {
      * @throws LoginException
      */
     public void isLoginValid(String email,String password) throws LoginException {
-        assert !users.stream().anyMatch(user -> user.getEmail().equals(email) && user.getPassword().equals(password));
+        if(!users.stream().anyMatch(user -> user.getEmail().equals(email) && user.getPassword().equals(password)))
+            throw new LoginException();
     }
 
     /**

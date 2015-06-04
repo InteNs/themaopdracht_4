@@ -24,16 +24,17 @@ public class LoginServlet extends HttpServlet {
             case "Registreren":
                 req.setAttribute("register", "register");
                 break;
-            case "Inloggen":
-                System.out.println("inloggen");
+            case "Login":
                 String email = req.getParameter("email");
                 String password = req.getParameter("password");
 
                 try {
                     userController.isLoginValid(email, password);
+                    System.out.println("login succes");
                     req.getSession().setAttribute("current_user", userController.findUser(email));
                     if (req.getAttribute("keep_email") != null) resp.addCookie(new Cookie("c_email", email));
                 } catch (LoginException e) {
+                    System.out.println("login failed");
                     req.setAttribute("login_error", e.getMessage());
                 }
                 break;
