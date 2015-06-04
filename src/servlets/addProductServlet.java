@@ -49,9 +49,9 @@ public class addProductServlet extends HttpServlet {
                     ///newProduct(aantal, minAantal, prijs, inkoopPrijs, leverancier, adres, postcode, plaats);
             ///controller.removeProduct();
 
-            requestDispatcher = req.getRequestDispatcher("/voorraad.jsp");
+            requestDispatcher = req.getRequestDispatcher("/stock.jsp");
         }
-        else requestDispatcher = req.getRequestDispatcher("/voorraad.jsp");
+        else requestDispatcher = req.getRequestDispatcher("/stock.jsp");
         requestDispatcher.forward(req,resp);
     }
 }

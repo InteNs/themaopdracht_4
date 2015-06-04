@@ -5,6 +5,6 @@
     <title></title>
   </head>
   <body>
-    <jsp:include page="navigation.jsp"/>
+    <jsp:include page="component/navigation/navigation.jsp"/>
   </body>
 </html>
