@@ -1,7 +1,6 @@
 package servlets;
 
-import controllers.UserController;
-import domain.Customer;
+import services.controllers.UserController;
 import domain.User;
 import listeners.Data;
 
@@ -40,22 +39,12 @@ public class RegisterServlet extends HttpServlet {
         postal = req.getParameter("postal");
         phoneNumber = req.getParameter("phonenumber");
         //TODO: move to validateService
-        if (!doesExist(email)
-                && !Objects.equals(email,"")
-                && !Objects.equals(password,"")
-                && !Objects.equals(realName,"")
-                && !Objects.equals(dateOfBirth,null)
-                && !Objects.equals(address,"")
-                && !Objects.equals(postal,"")
-                && !Objects.equals(phoneNumber,"")
-                && email.equals(req.getParameter("emailrepeat"))
-                && password.equals((req.getParameter("passwordrepeat")))
-                ){
-            userController.newCustomer(email,password,realName,dateOfBirth,address,postal,phoneNumber);
-
-            requestDispatcher = req.getRequestDispatcher("/index.jsp");
-        }
-        else requestDispatcher = req.getRequestDispatcher("/registration.jsp");
+//        if (){
+//            userController.newCustomer(email,password,realName,dateOfBirth,address,postal,phoneNumber);
+//
+//            requestDispatcher = req.getRequestDispatcher("/index.jsp");
+//        }
+//        else requestDispatcher = req.getRequestDispatcher("/registration.jsp");
         requestDispatcher.forward(req,resp);
     }
     private boolean doesExist(String email){

@@ -1,4 +1,4 @@
-package controllers;
+package services.controllers;
 
 import domain.Customer;
 import domain.User;
@@ -7,6 +7,7 @@ import java.io.Serializable;
 import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Objects;
 
 /**
  * Created by InteNs on 04.jun.2015.
@@ -103,9 +104,20 @@ public class UserController implements Serializable {
      * @param address     adress(street + house number)
      * @param dateOfBirth dateOfBirth
      */
-    public void newCustomer(String email, String password, String realName,LocalDate dateOfBirth, String address, String postal, String phoneNumber ) {
-        users.add(new Customer(email, password, realName, dateOfBirth, postal, address, phoneNumber));
-    }
+//    public void newCustomer(String email, String password, String realName,LocalDate dateOfBirth, String address, String postal, String phoneNumber ) {
+//        if(!doesExist(email)
+//                && !Objects.equals(email, "")
+//                && !Objects.equals(password,"")
+//                && !Objects.equals(realName,"")
+//                && !Objects.equals(dateOfBirth,null)
+//                && !Objects.equals(address,"")
+//                && !Objects.equals(postal,"")
+//                && !Objects.equals(phoneNumber,"")
+//                && email.equals(req.getParameter("emailrepeat"))
+//                && password.equals((req.getParameter("passwordrepeat")))
+//
+//        users.add(new Customer(email, password, realName, dateOfBirth, postal, address, phoneNumber));
+//    }
 
     /**
      * remove customer by email
