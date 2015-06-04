@@ -6,6 +6,7 @@ import domain.User;
 import java.io.Serializable;
 import java.time.LocalDate;
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
 import java.util.Objects;
 
@@ -70,8 +71,13 @@ public class UserController implements Serializable {
      * @return true if the login is valid
      */
     public Boolean isLoginValid(String email,String password){
-         return users.stream()
+        return users.stream()
                 .anyMatch(user -> user.getEmail().equals(email) || user.getPassword().equals(password));
+    }
+    public Boolean userExists(String email){
+        return users.stream()
+                .anyMatch(user -> user.getEmail().equals(email));
+
     }
 
     /**
@@ -104,38 +110,77 @@ public class UserController implements Serializable {
      * @param address     adress(street + house number)
      * @param dateOfBirth dateOfBirth
      */
-//    public void newCustomer(String email, String password, String realName,LocalDate dateOfBirth, String address, String postal, String phoneNumber ) {
-//        if(!doesExist(email)
-//                && !Objects.equals(email, "")
-//                && !Objects.equals(password,"")
-//                && !Objects.equals(realName,"")
-//                && !Objects.equals(dateOfBirth,null)
-//                && !Objects.equals(address,"")
-//                && !Objects.equals(postal,"")
-//                && !Objects.equals(phoneNumber,"")
-//                && email.equals(req.getParameter("emailrepeat"))
-//                && password.equals((req.getParameter("passwordrepeat")))
-//
-//        users.add(new Customer(email, password, realName, dateOfBirth, postal, address, phoneNumber));
-//    }
+    public void newCustomer(String email,String emailRepeat, String password,String passwordRepeat, String realName,LocalDate dateOfBirth, String address, String postal, String phoneNumber ) throws ValidateException {
+        boolean succes = true;
+        String ERROR_NULL = "Dit veld mag niet leeg zijn!";
+        HashMap<String,String> errorMap = new HashMap<>();
+        if(userExists(email)) {
+            succes = false;
+            errorMap.put("email_error","Dit emailadres bestaat al in ons systeem!");
+        }
+        if(Objects.equals(email, "")) {
+            succes = false;
+            errorMap.put("email_error",ERROR_NULL);
+        }
+        if(Objects.equals(password, "")) {
+            succes = false;
+            errorMap.put("password_error",ERROR_NULL);
+        }
+        if(Objects.equals(realName, "")) {
+            succes = false;
+            errorMap.put("realname_error",ERROR_NULL);
+        }
+        if(Objects.equals(dateOfBirth, null)) {
+            succes = false;
+            errorMap.put("dateofbirth_error",ERROR_NULL);
+        }
+        if(Objects.equals(address, "")) {
+            succes = false;
+            errorMap.put("address_error",ERROR_NULL);
+        }
+        if(Objects.equals(postal, "")) {
+            errorMap.put("postal_error",ERROR_NULL);
+            succes = false;
+        }
+        if(Objects.equals(phoneNumber, "")) {
+            errorMap.put("phonenumber_error",ERROR_NULL);
+            succes = false;
+        }
+        if(!email.equals(emailRepeat)) {
+            succes = false;
+            errorMap.put("email_error","Email adres komt niet overeen!");
+        }
+        if(!password.equals(passwordRepeat)) {
+            succes = false;
+            errorMap.put("password_error","wachtwoord komt niet overeen!");
+        }
 
-    /**
-     * remove customer by email
-     *
-     * @param email from the customer to be removed
-     */
-    public void removeUser(String email) {
+
+        if(succes) {
+            users.add(new Customer(email, password, realName, dateOfBirth, postal, address, phoneNumber));
+        }
+        else throw new ValidateException(errorMap);
+
+
+    }
+
+/**
+ * remove customer by email
+ *
+ * @param email from the customer to be removed
+ */
+public void removeUser(String email) {
         users.stream()
-                .filter(customer -> customer.getEmail().equals(email))
-                .forEach(users::remove);
-    }
+        .filter(customer -> customer.getEmail().equals(email))
+        .forEach(users::remove);
+        }
 
-    /**
-     * remove customer by object
-     *
-     * @param customer to be removed
-     */
-    public void removeCustomer(Customer customer) {
+/**
+ * remove customer by object
+ *
+ * @param customer to be removed
+ */
+public void removeCustomer(Customer customer) {
         users.remove(customer);
-    }
-}
+        }
+        }
