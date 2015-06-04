@@ -11,7 +11,7 @@ public class Customer extends User implements Serializable {
 //    private final ArrayList<Car> cars;
 
     public Customer(String email, String password, String realName, LocalDate dateOfBirth, String address, String postal, String phoneNumber) {
-        super(email, password,realName, dateOfBirth, address, postal, phoneNumber);
+        super(User.userType.CUSTOMER,email, password,realName, dateOfBirth, address, postal, phoneNumber);
 //        cars = new ArrayList<>();
     }
 

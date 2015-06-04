@@ -4,6 +4,8 @@ import java.io.Serializable;
 import java.time.LocalDate;
 
 public class User implements Serializable {
+    public static enum userType{CUSTOMER,OWNER,MECHANIC}
+    private userType userType;
     private String email;
     private String password;
     private String realName;
@@ -13,7 +15,8 @@ public class User implements Serializable {
     private LocalDate dateOfBirth;
 
 
-    public User(String email, String password, String realName, LocalDate dateOfBirth, String address, String postal, String phoneNumber) {
+    public User(userType userType, String email, String password, String realName, LocalDate dateOfBirth, String address, String postal, String phoneNumber) {
+        this.userType = userType;
         this.email = email;
         this.password = password;
         this.realName = realName;
@@ -22,6 +25,10 @@ public class User implements Serializable {
         this.dateOfBirth = dateOfBirth;
         this.phoneNumber = phoneNumber;
 
+    }
+
+    public User.userType getUserType() {
+        return userType;
     }
 
     public void setEmail(String email) {
