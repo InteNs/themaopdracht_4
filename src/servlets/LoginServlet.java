@@ -20,28 +20,29 @@ public class LoginServlet extends HttpServlet {
 
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        RequestDispatcher requestDispatcher = null;
-        ServletContext servletContext = req.getServletContext();
-        UserController userController = ((Data) servletContext.getAttribute("Data")).getUserController();
-        String email = req.getParameter("email");
-        String password = req.getParameter("password");
+        UserController userController = ((Data) req.getServletContext().getAttribute("data")).getUserController();
         String button = req.getParameter("button");
+        System.out.println(button);
+        switch (button) {
+            case "Registreren":
+                System.out.println("registreren");
+                req.setAttribute("register", "register");
+                req.getRequestDispatcher("/index.jsp").forward(req, resp);
+                break;
+            case "Inloggen":
+                System.out.println("inloggen");
+                String email = req.getParameter("email");
+                String password = req.getParameter("password");
 
-        try {
-            userController.isLoginValid(email,password);
-            if(req.getAttribute("keepemail") != null){
-                Cookie c = new Cookie("c_email", email);
-                c.setMaxAge(2000);
-                resp.addCookie(c);
-            }
-            req.getSession().setAttribute("currentuser",userController.findUser(email));
-            requestDispatcher = req.getRequestDispatcher("/secure/welcome.jsp");
-
-        } catch (LoginException e) {
-            req.setAttribute("login_error",e.getMessage());
-            requestDispatcher = req.getRequestDispatcher("/index.jsp");
+                try {
+                    userController.isLoginValid(email, password);
+                    req.getSession().setAttribute("current_user", userController.findUser(email));
+                    if (req.getAttribute("keep_email") != null) resp.addCookie(new Cookie("c_email", email));
+                } catch (LoginException e) {
+                    req.setAttribute("login_error", e.getMessage());
+                }
+                req.getRequestDispatcher("/index.jsp").forward(req, resp);
+                break;
         }
-        requestDispatcher.forward(req, resp);
-
     }
 }

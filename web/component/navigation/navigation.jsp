@@ -22,13 +22,13 @@
                  <input type="text" name="button" placeholder="wachtwoord"/>
             </span>
             <span class="navigationitem">
-                 <input type="submit" name="button" value="login"/>
+                 <input type="submit" value="Inloggen" name="button"/>
             </span>
             <span class="navigationitem">
                  Registreren:
             </span>
             <span class="navigationitem">
-                <input type="submit" name="button" value="register"/>
+                <input type="submit" value="Registreren" name="button"/>
             </span>
         </form>
 

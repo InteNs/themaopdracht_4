@@ -7,11 +7,11 @@ public class Customer extends User {
     private LocalDate lastVisit;
     private LocalDate lastMaintenance;
     private boolean isOnBlackList;
-    private final ArrayList<Car> cars;
+//    private final ArrayList<Car> cars;
 
     public Customer(String email, String password, String realName, LocalDate dateOfBirth, String address, String postal, String phoneNumber) {
         super(email, password,realName, dateOfBirth, address, postal, phoneNumber);
-        cars = new ArrayList<>();
+//        cars = new ArrayList<>();
     }
 
     public void setLastMaintenance(LocalDate lastMaintenance) {
@@ -31,17 +31,17 @@ public class Customer extends User {
         return lastMaintenance;
     }
 
-    public ArrayList<Car> getCars() {
-        return cars;
-    }
-
-    public void addCar(Car car) {
-        cars.add(car);
-    }
-
-    public void removeCar(Car car){
-        cars.remove(car);
-    }
+//    public ArrayList<Car> getCars() {
+//        return cars;
+//    }
+//
+//    public void addCar(Car car) {
+//        cars.add(car);
+//    }
+//
+//    public void removeCar(Car car){
+//        cars.remove(car);
+//    }
 
     public void setLastVisit(LocalDate lastVisit) {
         this.lastVisit = lastVisit;

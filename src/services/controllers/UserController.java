@@ -3,7 +3,7 @@ package services.controllers;
 import domain.Customer;
 import domain.User;
 import services.controllers.exceptions.LoginException;
-import services.controllers.exceptions.RegisterException;
+import services.controllers.exceptions.ValidateException;
 
 import java.io.Serializable;
 import java.time.LocalDate;
@@ -87,10 +87,8 @@ public class UserController implements Serializable {
      * @param email email to check
      * @return true if the user exists
      */
-    public Boolean userExists(String email){
-        return users.stream()
-                .anyMatch(user -> user.getEmail().equals(email));
-
+    public boolean userExists(String email){
+        return users.stream().anyMatch(user -> user.getEmail().equals(email));
     }
 
     /**
@@ -123,7 +121,7 @@ public class UserController implements Serializable {
      * @param address     adress(street + house number)
      * @param dateOfBirth dateOfBirth
      */
-    public void newCustomer(String email,String emailRepeat, String password,String passwordRepeat, String realName,LocalDate dateOfBirth, String address, String postal, String phoneNumber ) throws RegisterException {
+    public void newCustomer(String email,String emailRepeat, String password,String passwordRepeat, String realName,LocalDate dateOfBirth, String address, String postal, String phoneNumber ) throws ValidateException {
         boolean succes = true;
         String ERROR_NULL = "Dit veld mag niet leeg zijn!";
         HashMap<String,String> errorMap = new HashMap<>();
@@ -172,7 +170,7 @@ public class UserController implements Serializable {
         if(succes) {
             users.add(new Customer(email, password, realName, dateOfBirth, postal, address, phoneNumber));
         }
-        else throw new RegisterException(errorMap);
+        else throw new ValidateException(errorMap);
 
 
     }

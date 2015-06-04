@@ -2,7 +2,7 @@ package servlets;
 
 import services.controllers.UserController;
 import listeners.Data;
-import services.controllers.exceptions.RegisterException;
+import services.controllers.exceptions.ValidateException;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletContext;
@@ -20,11 +20,11 @@ public class RegisterServlet extends HttpServlet {
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 
         ServletContext servletContext = req.getServletContext();
-        UserController userController = ((Data) servletContext.getAttribute("Data")).getUserController();
+        UserController userController = ((Data) servletContext.getAttribute("data")).getUserController();
         String email = req.getParameter("email");
-        String emailRepeat = req.getParameter("emailRepeat");
+        String emailRepeat = req.getParameter("email_repeat");
         String password = req.getParameter("password");
-        String passwordRepeat = req.getParameter("passwordRepeat");
+        String passwordRepeat = req.getParameter("password_repeat");
         String realName = req.getParameter("realname");
         LocalDate dateOfBirth = LocalDate.parse(req.getParameter("date"));
         String address = req.getParameter("address");
@@ -34,7 +34,7 @@ public class RegisterServlet extends HttpServlet {
         try {
             userController.newCustomer(email, emailRepeat, password, passwordRepeat, realName, dateOfBirth, address, postal, phoneNumber);
             requestDispatcher = req.getRequestDispatcher("/index.jsp");
-        } catch (RegisterException e) {
+        } catch (ValidateException e) {
             requestDispatcher = req.getRequestDispatcher("/registration.jsp");
             for(Map.Entry<String, String> entry : e.getErrorMap().entrySet())
                 req.setAttribute(entry.getKey(),entry.getValue());
