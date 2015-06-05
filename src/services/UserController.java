@@ -1,5 +1,6 @@
 package services;
 
+import domain.Car;
 import domain.Customer;
 import domain.Owner;
 import domain.User;
@@ -112,9 +113,14 @@ public class UserController implements Serializable {
         if (address !=null)     customer.setAddress(address);
         if (phoneNumber != null)customer.setPhoneNumber(phoneNumber);
     }
-     public void newAdmin(){
+
+    /**
+     *
+     */
+    public void newAdmin(){
          users.add(new Owner("admin@admin.nl","admin","admin",LocalDate.now(),"admin","admin","admin"));
      }
+
     /**
      * create a new customer
      *
@@ -127,7 +133,6 @@ public class UserController implements Serializable {
     public void newCustomer(String email,String emailRepeat, String password,String passwordRepeat, String realName,LocalDate dateOfBirth, String address, String postal, String phoneNumber ) throws ValidateException {
         boolean succes = true;
         String ERROR_NULL = "Dit veld mag niet leeg zijn!";
-        System.out.println("hi from validator");
         HashMap<String,String> errorMap = new HashMap<>();
         if(userExists(email)) {
             succes = false;
@@ -179,15 +184,16 @@ public class UserController implements Serializable {
 
 
     }
+
     /**
      * remove customer by email
      *
      * @param email from the customer to be removed
      */
     public void removeUser(String email) {
-        users.stream()
-                .filter(customer -> customer.getEmail().equals(email))
-                .forEach(users::remove);
+        for (User user : users)
+                if(user.getEmail().equals(email))
+                    users.remove(user);
     }
 
     /**
@@ -197,5 +203,14 @@ public class UserController implements Serializable {
      */
     public void removeCustomer(Customer customer) {
         users.remove(customer);
+    }
+
+    public void newCar(String email,String type,String numberPlate){
+        if (findUser(email) instanceof Customer)
+            ((Customer)findUser(email)).addCar(new Car(type,numberPlate));
+    }
+    public void removeCar(String email,String numberPlate){
+        if (findUser(email) instanceof Customer)
+            ((Customer)findUser(email)).removeCar(numberPlate);
     }
 }

@@ -1,4 +1,4 @@
-package servlets;
+package servlets.sessionServlets;
 
 import domain.User;
 import listeners.Data;
@@ -37,7 +37,6 @@ public class LoginServlet extends HttpServlet {
                     if (userController.findUser(email).getUserType() == User.userType.OWNER)requestDispatcher = req.getRequestDispatcher("/secure/admin.jsp");
                     if (req.getAttribute("keep_email") != null) resp.addCookie(new Cookie("c_email", email));
                 } catch (LoginException e) {
-                    System.out.println("login failed");
                     req.setAttribute("login_error", e.getMessage());
                 }
                 break;

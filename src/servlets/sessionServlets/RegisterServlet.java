@@ -1,4 +1,4 @@
-package servlets;
+package servlets.sessionServlets;
 
 import listeners.Data;
 import services.UserController;
@@ -33,7 +33,7 @@ public class RegisterServlet extends HttpServlet {
         String phoneNumber = req.getParameter("phonenumber");
         RequestDispatcher requestDispatcher;
         try {
-            userController.newCustomer(email, emailRepeat, password, passwordRepeat, realName, dateOfBirth, address, postal, phoneNumber);
+            synchronized (userController){userController.newCustomer(email, emailRepeat, password, passwordRepeat, realName, dateOfBirth, address, postal, phoneNumber);}
             requestDispatcher = req.getRequestDispatcher("/index.jsp");
         } catch (ValidateException e) {
             req.setAttribute("register","register");
