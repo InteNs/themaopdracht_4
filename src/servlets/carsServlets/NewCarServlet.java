@@ -19,6 +19,7 @@ public class NewCarServlet extends HttpServlet {
         UserController userController = ((Data)req.getServletContext().getAttribute("data")).getUserController();
         String carType = req.getParameter("car_type");
         String carPlate= req.getParameter("car_Plate");
+        req.setAttribute("addcar", "addcar");
         User user = (User)req.getSession().getAttribute("current_user");
         synchronized (userController) {
             userController.newCar(user.getEmail(), carType, carPlate);

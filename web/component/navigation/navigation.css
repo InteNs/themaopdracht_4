@@ -12,3 +12,6 @@
 .floatright {
     float:right;
 }
+h3 {
+    display: inline;
+}
