@@ -1,6 +1,5 @@
 package servlets.userServlets;
 
-import domain.User;
 import listeners.Data;
 import services.UserController;
 

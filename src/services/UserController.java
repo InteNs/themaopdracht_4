@@ -1,17 +1,16 @@
 package services;
 
 import domain.Car;
-import domain.Customer;
-import domain.Owner;
-import domain.User;
+import domain.users.Customer;
+import domain.users.Mechanic;
+import domain.users.Owner;
+import domain.users.User;
 import services.exceptions.*;
 
 import java.io.Serializable;
 import java.time.LocalDate;
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Objects;
+import java.time.LocalDateTime;
+import java.util.*;
 
 /**
  * Created by InteNs on 04.jun.2015.
@@ -26,6 +25,7 @@ public class UserController implements Serializable {
         users = new ArrayList<>();
 
     }
+
     /**
      * @return an arraylist with all the users
      */
@@ -33,6 +33,11 @@ public class UserController implements Serializable {
         return users;
     }
 
+    /**
+     * finds a user by email
+     * @param email of the user to find
+     * @return the user with the given email
+     */
     public User findUser(String email){
         for(User user :users)
             if (user.getEmail().equals(email))return user;
@@ -94,8 +99,8 @@ public class UserController implements Serializable {
     }
 
     /**
-     * change a customer deetail
-     * @param customer      the customer that needs to be changed
+     * change a user's info
+     * @param user      the customer that needs to be changed
      * @param email         @nullable
      * @param password      @nullable
      * @param realName      @nullable
@@ -104,18 +109,18 @@ public class UserController implements Serializable {
      * @param address       @nullable
      * @param phoneNumber   @nullable
      */
-    public void changeCustomerInfo(Customer customer,String email, String password, String realName,LocalDate dateOfBirth, String address,String postal,String phoneNumber) {
-        if (email !=null)       customer.setEmail(email);
-        if (password !=null)    customer.setPassword(password);
-        if (realName !=null)   customer.setRealName(realName);
-        if (dateOfBirth !=customer.getDateOfBirth()) customer.setDateOfBirth(dateOfBirth);
-        if (postal != null)     customer.setPostal(postal);
-        if (address !=null)     customer.setAddress(address);
-        if (phoneNumber != null)customer.setPhoneNumber(phoneNumber);
+    public void changeUserInfo(User user,String email, String password, String realName,LocalDate dateOfBirth, String address,String postal,String phoneNumber) {
+        if (email !=null)       user.setEmail(email);
+        if (password !=null)    user.setPassword(password);
+        if (realName !=null)   user.setRealName(realName);
+        if (dateOfBirth !=user.getDateOfBirth()) user.setDateOfBirth(dateOfBirth);
+        if (postal != null)     user.setPostal(postal);
+        if (address !=null)     user.setAddress(address);
+        if (phoneNumber != null)user.setPhoneNumber(phoneNumber);
     }
 
     /**
-     *
+     * creates a new admin(hardcoded)
      */
     public void newAdmin(){
          users.add(new Owner("admin@admin.nl","admin","admin",LocalDate.now(),"admin","admin","admin"));
@@ -186,6 +191,62 @@ public class UserController implements Serializable {
     }
 
     /**
+     * create a new Mechanic
+     *
+     * @param email email
+     * @param password password
+     * @param realName realname
+     * @param dateOfBirth dateofbirth
+     * @param address address
+     * @param postal postal
+     * @param phoneNumber phonenumber
+     */
+    public void newMechanic(String email,String password,String realName,LocalDate dateOfBirth,String address,String postal,String phoneNumber) throws ValidateException {
+        boolean succes = true;
+        String ERROR_NULL = "Dit veld mag niet leeg zijn!";
+        HashMap<String,String> errorMap = new HashMap<>();
+        if(userExists(email)) {
+            succes = false;
+
+            errorMap.put("email_error","Dit emailadres bestaat al in ons systeem!");
+        }
+        if(Objects.equals(email, "")) {
+            succes = false;
+            errorMap.put("email_error",ERROR_NULL);
+        }
+        if(Objects.equals(password, "")) {
+            succes = false;
+            errorMap.put("password_error",ERROR_NULL);
+        }
+        if(Objects.equals(realName, "")) {
+            succes = false;
+            errorMap.put("realname_error",ERROR_NULL);
+        }
+        if(Objects.equals(dateOfBirth, null)) {
+            succes = false;
+            errorMap.put("dateofbirth_error",ERROR_NULL);
+        }
+        if(Objects.equals(address, "")) {
+            succes = false;
+            errorMap.put("address_error",ERROR_NULL);
+        }
+        if(Objects.equals(postal, "")) {
+            errorMap.put("postal_error",ERROR_NULL);
+            succes = false;
+        }
+        if(Objects.equals(phoneNumber, "")) {
+            errorMap.put("phonenumber_error",ERROR_NULL);
+            succes = false;
+        }
+        if(succes) {
+            users.add(new Mechanic(email,password,realName,dateOfBirth,address,postal,phoneNumber));
+        }
+        else throw new ValidateException(errorMap);
+
+
+    }
+
+    /**
      * remove customer by email
      *
      * @param email from the customer to be removed
@@ -197,18 +258,21 @@ public class UserController implements Serializable {
     }
 
     /**
-     * remove customer by object
-     *
-     * @param customer to be removed
+     * adds a new car
+     * @param email email of the car owner
+     * @param type  car type
+     * @param numberPlate numberplate of car
      */
-    public void removeCustomer(Customer customer) {
-        users.remove(customer);
-    }
-
     public void newCar(String email,String type,String numberPlate){
         if (findUser(email) instanceof Customer)
             ((Customer)findUser(email)).addCar(new Car(type,numberPlate));
     }
+
+    /**
+     * removes a car
+     * @param email email of car owner
+     * @param numberPlate numberplate of car
+     */
     public void removeCar(String email,String numberPlate){
         if (findUser(email) instanceof Customer)
             ((Customer)findUser(email)).removeCar(numberPlate);

@@ -1,6 +1,6 @@
 package servlets.carsServlets;
 
-import domain.User;
+import domain.users.User;
 import listeners.Data;
 import services.UserController;
 

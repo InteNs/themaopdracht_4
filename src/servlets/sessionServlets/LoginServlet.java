@@ -1,6 +1,6 @@
 package servlets.sessionServlets;
 
-import domain.User;
+import domain.users.User;
 import listeners.Data;
 import services.UserController;
 import services.exceptions.LoginException;

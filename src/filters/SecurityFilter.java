@@ -1,6 +1,6 @@
 //package filters;
 //
-//import domain.User;
+//import domain.users.User;
 //
 //import java.io.IOException;
 //import java.util.logging.Logger;
