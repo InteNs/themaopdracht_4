@@ -47,6 +47,7 @@
         <servlet-name>DeleteUserServlet</servlet-name>
         <url-pattern>/removeuser</url-pattern>
     </servlet-mapping>
+    <!-- TODO: map new servlets-->
 
     <!-- filters-->
     <!--<filter>-->
