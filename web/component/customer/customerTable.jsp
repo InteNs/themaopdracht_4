@@ -12,27 +12,26 @@
                     <th>Geboortedatum</th>
                     <th>Telefoonnummer</th>
                 </tr>
-                <table>
-                    <c:forEach items="${paramValues}" var="p">
-                        <tr>
-                            <td>${p.key}</td>
-                            <td>${p.value}</td>
-                        </tr>
-                    </c:forEach>
-                </table>
-                <%--<c:forEach items="${data.getUserController().getUsers()}" var="${user}">--%>
-                <%--<tr>--%>
-                    <%--<td>${user.getUserType()}</td>--%>
-                    <%--<td>${user.getEmail()}</td>--%>
-                    <%--<td>${user.getRealName()}</td>--%>
-                    <%--<td>${user.getPostal()}</td>--%>
-                    <%--<td>${user.getDateOfBirth()}</td>--%>
-                    <%--<td>${user.getPhone()}</td>--%>
-                    <%--<form action="/edituser" id="edituser" method="post">--%>
-                    <%--<td><input type="submit" name="button" value="Verwijderen"/></td>--%>
-                    <%--<td><input type="submit" name="button" value="Aanpassen"/></td>--%>
-                    <%--</form>--%>
-                <%--</tr>--%>
-                <%--</c:forEach>--%>
+
+                <c:forEach items="${users}" var="user">
+                <tr>
+                    <td>${user.getUserType()}</td>
+                    <td>${user.getEmail()}</td>
+                    <td>${user.getRealName()}</td>
+                    <td>${user.getPostal()}</td>
+                    <td>${user.getDateOfBirth()}</td>
+                    <td>${user.getPhoneNumber()}</td>
+                    <form action="/removeuser" id="edituser" method="post">
+                         <td><input type="submit" name="button" value="Verwijderen"/></td>
+                    </form>
+                    <form action="/edituser" id="edituser" method="post"> >
+                         <td><input type="submit" name="button" value="Aanpassen"/></td>
+                    </form>
+                </tr>
+                </c:forEach>
             </table>
+            <form action="/adduser" id="edituser" method="post">
+                <td><input type="submit" name="button" value="toevoegen"/></td>
+            </form>
+
         </div>

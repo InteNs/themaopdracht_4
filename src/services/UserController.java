@@ -28,7 +28,7 @@ public class UserController implements Serializable {
     /**
      * @return an arraylist with all the users
      */
-    public ArrayList<User> getUsers() {
+    public List<User> getUsers() {
         return users;
     }
 
