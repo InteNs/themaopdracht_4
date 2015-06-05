@@ -1,6 +1,7 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <link rel="stylesheet" href="<c:url value="/global.css"/>"/>
+<link rel="stylesheet" href="<c:url value="/component/customerTable.css"/>"/>
         <div class="container">
             <table>
 
@@ -21,16 +22,18 @@
                     <td>${user.getPostal()}</td>
                     <td>${user.getDateOfBirth()}</td>
                     <td>${user.getPhoneNumber()}</td>
-                    <form action="/removeuser" id="edituser" method="post">
+                    <form action="/removeuser" id="/removeuser" method="post">
                          <td><input type="submit" name="button" value="Verwijderen"/></td>
+                        <input type="hidden" name="user" value="${user}"/>
                     </form>
-                    <form action="/edituser" id="edituser" method="post"> >
-                         <td><input type="submit" name="button" value="Aanpassen"/></td>
+                    <form action="/edituser" id="/edituser" method="post"> >
+                         <td><input type="submit" name="button"  value="Aanpassen"/></td>
+                        <input type="hidden" name="user" value="${user}"/>
                     </form>
                 </tr>
                 </c:forEach>
             </table>
-            <form action="/adduser" id="edituser" method="post">
+            <form action="/adduser" id="/adduser" method="post">
                 <td><input type="submit" name="button" value="toevoegen"/></td>
             </form>
 
