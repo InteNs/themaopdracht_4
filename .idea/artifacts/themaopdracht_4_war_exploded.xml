@@ -9,6 +9,7 @@
         </element>
         <element id="directory" name="lib">
           <element id="library" level="project" name="taglibs-standard-spec-1.2.5" />
+          <element id="library" level="module" name="JUnit4" module-name="themaopdracht_4" />
         </element>
       </element>
     </root>
