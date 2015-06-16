@@ -1,13 +1,16 @@
 package domain;
 
+/**
+ * Created by InteNs on 05.jun.2015.
+ */
 public class Car {
 
     private String type;
-    private String kenteken;
+    private String numberPlate;
 
     public Car(String type, String kenteken) {
         this.type = type;
-        this.kenteken = kenteken;
+        this.numberPlate = kenteken;
 
     }
 
@@ -19,16 +22,16 @@ public class Car {
         this.type = type;
     }
 
-    public String getKenteken() {
-        return kenteken;
+    public String getNumberPlate() {
+        return numberPlate;
     }
 
-    public void setKenteken(String kenteken) {
-        this.kenteken = kenteken;
+    public void setNumberPlate(String numberPlate) {
+        this.numberPlate = numberPlate;
     }
 
     @Override
     public String toString() {
-        return "";
+        return numberPlate;
     }
 }

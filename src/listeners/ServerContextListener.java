@@ -25,7 +25,7 @@ public class ServerContextListener implements ServletContextListener {
         servletContext = servletContextEvent.getServletContext();
 
         // Get real path
-        file = servletContext.getRealPath("/")+"listeners.Data.obj";
+        file = servletContext.getRealPath("/")+"data.obj";
 
         // Create file
         new File(file);
@@ -38,8 +38,17 @@ public class ServerContextListener implements ServletContextListener {
         } catch (IOException | ClassNotFoundException e) {
             e.printStackTrace();
         }
-        if (servletContext.getAttribute("data") == null)
-            servletContext.setAttribute("data",new Data());
+        if (servletContext.getAttribute("data") == null){
+            System.out.println("no data object found, making a new one...");
+                servletContext.setAttribute("data",new Data());
+        }
+        else System.out.println("data found, loading...");
+
+        if (!((Data)servletContext.getAttribute("data")).getUserController().userExists("admin@admin.nl")) {
+            ((Data)servletContext.getAttribute("data")).getUserController().newAdmin();
+            System.out.println("admin added");
+
+        }
 
         // Initialize logger
         try{

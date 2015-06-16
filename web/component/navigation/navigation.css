@@ -1,19 +1,17 @@
-body {
-    padding-top: 120px;
-}
-
-.container {
+.containernavigation {
     width: 100%;
-    padding: 1%;
-    position: absolute;
-    top: 0;
-    left: 0;
     border-bottom: solid 1px black;
 }
 .navigationitem {
-    margin: 1%;
+    display: inline;
 }
-
 .navigationtitle {
+    display: inline;
     margin-bottom: 3px;
+}
+.floatright {
+    float:right;
+}
+h3 {
+    display: inline;
 }
