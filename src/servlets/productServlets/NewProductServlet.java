@@ -2,12 +2,14 @@ package servlets.productServlets;
 
 import listeners.Data;
 import services.ProductController;
+import services.exceptions.ValidateException;
 
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
+import java.util.Map;
 
 /**
  * Created by Jorrit Meulenbeld & Oussama Aalili on 18/06/15.
@@ -21,8 +23,15 @@ public class NewProductServlet extends HttpServlet {
         double price = Double.parseDouble(req.getParameter("price"));
         // TODO: try/catch for errors in adding Products
         synchronized (productController) {
-            productController.addProduct(productName, amount, price);
+            try {
+                productController.addProduct(productName, amount, price);
+            } catch (ValidateException e) {
+                e.printStackTrace();
+                for(Map.Entry<String, String> entry : e.getErrorMap().entrySet())
+                    req.setAttribute(entry.getKey(),entry.getValue());
+            }
+            System.out.println("ik voeg iets toe");
         }
-        req.getRequestDispatcher("/secure/product.jsp").forward(req,resp);
+        req.getRequestDispatcher("./secure/product.jsp").forward(req,resp);
     }
 }

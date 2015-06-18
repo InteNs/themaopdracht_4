@@ -49,6 +49,18 @@
     </servlet-mapping>
     <!-- TODO: map new servlets-->
 
+
+    <!--addProduct -->
+    <servlet>
+        <servlet-name>addProduct</servlet-name>
+        <servlet-class>servlets.productServlets.NewProductServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>addProduct</servlet-name>
+        <url-pattern>/addproduct</url-pattern>
+    </servlet-mapping>
+
+
     <!--filters-->
     <!--<filter>-->
         <!--<filter-name>FilterForSecurity</filter-name>-->
