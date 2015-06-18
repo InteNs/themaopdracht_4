@@ -1,7 +1,7 @@
 package listeners;
 
 
-
+import services.ProductController;
 import services.UserController;
 
 import java.io.Serializable;
@@ -13,16 +13,16 @@ import java.util.Locale;
  */
 public class Data implements Serializable {
     private UserController userController = new UserController();
-    //private ProductController productController = new ProductController();
+    private ProductController productController = new ProductController();
     public Data (){}
 
     public UserController getUserController(){
         return userController;
     }
 
-    //public ProductController getProductController() {
-     //   return productController;
-    //}
+    public ProductController getProductController() {
+        return productController;
+    }
 
     public static String convert(double price) {
         NumberFormat nf = NumberFormat.getCurrencyInstance(new Locale("nl", "NL"));
