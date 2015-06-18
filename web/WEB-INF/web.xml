@@ -3,7 +3,7 @@
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd"
          version="3.1">
-<!--ContextListener-->
+    <!--ContextListener-->
     <listener>
         <listener-class>listeners.ServerContextListener</listener-class>
     </listener>
@@ -50,25 +50,65 @@
     <!-- TODO: map new servlets-->
 
 
-    <!--addProduct -->
+    <!--AmmendProduct -->
     <servlet>
-        <servlet-name>addProduct</servlet-name>
+        <servlet-name>AmmendProductServlet</servlet-name>
+        <servlet-class>servlets.productServlets.AmmendProductServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>AmmendProductServlet</servlet-name>
+        <url-pattern>/ammendproduct</url-pattern>
+    </servlet-mapping>
+
+    <!--DeleteProduct -->
+    <servlet>
+        <servlet-name>DeleteProductServlet</servlet-name>
+        <servlet-class>servlets.productServlets.DeleteProductServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>DeleteProductServlet</servlet-name>
+        <url-pattern>/deleteproduct</url-pattern>
+    </servlet-mapping>
+
+    <!--NewProduct -->
+    <servlet>
+        <servlet-name>NewProductServlet</servlet-name>
         <servlet-class>servlets.productServlets.NewProductServlet</servlet-class>
     </servlet>
     <servlet-mapping>
-        <servlet-name>addProduct</servlet-name>
-        <url-pattern>/addproduct</url-pattern>
+        <servlet-name>NewProductServlet</servlet-name>
+        <url-pattern>/newproduct</url-pattern>
+    </servlet-mapping>
+
+    <!--ViewProductDetails -->
+    <servlet>
+        <servlet-name>ViewProductDetailsServlet</servlet-name>
+        <servlet-class>servlets.productServlets.ViewProductDetailsServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>ViewProductDetailsServlet</servlet-name>
+        <url-pattern>/viewproductdetails</url-pattern>
+    </servlet-mapping>
+
+    <!--ViewProductDetails -->
+    <servlet>
+        <servlet-name>ViewProductServlet</servlet-name>
+        <servlet-class>servlets.productServlets.ViewProductServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>ViewProductServlet</servlet-name>
+        <url-pattern>/viewproduct</url-pattern>
     </servlet-mapping>
 
 
     <!--filters-->
     <!--<filter>-->
-        <!--<filter-name>FilterForSecurity</filter-name>-->
-        <!--<filter-class>filters.SecurityFilter</filter-class>-->
+    <!--<filter-name>FilterForSecurity</filter-name>-->
+    <!--<filter-class>filters.SecurityFilter</filter-class>-->
     <!--</filter>-->
     <!--<filter-mapping>-->
-        <!--<filter-name>FilterForSecurity</filter-name>-->
-        <!--<url-pattern>/secure/*</url-pattern>-->
+    <!--<filter-name>FilterForSecurity</filter-name>-->
+    <!--<url-pattern>/secure/*</url-pattern>-->
     <!--</filter-mapping>-->
 
 </web-app>
