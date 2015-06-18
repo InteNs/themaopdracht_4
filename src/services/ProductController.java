@@ -21,7 +21,18 @@ public class ProductController implements Serializable {
      * @param amount
      * @param price
      */
-    public void addProduct(String name, int amount, double price){
-        products.add(new Product(name,amount,price));
+    public void addProduct(String name, int amount, double price) {
+        products.add(new Product(name, amount, price));
     }
+
+    public ArrayList<Product> getAllProducts() {
+        return products;
+    }
+
+    public Product findProduct(String nameProduct) {
+        for(Product product : products)
+            if(product.getName().equals(nameProduct)) return product;
+        return null;
+    }
+
 }

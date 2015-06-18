@@ -1,7 +1,7 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <link rel="stylesheet" href="<c:url value="/global.css"/>"/>
-<link rel="stylesheet" href="<c:url value="/component/customerTable.css"/>"/>
+<link rel="stylesheet" href="<c:url value="/component/table.css"/>"/>
 <div class="container">
     <table>
 
@@ -9,7 +9,6 @@
             <th>Gebruikerstype</th>
             <th>Email</th>
             <th>Naam</th>
-            <th>Address</th>
             <th>Postcode</th>
             <th>Geboortedatum</th>
             <th>Telefoonnummer</th>
