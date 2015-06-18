@@ -23,6 +23,7 @@ public class NewCarServlet extends HttpServlet {
         synchronized (userController) {
             userController.newCar(user.getEmail(), carType, carPlate);
         }
+        req.getRequestDispatcher("/secure/customer.jsp").forward(req,resp);
         //todo: dispatcher
 
     }

@@ -47,6 +47,15 @@
         <servlet-name>DeleteUserServlet</servlet-name>
         <url-pattern>/removeuser</url-pattern>
     </servlet-mapping>
+
+    <servlet>
+        <servlet-name>NewCarServlet</servlet-name>
+        <servlet-class>servlets.carsServlets.NewCarServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>NewCarServlet</servlet-name>
+        <url-pattern>/addcar</url-pattern>
+    </servlet-mapping>
     <!-- TODO: map new servlets-->
 
     <!--filters-->
