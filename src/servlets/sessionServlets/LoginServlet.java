@@ -1,5 +1,6 @@
 package servlets.sessionServlets;
 
+import domain.users.Customer;
 import domain.users.User;
 import listeners.Data;
 import services.UserController;
@@ -32,9 +33,14 @@ public class LoginServlet extends HttpServlet {
                 try {
                     userController.isLoginValid(email, password);
                     req.getSession().setAttribute("current_user", userController.findUser(email));
-                    req.getServletContext().setAttribute("users",userController.getUsers());
-                    if (userController.findUser(email).getUserType() == User.userType.CUSTOMER)requestDispatcher = req.getRequestDispatcher("/secure/customer.jsp");
-                    if (userController.findUser(email).getUserType() == User.userType.OWNER)requestDispatcher = req.getRequestDispatcher("/secure/admin.jsp");
+                    //TODO fix this
+                    if (userController.findUser(email).getUserType() == User.userType.CUSTOMER){
+                        System.out.println("found customer, redirecting to customer.jsp");
+                        requestDispatcher = req.getRequestDispatcher("/secure/customer.jsp");
+
+                    }
+                    if (userController.findUser(email).getUserType() == User.userType.OWNER)
+                        requestDispatcher = req.getRequestDispatcher("/viewusers");
                     if (req.getAttribute("keep_email") != null) resp.addCookie(new Cookie("c_email", email));
                 } catch (LoginException e) {
                     req.setAttribute("login_error", e.getMessage());

@@ -268,13 +268,25 @@ public class UserController implements Serializable {
             ((Customer)findUser(email)).addCar(new Car(type,numberPlate));
     }
 
+    public Car findCar(String numberPlate){
+       ArrayList<Car>cars = new ArrayList<>();
+        users.stream().filter(user -> user instanceof Customer).forEach(user -> cars.addAll(((Customer) user).getCars()));
+        for(Car car:cars)
+            if (car.getNumberPlate().equals(numberPlate))
+                return car;
+        return null;
+    }
+
     /**
      * removes a car
      * @param email email of car owner
      * @param numberPlate numberplate of car
      */
     public void removeCar(String email,String numberPlate){
-        if (findUser(email) instanceof Customer)
+        if (findUser(email) instanceof Customer){
             ((Customer)findUser(email)).removeCar(numberPlate);
+            System.out.println("Car "+numberPlate+" removed from "+email);
+
+        }
     }
 }
