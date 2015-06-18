@@ -1,12 +1,9 @@
 package services;
 
 import domain.Product;
-import services.exceptions.ValidateException;
 
 import java.io.Serializable;
 import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.Objects;
 
 /**
  * Created by Jorrit Meulenbeld & Oussama Aalili on 18/06/15.
@@ -56,6 +53,17 @@ public class ProductController implements Serializable {
 
     public boolean productExists(String name){
         return products.stream().anyMatch(product -> product.getName().equals(name));
+    }
+
+
+    public ArrayList<Product> getAllProducts() {
+        return products;
+    }
+
+    public Product findProduct(String nameProduct) {
+        for(Product product : products)
+            if(product.getName().equals(nameProduct)) return product;
+        return null;
     }
 
 }
