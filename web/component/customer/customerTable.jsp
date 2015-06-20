@@ -25,45 +25,47 @@
                 <td>${user.getPostal()}</td>
                 <td>${user.getDateOfBirth()}</td>
                 <td>${user.getPhoneNumber()}</td>
-                <form action="/removeuser" id="/removeuser" method="post">
-                    <td><input type="submit" name="button" value="Verwijderen"/></td>
-                    <input type="hidden" name="user" value="${user}"/>
-                </form>
-                <form action="/edituser" id="/edituser" method="post">
-                    <td><input type="submit" name="button"  value="Aanpassen"/></td>
-                    <input type="hidden" name="user" value="${user}"/>
-                </form>
+                <td>
+                    <form action="/removeuser" id="/removeuser" method="post">
+                        <input type="submit" name="button" value="Verwijderen"/>
+                        <input type="hidden" name="user" value="${user}"/>
+                    </form>
+                </td>
+                <%--<form action="/edituser" id="/edituser" method="post">--%>
+                    <%--<td><input type="submit" name="button"  value="Aanpassen"/></td>--%>
+                    <%--<input type="hidden" name="user" value="${user}"/>--%>
+                <%--</form>--%>
             </tr>
         </c:forEach>
-        <form action="/adduser" id="/adduser" method="post">
-            <tr>
+        <%--<form action="/adduser" id="/adduser" method="post">--%>
+            <%--<tr>--%>
 
-                <td>
-                    <input type="checkbox" name="usertype" id="usertype"/> Monteur
-                </td>
-                <td>
-                    <input type="text" name="email" id="email" placeholder="Email"/>
-                </td>
-                <td>
-                    <input type="text" name="realname" id="realname" placeholder="Naam"/>
-                </td>
-                <td>
-                    <input type="text" name="address" id="address" placeholder="Adres"/>
-                </td>
-                <td>
-                    <input type="text" name="postal" id="postalcode" placeholder="Postcode"/>
-                </td>
-                <td>
-                <input type="date" name="date" id="date" value=""/>
-                </td>
-                <td>
-                    <input type="tel" name="phonenumber" id="phonenumber" placeholder="Telefoonnummer" />
-                </td>
-                <td>
-                    <input type="submit" name="button" value="Toevoegen" /></td>
+                <%--<td>--%>
+                    <%--<input type="checkbox" name="usertype" id="usertype"/> Monteur--%>
+                <%--</td>--%>
+                <%--<td>--%>
+                    <%--<input type="text" name="email" id="email" placeholder="Email"/>--%>
+                <%--</td>--%>
+                <%--<td>--%>
+                    <%--<input type="text" name="realname" id="realname" placeholder="Naam"/>--%>
+                <%--</td>--%>
+                <%--<td>--%>
+                    <%--<input type="text" name="address" id="address" placeholder="Adres"/>--%>
+                <%--</td>--%>
+                <%--<td>--%>
+                    <%--<input type="text" name="postal" id="postalcode" placeholder="Postcode"/>--%>
+                <%--</td>--%>
+                <%--<td>--%>
+                <%--<input type="date" name="date" id="date" value=""/>--%>
+                <%--</td>--%>
+                <%--<td>--%>
+                    <%--<input type="tel" name="phonenumber" id="phonenumber" placeholder="Telefoonnummer" />--%>
+                <%--</td>--%>
+                <%--<td>--%>
+                    <%--<input type="submit" name="button" value="Toevoegen" /></td>--%>
 
-            </tr>
-        </form>
+            <%--</tr>--%>
+        <%--</form>--%>
     </table>
 
 

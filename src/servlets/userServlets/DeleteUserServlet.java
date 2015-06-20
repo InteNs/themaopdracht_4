@@ -9,7 +9,6 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
-import java.util.ConcurrentModificationException;
 
 /**
  * Created by InteNs on 05.jun.2015.
@@ -20,11 +19,9 @@ public class DeleteUserServlet extends HttpServlet {
         ServletContext servletContext = req.getServletContext();
         UserController userController = ((Data) servletContext.getAttribute("data")).getUserController();
         synchronized (userController){
-            try {
                 userController.removeUser(req.getParameter("user"));
-            } catch (ConcurrentModificationException e) {
-            }
         }
+
         req.getRequestDispatcher("/viewusers").forward(req,resp);
     }
 }

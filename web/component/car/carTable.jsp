@@ -10,19 +10,22 @@
       <th>Verwijderen</th>
       <th>Aanpassen</th>
     </tr>
-    <c:out value="${sessionScope.current_user.cars}"/>
-    <c:forEach items="${sessionScope.current_user.cars}" var="car">
+    <c:forEach items="${sessionScope.cars}" var="car">
       <tr>
         <td>${car.getType()}</td>
         <td>${car.getNumberPlate()}</td>
-        <form action="/removecar" id="removecar" method="post">
-          <td><input type="submit" name="button" value="Verwijderen"/></td>
-          <input type="hidden" name="car" value="${car}"/>
-        </form>
-        <%--<form action="/editcar" id="/editcar" method="post">--%>
-          <%--<td><input type="submit" name="button"  value="Aanpassen"/></td>--%>
-          <%--<input type="hidden" name="car" value="${car}"/>--%>
-        <%--</form>--%>
+          <td>
+              <form action="/removecar" id="removecar" method="post">
+                  <input type="submit" name="button" value="Verwijderen"/>
+                  <input type="hidden" name="selectedcar" value="${car}"/>
+              </form>
+          </td>
+          <%--<td>--%>
+              <%--<form action="/editcar" id="/editcar" method="post">--%>
+                  <%--<input type="submit" name="button"  value="Aanpassen"/>--%>
+                  <%--<input type="hidden" name="car" value="${car}"/>--%>
+              <%--</form>--%>
+          <%--</td>--%>
       </tr>
     </c:forEach>
     <form action="/addcar" id="addcar" method="post">
