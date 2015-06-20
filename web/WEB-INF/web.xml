@@ -94,5 +94,14 @@
         <filter-name>Filterindex</filter-name>
         <url-pattern>/index.jsp</url-pattern>
     </filter-mapping>
+    <!--filters-->
+    <filter>
+        <filter-name>FilterForSecurity</filter-name>
+        <filter-class>filters.SecurityFilter</filter-class>
+    </filter>
+    <filter-mapping>
+        <filter-name>FilterForSecurity</filter-name>
+        <url-pattern>/secure/*</url-pattern>
+    </filter-mapping>
 
 </web-app>
