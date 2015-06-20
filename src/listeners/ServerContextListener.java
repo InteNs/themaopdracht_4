@@ -1,5 +1,8 @@
 package listeners;
 
+import domain.users.Customer;
+import domain.users.User;
+
 import javax.servlet.ServletContext;
 import javax.servlet.ServletContextEvent;
 import javax.servlet.ServletContextListener;
@@ -42,7 +45,14 @@ public class ServerContextListener implements ServletContextListener {
             System.out.println("no data object found, making a new one...");
                 servletContext.setAttribute("data",new Data());
         }
-        else System.out.println("data found, loading...");
+        else {
+            System.out.println("data found, loading...");
+            for (User user:((Data)servletContext.getAttribute("data")).getUserController().getUsers()){
+                if(user instanceof Customer)
+                    System.out.println("user: "+user+"cars: "+((Customer)user).getCars());
+            }
+
+        }
 
         if (!((Data)servletContext.getAttribute("data")).getUserController().userExists("admin@admin.nl")) {
             ((Data)servletContext.getAttribute("data")).getUserController().newAdmin();

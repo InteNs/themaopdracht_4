@@ -10,7 +10,7 @@ public class Customer extends User implements Serializable {
     private LocalDate lastVisit;
     private LocalDate lastMaintenance;
     private boolean isOnBlackList;
-    private final ArrayList<Car> cars;
+    private ArrayList<Car> cars;
 
     public Customer(String email, String password, String realName, LocalDate dateOfBirth, String address, String postal, String phoneNumber) {
         super(User.userType.CUSTOMER,email, password,realName, dateOfBirth, address, postal, phoneNumber);
@@ -43,9 +43,7 @@ public class Customer extends User implements Serializable {
     }
 
     public void removeCar(String numberPlate){
-        cars.stream()
-                .filter(car -> car.getNumberPlate().equals(numberPlate))
-                .forEach(cars::remove);
+        for (Car car:cars)if (car.getNumberPlate().equals(numberPlate))cars.remove(car);
     }
 
     public void setLastVisit(LocalDate lastVisit) {
