@@ -72,6 +72,13 @@ public class ProductController implements Serializable {
     public void ammendProduct(String productName, int amount, double price) {
 
     }
+
+    public void removeProduct(String name) {
+        for (Product product : products)
+            if(product.getName().equals(name))
+                products.remove(product);
+
+    }
 }
 
 

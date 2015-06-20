@@ -42,7 +42,7 @@
           <%-- Remove product --%>
         <form action="/removeproduct" id="/removeproduct" method="post">
           <td><input type="submit" name="button" value="Verwijderen"/></td>
-          <input type="hidden" name="product" value="${product}"/>
+          <input type="hidden" name="name" value="${product.getName()}"/>
         </form>
 
       </tr>

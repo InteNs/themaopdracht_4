@@ -1,5 +1,9 @@
 package servlets.productServlets;
 
+import listeners.Data;
+import services.ProductController;
+import services.exceptions.ValidateException;
+
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
@@ -13,7 +17,16 @@ import java.io.IOException;
 public class DeleteProductServlet extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        super.doPost(req, resp);
+    ProductController productController = ((Data)req.getServletContext().getAttribute("data")).getProductController();
+        synchronized (ProductController) {
+            try {
+                ProductController.removeProduct(req.getParameter("name"));
+            } catch (ValidateException e) {
+                e.printStackTrace();
+            }
+
+            }
+        }
+        req.getRequestDispatcher("/secure/admin.jsp").forward(req,resp);
     }
-}
 
