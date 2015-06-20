@@ -50,13 +50,13 @@
     <!-- TODO: map new servlets-->
 
     <!--filters-->
-    <!--<filter>-->
-        <!--<filter-name>FilterForSecurity</filter-name>-->
-        <!--<filter-class>filters.SecurityFilter</filter-class>-->
-    <!--</filter>-->
-    <!--<filter-mapping>-->
-        <!--<filter-name>FilterForSecurity</filter-name>-->
-        <!--<url-pattern>/secure/*</url-pattern>-->
-    <!--</filter-mapping>-->
+    <filter>
+        <filter-name>FilterForSecurity</filter-name>
+        <filter-class>filters.SecurityFilter</filter-class>
+    </filter>
+    <filter-mapping>
+        <filter-name>FilterForSecurity</filter-name>
+        <url-pattern>/secure/*</url-pattern>
+    </filter-mapping>
 
 </web-app>
