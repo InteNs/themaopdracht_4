@@ -103,7 +103,7 @@
     </servlet>
     <servlet-mapping>
         <servlet-name>DeleteProductServlet</servlet-name>
-        <url-pattern>/deleteproduct</url-pattern>
+        <url-pattern>/removeproduct</url-pattern>
     </servlet-mapping>
 
     <!--NewProduct -->

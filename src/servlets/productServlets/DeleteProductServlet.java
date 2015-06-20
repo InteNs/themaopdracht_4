@@ -18,6 +18,7 @@ public class DeleteProductServlet extends HttpServlet {
     ProductController productController = ((Data)req.getServletContext().getAttribute("data")).getProductController();
         synchronized (productController) {
                 productController.removeProduct(req.getParameter("name"));
+
             }
         req.setAttribute("products",((Data)req.getServletContext().getAttribute("data")).getProductController().getAllProducts());
         req.getRequestDispatcher("/secure/product.jsp").forward(req, resp);

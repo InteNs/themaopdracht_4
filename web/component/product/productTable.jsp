@@ -33,19 +33,21 @@
           <input type="hidden" name="product" value="${product}"/>
         </form>
 
-        <%-- Ammend product --%>
+          <%-- Ammend product --%>
         <form action="/editproduct" id="/editproduct" method="post">
           <td><input type="submit" name="button"  value="Aanpassen"/></td>
           <input type="hidden" name="product" value="${product}"/>
         </form>
 
           <%-- Remove product --%>
-        <form action="/removeproduct" id="/removeproduct" method="post">
-          <td><input type="submit" name="button" value="Verwijderen"/></td>
-          <input type="hidden" name="name" value="${product.getName()}"/>
-        </form>
+        <td>
+          <form action="/removeproduct" id="/removeproduct" method="post">
+            <input type="submit" name="button" value="Verwijderen"/>
+            <input type="hidden" name="name" value="${product.getName()}"/>
+          </form>
+        </td>
 
       </tr>
-      </c:forEach>
-    </table>
+    </c:forEach>
+  </table>
 </div>
