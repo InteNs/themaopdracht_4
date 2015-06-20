@@ -24,15 +24,15 @@ public class AmmendProductServlet extends HttpServlet{
         int amount = Integer.parseInt(req.getParameter("amount"));
         double price = Double.parseDouble(req.getParameter("price"));
         synchronized (productController) {
-//            try {
-//                productController.ammendProduct(productName, amount, price, productController.findProduct());
-//            } catch (ValidateException e) {
-//                e.printStackTrace();
-//                for(Map.Entry<String, String> entry : e.getErrorMap().entrySet())
-//                    req.setAttribute(entry.getKey(),entry.getValue());
-//            }
+            try {
+                productController.ammendProduct(productName, amount, price, productController.findProduct());
+            } catch (ValidateException e) {
+                e.printStackTrace();
+                for(Map.Entry<String, String> entry : e.getErrorMap().entrySet())
+                    req.setAttribute(entry.getKey(),entry.getValue());
+            }
             System.out.println("ik pas iets toe");
         }
-        req.getRequestDispatcher("./secure/product.jsp").forward(req,resp);
+        req.getRequestDispatcher("./secure/product.jsp").forward(req, resp);
     }
 }

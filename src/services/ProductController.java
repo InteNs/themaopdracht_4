@@ -68,9 +68,12 @@ public class ProductController implements Serializable {
             if (product.getName().equals(nameProduct)) return product;
         return null;
     }
-
-    public void ammendProduct(String productName, int amount, double price) {
-
+    
+    public void ammendProduct(String originalProductName, String productName, int amount, double price) {
+        Product product = findProduct(originalProductName);
+        product.setName(productName);
+        product.setAmount(amount);
+        product.setPrice(price);
     }
 
     public void removeProduct(String name) {
@@ -80,5 +83,3 @@ public class ProductController implements Serializable {
 
     }
 }
-
-
