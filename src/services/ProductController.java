@@ -108,7 +108,9 @@ public class ProductController implements Serializable {
 
     public void removeProduct(String name) {
         for (Product product : products)
-            if(product.getName().equals(name))
+            if(product.getName().equals(name)) {
                 products.remove(product);
+                return;
+            }
     }
 }
