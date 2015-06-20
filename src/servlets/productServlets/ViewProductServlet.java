@@ -1,4 +1,4 @@
-package servlets.userServlets;
+package servlets.productServlets;
 
 import listeners.Data;
 
@@ -9,13 +9,13 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
 /**
- * Created by InteNs on 18.jun.2015.
+ * Created by Jorrit Meulenbeld on 18/06/15.
+ * TODO: ViewProductServlet
  */
-public class viewUsersServlet extends HttpServlet{
-
+public class ViewProductServlet extends HttpServlet{
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        req.setAttribute("users",((Data)req.getServletContext().getAttribute("data")).getUserController().getUsers());
-        req.getRequestDispatcher("/secure/user.jsp").forward(req,resp);
+        req.setAttribute("products",((Data)req.getServletContext().getAttribute("data")).getProductController().getAllProducts());
+        req.getRequestDispatcher("/secure/product.jsp").forward(req, resp);
     }
 }
