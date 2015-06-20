@@ -8,5 +8,8 @@
 <body>
 <jsp:include page="/component/navigation/navigation.jsp"/>
 <jsp:include page="/component/product/productTable.jsp"/>
+<jsp:include page="/component/product/addProductForm.jsp"/>
+<jsp:include page="/component/product/ammendProductForm.jsp"/>
+<jsp:include page="/component/product/productDetails.jsp"/>
 </body>
 </html>

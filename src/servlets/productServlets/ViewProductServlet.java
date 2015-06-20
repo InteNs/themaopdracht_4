@@ -1,5 +1,7 @@
 package servlets.productServlets;
 
+import listeners.Data;
+
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
@@ -13,11 +15,7 @@ import java.io.IOException;
 public class ViewProductServlet extends HttpServlet{
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-
-
-        super.doPost(req, resp);
+        req.setAttribute("products",((Data)req.getServletContext().getAttribute("data")).getProductController().getAllProducts());
+        req.getRequestDispatcher("/secure/product.jsp").forward(req, resp);
     }
-
-    //    req.getServletContext().setAttribute("users",userController.getUsers());
-
 }
