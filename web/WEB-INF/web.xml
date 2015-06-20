@@ -113,7 +113,7 @@
     </servlet>
     <servlet-mapping>
         <servlet-name>NewProductServlet</servlet-name>
-        <url-pattern>/newproduct</url-pattern>
+        <url-pattern>/addproduct</url-pattern>
     </servlet-mapping>
 
     <!--ViewProductDetails -->

@@ -25,6 +25,7 @@ public class NewProductServlet extends HttpServlet {
         synchronized (productController) {
             try {
                 productController.addProduct(productName, amount, price);
+                System.out.println("Ik doe het hoor");
             } catch (ValidateException e) {
                 e.printStackTrace();
                 for(Map.Entry<String, String> entry : e.getErrorMap().entrySet())
