@@ -16,6 +16,6 @@ public class viewUsersServlet extends HttpServlet{
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         req.setAttribute("users",((Data)req.getServletContext().getAttribute("data")).getUserController().getUsers());
-        req.getRequestDispatcher("/secure/admin.jsp").forward(req,resp);
+        req.getRequestDispatcher("/secure/user.jsp").forward(req,resp);
     }
 }
