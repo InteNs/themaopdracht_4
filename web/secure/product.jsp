@@ -1,16 +1,12 @@
-<%--
-  Created by IntelliJ IDEA.
-  User: oussama
-  Date: 18-6-2015
-  Time: 12:28
-  To change this template use File | Settings | File Templates.
---%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
-    <title></title>
+  <title>AutoTotaalDienst</title>
+  <link rel="stylesheet" href="<c:url value="/global.css"/>"/>
 </head>
 <body>
-hoi ik
+<jsp:include page="/component/navigation/navigation.jsp"/>
+<jsp:include page="/component/product/productTable.jsp"/>
 </body>
 </html>

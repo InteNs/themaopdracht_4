@@ -30,8 +30,7 @@ public class NewProductServlet extends HttpServlet {
                 for(Map.Entry<String, String> entry : e.getErrorMap().entrySet())
                     req.setAttribute(entry.getKey(),entry.getValue());
             }
-            System.out.println("ik voeg iets toe");
         }
-        req.getRequestDispatcher("./secure/product.jsp").forward(req,resp);
+        req.getRequestDispatcher("/secure/product.jsp").forward(req,resp);
     }
 }
