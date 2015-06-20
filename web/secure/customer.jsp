@@ -11,5 +11,6 @@
   <jsp:include page="/component/welcome/welcomePanel.jsp"/>
 </c:if>
 <jsp:include page="/component/car/carTable.jsp"/>
+
 </body>
 </html>

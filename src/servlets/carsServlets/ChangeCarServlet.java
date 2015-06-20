@@ -12,9 +12,9 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
 /**
- * Created by InteNs on 05.jun.2015.
+ * Created by InteNs on 18.jun.2015.
  */
-public class NewCarServlet extends HttpServlet {
+public class ChangeCarServlet extends HttpServlet{
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         UserController userController = ((Data)req.getServletContext().getAttribute("data")).getUserController();
@@ -36,4 +36,4 @@ public class NewCarServlet extends HttpServlet {
         req.getRequestDispatcher("/secure/customer.jsp").forward(req,resp);
 
     }
-}
+    }

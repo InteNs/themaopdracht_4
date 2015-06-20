@@ -1,9 +1,11 @@
 package domain;
 
+import java.io.Serializable;
+
 /**
  * Created by InteNs on 05.jun.2015.
  */
-public class Car {
+public class Car implements Serializable {
 
     private String type;
     private String numberPlate;
