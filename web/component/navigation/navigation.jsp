@@ -4,11 +4,11 @@
 <div class="containernavigation">
         <span class="navigationtitle">
             <h3>AutoTotaalDienst</h3>
-            <c:if test="${not empty current_user}" >
-                <caption> - Gebruiker: ${current_user.getRealName()}</caption>
+            <c:if test="${not empty sessionScope.current_user}" >
+                <caption> - Gebruiker: ${sessionScope.current_user}</caption>
             </c:if>
         </span>
-    <c:if test="${not empty current_user}">
+    <c:if test="${not empty sessionScope.current_user}">
         <span class="floatright">
         <form action="/logout" id="navigation" method="post">
         <span class="navigationitem">

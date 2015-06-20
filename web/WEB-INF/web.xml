@@ -65,6 +65,14 @@
         <servlet-name>DeleteCarServlet</servlet-name>
         <url-pattern>/removecar</url-pattern>
     </servlet-mapping>
+    <servlet>
+        <servlet-name>viewCarsServlet</servlet-name>
+        <servlet-class>servlets.carsServlets.viewCarsServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>viewCarsServlet</servlet-name>
+        <url-pattern>/viewcars</url-pattern>
+    </servlet-mapping>
 
     <!--edit car-->
     <servlet>
@@ -85,15 +93,6 @@
     </servlet-mapping>
     <!-- TODO: map new servlets-->
 
-    filters
-    <filter>
-        <filter-name>Filterindex</filter-name>
-        <filter-class>filters.loggedinFilter</filter-class>
-    </filter>
-    <filter-mapping>
-        <filter-name>Filterindex</filter-name>
-        <url-pattern>/index.jsp</url-pattern>
-    </filter-mapping>
     <!--filters-->
     <filter>
         <filter-name>FilterForSecurity</filter-name>

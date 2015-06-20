@@ -33,7 +33,7 @@ public class NewCarServlet extends HttpServlet {
             }
             req.setAttribute("cars", ((Customer) user).getCars());
         }
-        req.getRequestDispatcher("/secure/customer.jsp").forward(req,resp);
+        req.getRequestDispatcher("/viewcars").forward(req,resp);
 
     }
 }

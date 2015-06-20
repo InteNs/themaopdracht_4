@@ -5,12 +5,15 @@ import domain.users.Customer;
 import domain.users.Mechanic;
 import domain.users.Owner;
 import domain.users.User;
-import services.exceptions.*;
+import services.exceptions.LoginException;
+import services.exceptions.ValidateException;
 
 import java.io.Serializable;
 import java.time.LocalDate;
-import java.time.LocalDateTime;
-import java.util.*;
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Objects;
 
 /**
  * Created by InteNs on 04.jun.2015.
@@ -253,8 +256,10 @@ public class UserController implements Serializable {
      */
     public void removeUser(String email) {
         for (User user : users)
-                if(user.getEmail().equals(email))
+                if(user.getEmail().equals(email)){
                     users.remove(user);
+                    return;
+                }
     }
 
     /**
@@ -267,7 +272,9 @@ public class UserController implements Serializable {
         if (findUser(email) instanceof Customer)
             ((Customer)findUser(email)).addCar(new Car(type,numberPlate));
     }
-
+    public List<Car> getOwnedCars(User customer){
+        return null;
+    }
     public Car findCar(String numberPlate){
        ArrayList<Car>cars = new ArrayList<>();
         users.stream().filter(user -> user instanceof Customer).forEach(user -> cars.addAll(((Customer) user).getCars()));
