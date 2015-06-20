@@ -14,6 +14,7 @@ import java.util.Map;
 
 /**
  * Created by InteNs on 05.jun.2015.
+ * TODO: rewrite for seperate form
  */
 public class newUserServlet extends HttpServlet {
     @Override

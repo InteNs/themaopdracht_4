@@ -5,12 +5,15 @@ import domain.users.Customer;
 import domain.users.Mechanic;
 import domain.users.Owner;
 import domain.users.User;
-import services.exceptions.*;
+import services.exceptions.LoginException;
+import services.exceptions.ValidateException;
 
 import java.io.Serializable;
 import java.time.LocalDate;
-import java.time.LocalDateTime;
-import java.util.*;
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Objects;
 
 /**
  * Created by InteNs on 04.jun.2015.
@@ -123,8 +126,8 @@ public class UserController implements Serializable {
      * creates a new admin(hardcoded)
      */
     public void newAdmin(){
-         users.add(new Owner("admin@admin.nl","admin","admin",LocalDate.now(),"admin","admin","admin"));
-     }
+        users.add(new Owner("admin@admin.nl","admin","admin",LocalDate.now(),"admin","admin","admin"));
+    }
 
     /**
      * create a new customer
@@ -253,8 +256,10 @@ public class UserController implements Serializable {
      */
     public void removeUser(String email) {
         for (User user : users)
-                if(user.getEmail().equals(email))
-                    users.remove(user);
+            if(user.getEmail().equals(email)) {
+                users.remove(user);
+                return;
+            }
     }
 
     /**
@@ -268,8 +273,13 @@ public class UserController implements Serializable {
             ((Customer)findUser(email)).addCar(new Car(type,numberPlate));
     }
 
+    /**
+     * find all cars with the corresponding numberplate
+     * @param numberPlate searchword
+     * @return null if car doesn't exist, the car otherwise
+     */
     public Car findCar(String numberPlate){
-       ArrayList<Car>cars = new ArrayList<>();
+        ArrayList<Car>cars = new ArrayList<>();
         users.stream().filter(user -> user instanceof Customer).forEach(user -> cars.addAll(((Customer) user).getCars()));
         for(Car car:cars)
             if (car.getNumberPlate().equals(numberPlate))

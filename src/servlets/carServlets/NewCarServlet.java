@@ -1,6 +1,5 @@
-package servlets.carsServlets;
+package servlets.carServlets;
 
-import domain.users.Customer;
 import domain.users.User;
 import listeners.Data;
 import services.UserController;
@@ -22,18 +21,11 @@ public class NewCarServlet extends HttpServlet {
         String carPlate= req.getParameter("numberplate");
         User user = (User)req.getSession().getAttribute("current_user");
         synchronized (userController) {
-            //todo: check if exists
-            if (userController.findCar(carPlate)==null) {
+            if (userController.findCar(carPlate)==null)
                 userController.newCar(user.getEmail(), carType, carPlate);
-                System.out.println("car doesn't exist");
-            }
-            else {
-                System.out.println("car exists");
-                req.setAttribute("car_error","kenteken bestaat al");
-            }
-            req.setAttribute("cars", ((Customer) user).getCars());
+            else req.setAttribute("car_error","kenteken bestaat al");
         }
-        req.getRequestDispatcher("/secure/customer.jsp").forward(req,resp);
+        req.getRequestDispatcher("/viewcars").forward(req,resp);
 
     }
 }

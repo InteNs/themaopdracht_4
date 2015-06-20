@@ -3,7 +3,7 @@
 <link rel="stylesheet" href="<c:url value="/component/form.css"/>"/>
 
 <div class="container">
-    <form action="/login" id="/login" method="post">
+    <form action="<c:url value="/login"/>" id="/login" method="post">
         <fieldset name="Login">
             <legend>Login</legend>
             <div class="p">
@@ -16,15 +16,12 @@
             </div>
             <div class="p">
                 <label class="formlabel" for="staylogged">&nbsp;</label>
-                <input class="checkbox" type="checkbox" name="staylogged" id="staylogged">onthoud mij</input>
+                <input class="checkbox" type="checkbox" name="staylogged" id="staylogged"/>onthoud mij
             </div>
             <div class="p">
                 <label class="formlabel" for="login">&nbsp;</label>
                 <input class="button" type="submit" name="button" id="login" value="Login"/>
-            </div>
-            <div class="p">
-                <label class="formlabel" for="register">Klik hier om te</label>
-                <input class="button" type="submit" name="button" id="register" value="Registreren"/>
+                <a href="<c:url value="/component/register/register.jsp"/>"><input type="button" class="button" value="Registreren" /></a>
             </div>
         </fieldset>
     </form>

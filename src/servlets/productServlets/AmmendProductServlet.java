@@ -27,6 +27,6 @@ public class AmmendProductServlet extends HttpServlet{
             productController.ammendProduct(originalProductName, productName, amount, price);
         }
         req.setAttribute("products",((Data)req.getServletContext().getAttribute("data")).getProductController().getAllProducts());
-        req.getRequestDispatcher("./secure/product.jsp").forward(req, resp);
+        req.getRequestDispatcher("/viewproducts").forward(req, resp);
     }
 }

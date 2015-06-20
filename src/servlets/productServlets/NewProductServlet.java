@@ -19,19 +19,17 @@ public class NewProductServlet extends HttpServlet {
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         ProductController productController = ((Data)req.getServletContext().getAttribute("data")).getProductController();
         String productName = req.getParameter("productname");
-        int amount = Integer.parseInt(req.getParameter("amount"));
-        double price = Double.parseDouble(req.getParameter("price"));
-        // TODO: try/catch for errors in adding Products
+        String amount =      req.getParameter("amount");
+        String price =       req.getParameter("price");
         synchronized (productController) {
             try {
                 productController.addProduct(productName, amount, price);
             } catch (ValidateException e) {
-                e.printStackTrace();
                 for(Map.Entry<String, String> entry : e.getErrorMap().entrySet())
                     req.setAttribute(entry.getKey(),entry.getValue());
+                req.getRequestDispatcher("/secure/product.jsp").forward(req,resp);
             }
         }
-        req.setAttribute("products",((Data)req.getServletContext().getAttribute("data")).getProductController().getAllProducts());
-        req.getRequestDispatcher("/secure/product.jsp").forward(req,resp);
+        req.getRequestDispatcher("/viewproducts").forward(req,resp);
     }
 }

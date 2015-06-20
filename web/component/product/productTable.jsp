@@ -10,42 +10,41 @@
 <link rel="stylesheet" href="<c:url value="/global.css"/>"/>
 <link rel="stylesheet" href="<c:url value="/component/table.css"/>"/>
 <div class="container">
-  <table>
+    <table>
 
-    <tr>
-      <th>Naam</th>
-      <th>Aantal</th>
-      <th>Prijs</th>
-      <th>Details</th>
-      <th>Verwijderen</th>
-      <th>Aanpassen</th>
-    </tr>
+        <tr>
+            <th>Naam</th>
+            <th>Aantal</th>
+            <th>Prijs</th>
+            <th>Details</th>
+            <th>Verwijderen</th>
+            <th>Aanpassen</th>
+        </tr>
 
-    <c:forEach items="${products}" var="product">
-      <tr>
-        <td>${product.getName()}</td>
-        <td>${product.getAmount()}</td>
-        <td>${product.getPrice()}</td>
+        <c:forEach items="${requestScope.products}" var="product">
+            <tr>
+                <td>${product.getName()}</td>
+                <td>${product.getAmount()}</td>
+                <td>${product.getPrice()}</td>
 
-          <%-- Productdetails --%>
-        <form action="/productdetails" id="/productdetails" method="post">
-          <td><input type="submit" name="button" value="Details"/></td>
-          <input type="hidden" name="product" value="${product}"/>
-        </form>
+                    <%-- Productdetails --%>
+                <td><form action="<c:url value="/productdetails"/>" id="/productdetails" method="post">
+                    <input type="submit" name="button" value="Details"/>
+                    <input type="hidden" name="product" value="${product}"/>
+                </form></td>
 
-        <%-- Ammend product --%>
-        <form action="/editproduct" id="/editproduct" method="post">
-          <td><input type="submit" name="button"  value="Aanpassen"/></td>
-          <input type="hidden" name="product" value="${product}"/>
-        </form>
+                    <%-- Ammend product --%>
+                <td><form action="<c:url value="/editproduct"/>" id="/editproduct" method="post">
+                    <input type="submit" name="button"  value="Aanpassen"/>
+                    <input type="hidden" name="product" value="${product}"/>
+                </form></td>
 
-          <%-- Remove product --%>
-        <form action="/removeproduct" id="/removeproduct" method="post">
-          <td><input type="submit" name="button" value="Verwijderen"/></td>
-          <input type="hidden" name="name" value="${product.getName()}"/>
-        </form>
-
-      </tr>
-      </c:forEach>
+                    <%-- Remove product --%>
+                <td><form action="<c:url value="/removeproduct"/>" id="/removeproduct" method="post">
+                    <input type="submit" name="button" value="Verwijderen"/>
+                    <input type="hidden" name="name" value="${product.getName()}"/>
+                </form></td>
+            </tr>
+        </c:forEach>
     </table>
 </div>

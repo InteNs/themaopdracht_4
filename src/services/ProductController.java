@@ -1,6 +1,5 @@
 package services;
 
-import com.sun.org.apache.xpath.internal.SourceTree;
 import domain.Product;
 import services.exceptions.ValidateException;
 
@@ -24,34 +23,47 @@ public class ProductController implements Serializable {
 
     /**
      * Create new product
-     *
-     * @param name
-     * @param amount
-     * @param price
+     *  @param name name of the product
+     * @param stringAmount number of products(in stringformat)
+     * @param stringPrice  price of the product(in stringformat)
      */
-    public void addProduct(String name, int amount, double price) throws ValidateException {
+    public void addProduct(String name, String stringAmount, String stringPrice) throws ValidateException {
         boolean succes = true;
         String ERROR_NULL = "Dit veld mag niet leeg zijn!";
+        String ERROR_NUM = "vul een getal in!";
+        int amount = 0;
+        double price = 0;
         HashMap<String, String> errorMap = new HashMap<>();
         if (productExists(name)) {
             succes = false;
-
             errorMap.put("name_error", "Deze naam bestaat al in ons systeem!");
         }
         if (Objects.equals(name, "")) {
             succes = false;
             errorMap.put("name_error", ERROR_NULL);
         }
-        if (Objects.equals(amount, "")) {
+        if (Objects.equals(stringAmount, "")) {
             succes = false;
             errorMap.put("amount_error", ERROR_NULL);
         }
-        if (Objects.equals(price, "")) {
+        if (Objects.equals(stringPrice, "")) {
             succes = false;
             errorMap.put("price_error", ERROR_NULL);
         }
+        try {
+            amount = Integer.parseInt(stringAmount);
+        } catch (NumberFormatException e) {
+            succes = false;
+            errorMap.put("amount_error",ERROR_NUM);
+        }
+        try {
+            price = Double.parseDouble(stringPrice);
+        } catch (NumberFormatException e) {
+            succes = false;
+            errorMap.put("price_error", ERROR_NUM);
+        }
         if (succes) {
-           Product test = new Product(name, amount, price);
+           Product test = new Product(name, amount,price);
             products.add(test);
             System.out.println(test);
 
@@ -82,16 +94,15 @@ public class ProductController implements Serializable {
      * @param name of the product to find
      * @return the product with the given name
      */
-    public Product findProduct(String nameProduct) {
+    public Product findProduct(String name) {
         for (Product product : products)
-            if (product.getName().equals(nameProduct)) return product;
+            if (product.getName().equals(name)) return product;
         return null;
     }
 
     /**
      * ammend a product
      * @param originalProductName of the product to find
-     * @return the product with the given name,amount,price
      */
     public void ammendProduct(String originalProductName, String productName, int amount, double price) {
         Product product = findProduct(originalProductName);
@@ -108,7 +119,9 @@ public class ProductController implements Serializable {
 
     public void removeProduct(String name) {
         for (Product product : products)
-            if(product.getName().equals(name))
+            if(product.getName().equals(name)) {
                 products.remove(product);
+                return;
+            }
     }
 }

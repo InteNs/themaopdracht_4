@@ -1,3 +1,4 @@
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%--
   Created by IntelliJ IDEA.
   User: Jorrit Meulenbeld
@@ -5,25 +6,30 @@
   Time: 21:10
   To change this template use File | Settings | File Templates.
 --%>
-<div style="margin:auto auto; margin-top:10px;">
-  <form action="/viewusers" id="viewusers2" method="post">
-    <span class="navigationitem">
-      <input type="submit" name="button" value="Gebruikers"/>
-    </span>
-  </form>
-  <form action="/addcar" id="addcar2" method="post">
-    <span class="navigationitem">
-      <input type="submit" name="button" value="Auto toevoegen"/>
-    </span>
-  </form>
-  <form action="/viewproduct" id="viewproduct2" method="post">
-    <span class="navigationitem">
-      <input type="submit" name="button" value="Producten"/>
-    </span>
-  </form>
-  <form action="/logout" id="logout2" method="post">
-    <span class="navigationitem">
-      <input type="submit" name="button" value="Uitloggen"/>
-    </span>
-  </form>
+<div>
+    <c:if test="${sessionScope.current_user.getUserType() == 'OWNER'}">
+        <form action="<c:url value="/viewusers"/>" method="post">
+            <span class="navigationitem">
+              <input type="submit" name="button" value="Gebruikers"/>
+            </span>
+        </form>
+
+        <form action="<c:url value="/viewproducts"/>" method="post">
+            <span class="navigationitem">
+              <input type="submit" name="button" value="Producten"/>
+            </span>
+        </form>
+    </c:if>
+    <c:if test="${sessionScope.current_user.getUserType() == 'CUSTOMER'}">
+    <form action="<c:url value="/viewcars"/>" method="post">
+            <span class="navigationitem">
+              <input type="submit" name="button" value="Autos"/>
+            </span>
+    </form>
+    </c:if>
+    <form action="<c:url value="/logout"/>" method="post">
+        <span class="navigationitem">
+          <input type="submit" name="button" value="Uitloggen"/>
+        </span>
+    </form>
 </div>

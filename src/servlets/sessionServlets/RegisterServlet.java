@@ -36,8 +36,7 @@ public class RegisterServlet extends HttpServlet {
             synchronized (userController){userController.newCustomer(email, emailRepeat, password, passwordRepeat, realName, dateOfBirth, address, postal, phoneNumber);}
             requestDispatcher = req.getRequestDispatcher("/index.jsp");
         } catch (ValidateException e) {
-            req.setAttribute("register","register");
-            requestDispatcher = req.getRequestDispatcher("/index.jsp");
+            requestDispatcher = req.getRequestDispatcher("/component/register/register.jsp");
             for(Map.Entry<String, String> entry : e.getErrorMap().entrySet())
                 req.setAttribute(entry.getKey(),entry.getValue());
         }

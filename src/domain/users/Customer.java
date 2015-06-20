@@ -43,7 +43,11 @@ public class Customer extends User implements Serializable {
     }
 
     public void removeCar(String numberPlate){
-        for (Car car:cars)if (car.getNumberPlate().equals(numberPlate))cars.remove(car);
+        for(Car car:cars)
+            if (car.getNumberPlate().equals(numberPlate)) {
+                cars.remove(car);
+                return;
+            }
     }
 
     public void setLastVisit(LocalDate lastVisit) {

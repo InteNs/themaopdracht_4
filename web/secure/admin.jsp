@@ -7,7 +7,6 @@
 </head>
 <body>
 <jsp:include page="/component/navigation/navigation.jsp"/>
-<jsp:include page="/component/welcome/welcomePanel.jsp"/>
 <jsp:include page="/component/navigation/links.jsp"/>
 </body>
 </html>

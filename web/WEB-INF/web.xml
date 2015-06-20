@@ -50,31 +50,31 @@
     <!--add car-->
     <servlet>
         <servlet-name>NewCarServlet</servlet-name>
-        <servlet-class>servlets.carsServlets.NewCarServlet</servlet-class>
+        <servlet-class>servlets.carServlets.NewCarServlet</servlet-class>
     </servlet>
     <servlet-mapping>
         <servlet-name>NewCarServlet</servlet-name>
         <url-pattern>/addcar</url-pattern>
     </servlet-mapping>
+    <!--view car-->
+    <servlet>
+        <servlet-name>viewCarsServlet</servlet-name>
+        <servlet-class>servlets.carServlets.ViewCarsServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>viewCarsServlet</servlet-name>
+        <url-pattern>/viewcars</url-pattern>
+    </servlet-mapping>
     <!--remove car-->
     <servlet>
         <servlet-name>DeleteCarServlet</servlet-name>
-        <servlet-class>servlets.carsServlets.DeleteCarServlet</servlet-class>
+        <servlet-class>servlets.carServlets.DeleteCarServlet</servlet-class>
     </servlet>
     <servlet-mapping>
         <servlet-name>DeleteCarServlet</servlet-name>
         <url-pattern>/removecar</url-pattern>
     </servlet-mapping>
-
-    <!--edit car-->
-    <servlet>
-        <servlet-name>ChangeCarServlet</servlet-name>
-        <servlet-class>servlets.carsServlets.ChangeCarServlet</servlet-class>
-    </servlet>
-    <servlet-mapping>
-        <servlet-name>ChangeCarServlet</servlet-name>
-        <url-pattern>/editcar</url-pattern>
-    </servlet-mapping>
+    <!-- view users-->
     <servlet>
         <servlet-name>viewUsersServlet</servlet-name>
         <servlet-class>servlets.userServlets.viewUsersServlet</servlet-class>
@@ -103,7 +103,7 @@
     </servlet>
     <servlet-mapping>
         <servlet-name>DeleteProductServlet</servlet-name>
-        <url-pattern>/deleteproduct</url-pattern>
+        <url-pattern>/removeproduct</url-pattern>
     </servlet-mapping>
 
     <!--NewProduct -->
@@ -126,25 +126,16 @@
         <url-pattern>/viewproductdetails</url-pattern>
     </servlet-mapping>
 
-    <!--ViewProductDetails -->
+    <!--ViewProducts -->
     <servlet>
         <servlet-name>ViewProductServlet</servlet-name>
         <servlet-class>servlets.productServlets.ViewProductServlet</servlet-class>
     </servlet>
     <servlet-mapping>
         <servlet-name>ViewProductServlet</servlet-name>
-        <url-pattern>/viewproduct</url-pattern>
+        <url-pattern>/viewproducts</url-pattern>
     </servlet-mapping>
-    
-    <!-- filters -->
-    <filter>
-        <filter-name>Filterindex</filter-name>
-        <filter-class>filters.loggedinFilter</filter-class>
-    </filter>
-    <filter-mapping>
-        <filter-name>Filterindex</filter-name>
-        <url-pattern>/index.jsp</url-pattern>
-    </filter-mapping>
+
     <!--filters-->
     <filter>
         <filter-name>FilterForSecurity</filter-name>

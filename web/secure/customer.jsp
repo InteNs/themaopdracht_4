@@ -7,9 +7,6 @@
 </head>
 <body>
 <jsp:include page="/component/navigation/navigation.jsp"/>
-<c:if test="${empty current_page}">
-  <jsp:include page="/component/welcome/welcomePanel.jsp"/>
-</c:if>
 <jsp:include page="/component/car/carTable.jsp"/>
 
 </body>
