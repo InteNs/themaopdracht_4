@@ -3,7 +3,7 @@
 <link rel="stylesheet" href="<c:url value="/global.css"/>"/>
 <link rel="stylesheet" href="<c:url value="/component/table.css"/>"/>
 <a href="<c:url value="/secure/admin.jsp"/>"><input type="button" class="button" value="Terug" /></a>
-<%--<a href="<c:url value="/secure/addcar.jsp"/>"><input type="button" class="button" value="Auto Toevoegen" /></a>--%>
+<a href="<c:url value="/secure/addcar.jsp"/>"><input type="button" class="button" value="Auto Toevoegen" /></a>
 <div class="container">
     <table>
         <tr>
@@ -23,15 +23,5 @@
             </td>
         </tr>
         </c:forEach>
-        <form action="<c:url value="/addcar"/>" id="addcar" method="post">
-            <tr>
-                <td><input type="text" name="cartype" id="cartype" placeholder="Vul autotype in"/></td>
-                <td><input type="text" name="numberplate" id="numberplate" placeholder="Vul kenteken in"/></td>
-                <td>&nbsp;</td>
-                <td><input type="submit" name="button" value="Toevoegen" /></td>
-            </tr>
-        </form>
-        <label class="text"><c:out value="${requestScope.car_error}"/></label>
-
-
+    </table>
 </div>

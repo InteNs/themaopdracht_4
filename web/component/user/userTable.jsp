@@ -3,7 +3,7 @@
 <link rel="stylesheet" href="<c:url value="/global.css"/>"/>
 <link rel="stylesheet" href="<c:url value="/component/table.css"/>"/>
 <a href="<c:url value="/secure/admin.jsp"/>"><input type="button" class="button" value="Terug" /></a>
-<%--TODO <a href="<c:url value="/secure/adduser.jsp"/>"><input type="button" class="button" value="Genruiker Toevoegen" /></a>--%>
+<a href="<c:url value="/secure/adduser.jsp"/>"><input type="button" class="button" value="Gebruiker Toevoegen" /></a>
 <div class="container">
     <table>
         <tr>
@@ -13,8 +13,9 @@
             <th>Postcode</th>
             <th>Geboortedatum</th>
             <th>Telefoonnummer</th>
-            <th>Verwijderen</th>
+            <th>Details</th>
             <th>Aanpassen</th>
+            <th>Verwijderen</th>
         </tr>
         <c:forEach items="${requestScope.users}" var="user">
             <tr>
@@ -26,14 +27,22 @@
                 <td>${user.getDateOfBirth()}</td>
                 <td>${user.getPhoneNumber()}</td>
                 <td>
-                    <form action="<c:url value="/removeuser"/>" method="post">
-                        <input type="submit" name="button" value="Verwijderen"/>
+                    <%--TODO XML + servlet aanpassen--%>
+                    <form action="<c:url value="/userdetails"/>" method="post">
+                        <input type="submit" name="button" value="Details"/>
                         <input type="hidden" name="user" value="${pageScope.user}"/>
                     </form>
                 </td>
                 <td>
-                    <form action="<c:url value="/edituser"/>" method="post">
+                    <%--TODO XML + servlet aanpassen--%>
+                    <form action="<c:url value="/ammenduser"/>" method="post">
                         <input type="submit" name="button"  value="Aanpassen"/>
+                        <input type="hidden" name="user" value="${pageScope.user}"/>
+                    </form>
+                </td>
+                <td>
+                    <form action="<c:url value="/removeuser"/>" method="post">
+                        <input type="submit" name="button" value="Verwijderen"/>
                         <input type="hidden" name="user" value="${pageScope.user}"/>
                     </form>
                 </td>
