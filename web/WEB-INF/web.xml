@@ -70,11 +70,20 @@
     <!-- view users-->
     <servlet>
         <servlet-name>viewUsersServlet</servlet-name>
-        <servlet-class>servlets.userServlets.viewUsersServlet</servlet-class>
+        <servlet-class>servlets.userServlets.ViewUsersServlet</servlet-class>
     </servlet>
     <servlet-mapping>
         <servlet-name>viewUsersServlet</servlet-name>
         <url-pattern>/viewusers</url-pattern>
+    </servlet-mapping>
+    <!-- view ammendUser-->
+    <servlet>
+        <servlet-name>ammendUserServlet</servlet-name>
+        <servlet-class>servlets.userServlets.AmmendUserServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>viewUsersServlet</servlet-name>
+        <url-pattern>/ammenduser</url-pattern>
     </servlet-mapping>
     <!-- deleteUser-->
     <servlet>

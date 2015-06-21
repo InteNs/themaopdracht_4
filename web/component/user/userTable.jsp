@@ -29,14 +29,14 @@
                 <td>${user.getPhoneNumber()}</td>
                 <td>
                     <%--TODO XML + servlet aanpassen--%>
-                    <form action="<c:url value="/userdetails"/>" method="post">
+                    <form action="<c:url value="/secure/detailsuser.jsp"/>" method="post">
                         <input type="submit" name="button" value="Details"/>
                         <input type="hidden" name="user" value="${pageScope.user}"/>
                     </form>
                 </td>
                 <td>
                     <%--TODO XML + servlet aanpassen--%>
-                    <form action="<c:url value="/ammenduser"/>" method="post">
+                    <form action="<c:url value="/secure/ammenduser.jsp"/>" method="post">
                         <input type="submit" name="button"  value="Aanpassen"/>
                         <input type="hidden" name="user" value="${pageScope.user}"/>
                     </form>
