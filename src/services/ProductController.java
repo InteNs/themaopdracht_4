@@ -7,6 +7,9 @@ import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Objects;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
+
 
 /**
  * Created by Jorrit Meulenbeld & Oussama Aalili on 18/06/15.
@@ -46,10 +49,7 @@ public class ProductController implements Serializable {
             succes = false;
             errorMap.put("amount_error", ERROR_NULL);
         }
-        if (Objects.equals(stringPrice, "")) {
-            succes = false;
-            errorMap.put("price_error", ERROR_NULL);
-        }
+
         try {
             amount = Integer.parseInt(stringAmount);
         } catch (NumberFormatException e) {
@@ -61,6 +61,18 @@ public class ProductController implements Serializable {
         } catch (NumberFormatException e) {
             succes = false;
             errorMap.put("price_error", ERROR_NUM);
+        }
+        if (!name.matches(".*[a-zA-Z].*")) {
+            succes = false;
+            errorMap.put("price_error", "Een naam bestaat uit letters");
+        }
+        if((""+amount).contains("-")) {
+            succes = false;
+            errorMap.put("amount_error","Mag geen negatief getal worden ingevuld");
+        }
+        if((""+price).contains("-")) {
+            succes = false;
+            errorMap.put("price_error","Mag geen negatief getal worden ingevuld");
         }
         if (succes) {
            Product test = new Product(name, amount,price);

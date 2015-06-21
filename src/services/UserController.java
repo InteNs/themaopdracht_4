@@ -14,6 +14,8 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Objects;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 /**
  * Created by InteNs on 04.jun.2015.
@@ -183,6 +185,26 @@ public class UserController implements Serializable {
             succes = false;
             errorMap.put("password_repeat_error","wachtwoord komt niet overeen!");
         }
+        if(!email.contains("@")) {
+            succes = false;
+            errorMap.put("email_error","De email moet een @ bevatten");
+        }
+        if(password.length() < 5) {
+            succes = false;
+            errorMap.put("password_error","het wachtwoord moet minimaal 5 karakters bevatten");
+        }
+        if(phoneNumber.length() < 10 ){
+            succes = false;
+            errorMap.put("phonenumber_error","De telefoonnummer bevat geen 10 cijfers");
+        }
+        if(phoneNumber.matches(".*[a-zA-Z].*")) {
+            succes = false;
+            errorMap.put("phonenumber_error","Een telefoonnummer bevat geen letters");
+        }
+        if(!postal.matches(".*[0-9]{4,}+[a-zA-Z]{2,}.*")) {
+            succes = false;
+            errorMap.put("postal_error","geen geldige postcode");
+        }
 
 
         if(succes) {
@@ -269,6 +291,18 @@ public class UserController implements Serializable {
      * @param numberPlate numberplate of car
      */
     public void newCar(String email,String type,String numberPlate){
+        boolean succes = true;
+        String ERROR_NULL = "Dit veld mag niet leeg zijn!";
+        HashMap<String,String> errorMap = new HashMap<>();
+        if(userExists(numberPlate)) {
+            succes = false;
+
+            errorMap.put("numberplate_error","Deze kentekenen bestaat al in ons systeem!");
+        }
+        if(!numberPlate.matches(".*[a-zA-Z]{4,}+[0-9]{2,}.*")) {
+            errorMap.put("numberplate_error","Kenteken heeft 4 letters 2 cijfers ");
+            succes = false;
+        }
         if (findUser(email) instanceof Customer)
             ((Customer)findUser(email)).addCar(new Car(type,numberPlate));
     }
