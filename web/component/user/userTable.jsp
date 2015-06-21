@@ -28,7 +28,6 @@
                 <td>${user.getDateOfBirth()}</td>
                 <td>${user.getPhoneNumber()}</td>
                 <td>
-                    <%--TODO XML + servlet aanpassen--%>
                     <form action="<c:url value="/secure/detailsuser.jsp"/>" method="post">
                         <input type="submit" name="button" value="Details"/>
                         <input type="hidden" name="usertype" value="${user.getUserType()}"/>
@@ -41,7 +40,6 @@
                     </form>
                 </td>
                 <td>
-                    <%--TODO XML + servlet aanpassen--%>
                     <form action="<c:url value="/secure/ammenduser.jsp"/>" method="post">
                         <input type="submit" name="button" value="Aanpassen"/>
                         <input type="hidden" name="usertype" value="${user.getUserType()}"/>

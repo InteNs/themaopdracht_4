@@ -6,7 +6,9 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class User implements Serializable {
-    public static enum userType{CUSTOMER,OWNER,MECHANIC}
+
+
+    public enum userType{CUSTOMER,OWNER,MECHANIC}
     private userType userType;
     private String email;
     private String password;

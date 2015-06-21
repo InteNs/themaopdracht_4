@@ -6,7 +6,6 @@
               <input type="submit" class="button" name="button" value="Gebruikers"/>
             </span>
 </form>
-<%--TODO XML userdetails--%>
 <form action="<c:url value="/secure/detailsuser.jsp"/>" method="post">
             <span class="navigationitem">
   <input type="hidden" name="email" value="${param.email}"/>
@@ -20,13 +19,13 @@
             </span>
 </form>
 <div class="container">
-<%--TODO XML ammenduser--%>
     <form action="<c:url value="/ammenduser"/>"  method="post">
     <fieldset name="adduser">
       <legend>Gebruiker toevoegen</legend>
       <div class="p">
         <label class="formlabel" for="email">Email:</label>
         <input class="text" type="text" name="email" id="email" placeholder="Vul email in" value="${param.email}"/>
+          <input type="hidden" name="originalemail" value="${param.email}"/>
         <label class="formlabel">&nbsp;</label>
         <label class="text"><c:out value="${pageScope.email_error}"/></label>
       </div>
@@ -78,13 +77,10 @@
         <label class="formlabel">&nbsp;</label>
         <label class="text"><c:out value="${pageScope.phonenumber_error}"/></label>
       </div>
-      <%--TODO usertype kunnen ontvangen in backend--%>
-      <%--TODO dropdown for usertype--%>
       <div class="p">
         <label class="formlabel" for="usertype">Type:</label>
         <input class="text" type="tel" name="usertype" id="usertype" placeholder="Vul type gebruiker in." value="${param.usertype}"/>
         <label class="formlabel">&nbsp;</label>
-        <%--TODO usertype_error--%>
         <label class="text"><c:out value="${pageScope.usertype_error}"/></label>
       </div>
       <div class="p">

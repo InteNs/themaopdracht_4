@@ -65,13 +65,10 @@
                 <label class="formlabel">&nbsp;</label>
                 <label class="text"><c:out value="${requestScope.phonenumber_error}"/></label>
             </div>
-            <%--TODO usertype kunnen ontvangen in backend--%>
             <div class="p">
                 <label class="formlabel" for="usertype">Type:</label>
                 <input class="text" type="tel" name="usertype" id="usertype" placeholder="Vul type gebruiker in."/>
                 <label class="formlabel">&nbsp;</label>
-                <%--TODO usertype_error--%>
-                <label class="text"><c:out value="${requestScope.usertype_error}"/></label>
             </div>
             <div class="p">
                 <input type="reset" class="button" name="reset" value="Reset"/>

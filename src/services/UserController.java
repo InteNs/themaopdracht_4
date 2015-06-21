@@ -2,7 +2,6 @@ package services;
 
 import domain.Car;
 import domain.users.Customer;
-import domain.users.Mechanic;
 import domain.users.Owner;
 import domain.users.User;
 import services.exceptions.LoginException;
@@ -14,8 +13,6 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Objects;
-import java.util.regex.Matcher;
-import java.util.regex.Pattern;
 
 /**
  * Created by InteNs on 04.jun.2015.
@@ -95,58 +92,79 @@ public class UserController implements Serializable {
     }
 
     /**
-     * checks if the user exists
-     * @param email email to check
-     * @return true if the user exists
+     *  creates a new owner
+     * @param email               email
+     * @param emailRepeat         emailrepeat
+     * @param password            password
+     * @param passwordRepeat      password repeat
+     * @param dateOfBirth         date of birth
+     * @param realName            realname
+     * @param address             address
+     * @param postal              postal
+     * @param phoneNumber         phonenumber
+     * @throws ValidateException
      */
-    public boolean userExists(String email){
-        return users.stream().anyMatch(user -> user.getEmail().equals(email));
+    public void newOwner(String email,String emailRepeat, String password,String passwordRepeat, String realName,LocalDate dateOfBirth, String address, String postal, String phoneNumber ) throws ValidateException {
+        if(validateUser(email,emailRepeat,password,passwordRepeat,realName,dateOfBirth,address,postal,phoneNumber))
+            users.add(new Owner(email, password, realName, dateOfBirth, postal, address, phoneNumber));
     }
 
     /**
-     * change a user's info
-     * @param user      the customer that needs to be changed
-     * @param email         @nullable
-     * @param password      @nullable
-     * @param realName      @nullable
-     * @param dateOfBirth   @nullable
-     * @param postal        @nullable
-     * @param address       @nullable
-     * @param phoneNumber   @nullable
-     */
-    public void changeUserInfo(User user,String email, String password, String realName,LocalDate dateOfBirth, String address,String postal,String phoneNumber) {
-        if (email !=null)       user.setEmail(email);
-        if (password !=null)    user.setPassword(password);
-        if (realName !=null)   user.setRealName(realName);
-        if (dateOfBirth !=user.getDateOfBirth()) user.setDateOfBirth(dateOfBirth);
-        if (postal != null)     user.setPostal(postal);
-        if (address !=null)     user.setAddress(address);
-        if (phoneNumber != null)user.setPhoneNumber(phoneNumber);
-    }
-
-    /**
-     * creates a new admin(hardcoded)
-     */
-    public void newAdmin(){
-        users.add(new Owner("admin@admin.nl","admin","admin",LocalDate.now(),"admin","admin","admin"));
-    }
-
-    /**
-     * create a new customer
      *
-     * @param email       emailadress
-     * @param password    password
-     * @param realName   firstname
-     * @param address     adress(street + house number)
-     * @param dateOfBirth dateOfBirth
+     * @param email               email
+     * @param emailRepeat         emailrepeat
+     * @param password            password
+     * @param passwordRepeat      password repeat
+     * @param dateOfBirth         date of birth
+     * @param realName            realname
+     * @param address             address
+     * @param postal              postal
+     * @param phoneNumber         phonenumber
+     * @throws ValidateException
      */
-    public void newCustomer(String email,String emailRepeat, String password,String passwordRepeat, String realName,LocalDate dateOfBirth, String address, String postal, String phoneNumber ) throws ValidateException {
+    public void newCustomer(String email, String emailRepeat, String password, String passwordRepeat, String realName, LocalDate dateOfBirth, String address, String postal, String phoneNumber) throws ValidateException {
+        if (validateUser(email, emailRepeat, password, passwordRepeat, realName, dateOfBirth, address, postal, phoneNumber))
+            users.add(new Customer(email, password, realName, dateOfBirth, postal, address, phoneNumber));
+    }
+
+    /**
+     * creates a new mechanic
+     * @param email               email
+     * @param emailRepeat         emailrepeat
+     * @param password            password
+     * @param passwordRepeat      password repeat
+     * @param dateOfBirth         date of birth
+     * @param realName            realname
+     * @param address             address
+     * @param postal              postal
+     * @param phoneNumber         phonenumber
+     * @throws ValidateException
+     */
+    public void newMechanic(String email,String emailRepeat, String password,String passwordRepeat, String realName,LocalDate dateOfBirth, String address, String postal, String phoneNumber ) throws ValidateException {
+        if(validateUser(email,emailRepeat,password,passwordRepeat,realName,dateOfBirth,address,postal,phoneNumber))
+            users.add(new Customer(email, password, realName, dateOfBirth, postal, address, phoneNumber));
+    }
+
+    /**
+     * validates if the fields are correct
+     * @param email               email
+     * @param emailRepeat         emailrepeat
+     * @param password            password
+     * @param passwordRepeat      password repeat
+     * @param dateOfBirth         date of birth
+     * @param realName            realname
+     * @param address             address
+     * @param postal              postal
+     * @param phoneNumber         phonenumber
+     * @return true if the fields are correct
+     * @throws ValidateException
+     */
+    private boolean validateUser(String email,String emailRepeat, String password,String passwordRepeat, String realName,LocalDate dateOfBirth, String address, String postal, String phoneNumber ) throws ValidateException {
         boolean succes = true;
         String ERROR_NULL = "Dit veld mag niet leeg zijn!";
         HashMap<String,String> errorMap = new HashMap<>();
-        if(userExists(email)) {
+        if(findUser(email)!=null) {
             succes = false;
-
             errorMap.put("email_error","Dit emailadres bestaat al in ons systeem!");
         }
         if(Objects.equals(email, "")) {
@@ -185,90 +203,48 @@ public class UserController implements Serializable {
             succes = false;
             errorMap.put("password_repeat_error","wachtwoord komt niet overeen!");
         }
-        if(!email.contains("@")) {
-            succes = false;
-            errorMap.put("email_error","De email moet een @ bevatten");
-        }
         if(password.length() < 5) {
             succes = false;
-            errorMap.put("password_error","het wachtwoord moet minimaal 5 karakters bevatten");
+            errorMap.put("password_error","minimaal 5 tekens");
         }
-        if(phoneNumber.length() < 10 ){
+        if(phoneNumber.matches("(^\\+[0-9]{2}|^\\+[0-9]{2}\\(0\\)|^\\(\\+[0-9]{2}\\)\\(0\\)|^00[0-9]{2}|^0)([0-9]{9}$|[0-9\\-\\s]{10}$)")) {
             succes = false;
-            errorMap.put("phonenumber_error","De telefoonnummer bevat geen 10 cijfers");
+            errorMap.put("phonenumber_error","geen geldig telefoonnummer");
         }
-        if(phoneNumber.matches(".*[a-zA-Z].*")) {
-            succes = false;
-            errorMap.put("phonenumber_error","Een telefoonnummer bevat geen letters");
-        }
-        if(!postal.matches(".*[0-9]{4,}+[a-zA-Z]{2,}.*")) {
+        if(!postal.matches("(([a-zA-Z]{3}[0-9]{3})|(\\w{2}-\\w{2}-\\w{2})|([0-9]{2}-[a-zA-Z]{3}-[0-9]{1})|([0-9]{1}-[a-zA-Z]{3}-[0-9]{2})|([a-zA-Z]{1}-[0-9]{3}-[a-zA-Z]{2}))")) {
             succes = false;
             errorMap.put("postal_error","geen geldige postcode");
         }
-
-
-        if(succes) {
-            users.add(new Customer(email, password, realName, dateOfBirth, postal, address, phoneNumber));
-        }
-        else throw new ValidateException(errorMap);
-
-
+        if (!succes)
+            throw new ValidateException(errorMap);
+        return succes;
     }
 
     /**
-     * create a new Mechanic
-     *
-     * @param email email
-     * @param password password
-     * @param realName realname
-     * @param dateOfBirth dateofbirth
-     * @param address address
-     * @param postal postal
-     * @param phoneNumber phonenumber
+     * change an existing user
+     * @param originalEmail       the original email adress(to find the corresponding user)
+     * @param email               email
+     * @param emailRepeat         emailrepeat
+     * @param password            password
+     * @param passwordRepeat      password repeat
+     * @param dateOfBirth         date of birth
+     * @param realName            realname
+     * @param address             address
+     * @param postal              postal
+     * @param phoneNumber         phonenumber
+     * @throws ValidateException
      */
-    public void newMechanic(String email,String password,String realName,LocalDate dateOfBirth,String address,String postal,String phoneNumber) throws ValidateException {
-        boolean succes = true;
-        String ERROR_NULL = "Dit veld mag niet leeg zijn!";
-        HashMap<String,String> errorMap = new HashMap<>();
-        if(userExists(email)) {
-            succes = false;
-
-            errorMap.put("email_error","Dit emailadres bestaat al in ons systeem!");
+    public void ammendUser(String originalEmail, String email, String emailRepeat, String password, String passwordRepeat, LocalDate dateOfBirth, String realName, String address, String postal, String phoneNumber) throws ValidateException {
+        if(validateUser(email,emailRepeat,password,passwordRepeat,realName,dateOfBirth,address,postal,phoneNumber)) {
+            User user = findUser(originalEmail);
+            user.setEmail(email);
+            user.setPostal(postal);
+            user.setPhoneNumber(phoneNumber);
+            user.setDateOfBirth(dateOfBirth);
+            user.setAddress(address);
+            user.setPassword(password);
+            user.setRealName(realName);
         }
-        if(Objects.equals(email, "")) {
-            succes = false;
-            errorMap.put("email_error",ERROR_NULL);
-        }
-        if(Objects.equals(password, "")) {
-            succes = false;
-            errorMap.put("password_error",ERROR_NULL);
-        }
-        if(Objects.equals(realName, "")) {
-            succes = false;
-            errorMap.put("realname_error",ERROR_NULL);
-        }
-        if(Objects.equals(dateOfBirth, null)) {
-            succes = false;
-            errorMap.put("dateofbirth_error",ERROR_NULL);
-        }
-        if(Objects.equals(address, "")) {
-            succes = false;
-            errorMap.put("address_error",ERROR_NULL);
-        }
-        if(Objects.equals(postal, "")) {
-            errorMap.put("postal_error",ERROR_NULL);
-            succes = false;
-        }
-        if(Objects.equals(phoneNumber, "")) {
-            errorMap.put("phonenumber_error",ERROR_NULL);
-            succes = false;
-        }
-        if(succes) {
-            users.add(new Mechanic(email,password,realName,dateOfBirth,address,postal,phoneNumber));
-        }
-        else throw new ValidateException(errorMap);
-
-
     }
 
     /**
@@ -290,21 +266,31 @@ public class UserController implements Serializable {
      * @param type  car type
      * @param numberPlate numberplate of car
      */
-    public void newCar(String email,String type,String numberPlate){
+    public void newCar(String email,String type,String numberPlate) throws ValidateException {
         boolean succes = true;
         String ERROR_NULL = "Dit veld mag niet leeg zijn!";
         HashMap<String,String> errorMap = new HashMap<>();
-        if(userExists(numberPlate)) {
+        if(Objects.equals(type,"")){
             succes = false;
-
-            errorMap.put("numberplate_error","Deze kentekenen bestaat al in ons systeem!");
+            errorMap.put("type_error",ERROR_NULL);
+        }
+        if(Objects.equals(numberPlate,"")){
+            succes = false;
+            errorMap.put("numberplate_error",ERROR_NULL);
+        }
+        if(findCar(numberPlate) != null) {
+            succes = false;
+            errorMap.put("numberplate_error","dit kenteken bestaat al");
         }
         if(!numberPlate.matches(".*[a-zA-Z]{4,}+[0-9]{2,}.*")) {
-            errorMap.put("numberplate_error","Kenteken heeft 4 letters 2 cijfers ");
+            errorMap.put("numberplate_error","geen geldig kenteken");
             succes = false;
         }
-        if (findUser(email) instanceof Customer)
-            ((Customer)findUser(email)).addCar(new Car(type,numberPlate));
+        if (succes){
+            if (findUser(email) instanceof Customer)
+                ((Customer)findUser(email)).addCar(new Car(type,numberPlate));
+        }
+        else throw new ValidateException(errorMap);
     }
 
     /**
@@ -327,7 +313,7 @@ public class UserController implements Serializable {
      * @param numberPlate numberplate of car
      */
     public void removeCar(String email,String numberPlate){
-        if (findUser(email) instanceof Customer){
+        if (findUser(email) instanceof Customer) {
             ((Customer)findUser(email)).removeCar(numberPlate);
             System.out.println("Car "+numberPlate+" removed from "+email);
 
