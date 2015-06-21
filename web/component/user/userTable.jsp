@@ -31,14 +31,26 @@
                     <%--TODO XML + servlet aanpassen--%>
                     <form action="<c:url value="/secure/detailsuser.jsp"/>" method="post">
                         <input type="submit" name="button" value="Details"/>
-                        <input type="hidden" name="user" value="${pageScope.user}"/>
+                        <input type="hidden" name="usertype" value="${user.getUserType()}"/>
+                        <input type="hidden" name="email" value="${user.getEmail()}"/>
+                        <input type="hidden" name="name" value="${user.getRealName()}"/>
+                        <input type="hidden" name="address" value="${user.getAddress()}"/>
+                        <input type="hidden" name="postal" value="${user.getPostal()}"/>
+                        <input type="hidden" name="dateofbirth" value="${user.getDateOfBirth()}"/>
+                        <input type="hidden" name="phonenumber" value="${user.getPhoneNumber()}"/>
                     </form>
                 </td>
                 <td>
                     <%--TODO XML + servlet aanpassen--%>
                     <form action="<c:url value="/secure/ammenduser.jsp"/>" method="post">
-                        <input type="submit" name="button"  value="Aanpassen"/>
-                        <input type="hidden" name="user" value="${pageScope.user}"/>
+                        <input type="submit" name="button" value="Aanpassen"/>
+                        <input type="hidden" name="usertype" value="${user.getUserType()}"/>
+                        <input type="hidden" name="email" value="${user.getEmail()}"/>
+                        <input type="hidden" name="name" value="${user.getRealName()}"/>
+                        <input type="hidden" name="address" value="${user.getAddress()}"/>
+                        <input type="hidden" name="postal" value="${user.getPostal()}"/>
+                        <input type="hidden" name="dateofbirth" value="${user.getDateOfBirth()}"/>
+                        <input type="hidden" name="phonenumber" value="${user.getPhoneNumber()}"/>
                     </form>
                 </td>
                 <td>
