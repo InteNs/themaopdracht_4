@@ -20,7 +20,8 @@ import java.util.Objects;
  * Created by InteNs on 04.jun.2015.
  */
 public class UserController implements Serializable {
-    ArrayList<User> users;
+    @SuppressWarnings("CanBeFinal")
+    private ArrayList<User> users;
 
     /**
      * create a new controller(use only once)
@@ -165,7 +166,6 @@ public class UserController implements Serializable {
         boolean succes = true;
         String ERROR_NULL = "Dit veld mag niet leeg zijn!";
         HashMap<String,String> errorMap = new HashMap<>();
-        LocalDate dateofBirth = null;
         System.out.println("validating");
 //        TODO only with new
 //        if(findUser(email)!=null) {
@@ -221,7 +221,7 @@ public class UserController implements Serializable {
             errorMap.put("postal_error","geen geldige postcode");
         }
         try {
-            dateofBirth = LocalDate.parse(stringDateOfBirth);
+            LocalDate dateofBirth = LocalDate.parse(stringDateOfBirth);
         } catch (DateTimeParseException e) {
             succes = false;
             errorMap.put("dateofbirth_error","geen geldige datum");
@@ -235,6 +235,7 @@ public class UserController implements Serializable {
             System.out.println("incorrect");
             throw new ValidateException(errorMap);
         }
+        //noinspection ConstantConditions
         return succes;
     }
 
@@ -318,7 +319,7 @@ public class UserController implements Serializable {
      * @param numberPlate searchword
      * @return null if car doesn't exist, the car otherwise
      */
-    public Car findCar(String numberPlate){
+    private Car findCar(String numberPlate){
         ArrayList<Car>cars = new ArrayList<>();
         users.stream().filter(user -> user instanceof Customer).forEach(user -> cars.addAll(((Customer) user).getCars()));
         for(Car car:cars)

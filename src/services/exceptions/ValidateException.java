@@ -6,7 +6,7 @@ package services.exceptions;
  * Created by InteNs on 04.jun.2015.
  */
 public class ValidateException extends Exception {
-    private HashMap<String,String> errorMap;
+    private final HashMap<String,String> errorMap;
 
     public ValidateException(HashMap<String, String> errorMap){
         super();

@@ -4,7 +4,7 @@ package services.exceptions;
  * Created by InteNs on 04.jun.2015.
  */
 public class LoginException extends Exception {
-    private String message = "inloggen mislukt";
+    private final String message = "inloggen mislukt";
 
     public LoginException(){}
 

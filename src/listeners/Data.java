@@ -12,8 +12,8 @@ import java.util.Locale;
  * Created by InteNs on 04.jun.2015.
  */
 public class Data implements Serializable {
-    private UserController userController = new UserController();
-    private ProductController productController = new ProductController();
+    private final UserController userController = new UserController();
+    private final ProductController productController = new ProductController();
     public Data (){}
 
     public UserController getUserController(){

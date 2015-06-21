@@ -1,6 +1,5 @@
 package domain;
 
-import domain.Car;
 import org.junit.Before;
 import org.junit.Test;
 
@@ -10,9 +9,9 @@ import static org.junit.Assert.assertEquals;
  * Created by TAOUFIK & OUSSAMA on 16.jun.2015.
  */
 public class CarTest {
-    private final static String type = "sportwagen" ;
-    private final static String numberPlate = "aa-11-bb";
-    Car car ;
+    final static String type = "sportwagen" ;
+    final static String numberPlate = "aa-11-bb";
+    private Car car ;
 
     @Before
     public void setUp(){car = new Car(type, numberPlate);

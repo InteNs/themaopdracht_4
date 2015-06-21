@@ -27,7 +27,7 @@ public class UserTest {
     private final static String PHONE_NUMBER_1 = "test1";
     private final static String POSTAL_1 = "test1";
     private final static LocalDate DATE_OF_BIRTH_1 = LocalDate.of(2013,2,15);
-    User user;
+    private User user;
     @Before
     public void setUp(){
         user = new User(TYPE,EMAIL,PASSWORD,REAL_NAME, DATE_OF_BIRTH,ADDRESS,POSTAL,PHONE_NUMBER);

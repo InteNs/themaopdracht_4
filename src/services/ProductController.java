@@ -7,14 +7,13 @@ import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Objects;
-import java.util.regex.Matcher;
-import java.util.regex.Pattern;
 
 
 /**
  * Created by Jorrit Meulenbeld & Oussama Aalili on 18/06/15.
  */
 public class ProductController implements Serializable {
+    @SuppressWarnings("CanBeFinal")
     private ArrayList<Product> products;
 
     /**
@@ -90,7 +89,7 @@ public class ProductController implements Serializable {
      * @param name name to check
      * @return true if the product exists
      */
-    public boolean productExists(String name) {
+    private boolean productExists(String name) {
         return products.stream().anyMatch(product -> product.getName().equals(name));
     }
 
@@ -106,7 +105,7 @@ public class ProductController implements Serializable {
      * @param name of the product to find
      * @return the product with the given name
      */
-    public Product findProduct(String name) {
+    private Product findProduct(String name) {
         for (Product product : products)
             if (product.getName().equals(name)) return product;
         return null;

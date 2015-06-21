@@ -11,7 +11,7 @@ import static org.junit.Assert.assertEquals;
  * Created by InteNs on 16.jun.2015.
  */
 public class CustomerTest {
-         Customer customer;
+         private Customer customer;
 
     @Before
     public void setUp() throws Exception {

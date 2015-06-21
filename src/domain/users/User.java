@@ -9,7 +9,7 @@ public class User implements Serializable {
 
 
     public enum userType{CUSTOMER,OWNER,MECHANIC}
-    private userType userType;
+    private final userType userType;
     private String email;
     private String password;
     private String realName;
