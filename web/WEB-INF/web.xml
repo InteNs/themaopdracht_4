@@ -70,7 +70,7 @@
     <!-- view users-->
     <servlet>
         <servlet-name>viewUsersServlet</servlet-name>
-        <servlet-class>servlets.userServlets.ViewUsersServlet</servlet-class>
+        <servlet-class>servlets.userServlets.viewUsersServlet</servlet-class>
     </servlet>
     <servlet-mapping>
         <servlet-name>viewUsersServlet</servlet-name>
@@ -79,7 +79,7 @@
     <!-- view ammendUser-->
     <servlet>
         <servlet-name>ammendUserServlet</servlet-name>
-        <servlet-class>servlets.userServlets.AmmendUserServlet</servlet-class>
+        <servlet-class>servlets.userServlets.ammenduserServlet</servlet-class>
     </servlet>
     <servlet-mapping>
         <servlet-name>viewUsersServlet</servlet-name>
