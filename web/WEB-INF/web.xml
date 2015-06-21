@@ -76,6 +76,15 @@
         <servlet-name>viewUsersServlet</servlet-name>
         <url-pattern>/viewusers</url-pattern>
     </servlet-mapping>
+    <!-- view ammendUser-->
+    <servlet>
+        <servlet-name>ammendUserServlet</servlet-name>
+        <servlet-class>servlets.userServlets.ammenduserServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>viewUsersServlet</servlet-name>
+        <url-pattern>/ammenduser</url-pattern>
+    </servlet-mapping>
     <!-- deleteUser-->
     <servlet>
         <servlet-name>DeleteUserServlet</servlet-name>
