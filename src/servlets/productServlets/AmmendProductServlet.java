@@ -11,20 +11,24 @@ import java.io.IOException;
 
 /**
  * Created by Jorrit Meulenbeld on 18/06/15.
- * TODO: AmmendProductServlet
  */
 public class AmmendProductServlet extends HttpServlet{
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+
         ProductController productController = ((Data)req.getServletContext().getAttribute("data")).getProductController();
-        String originalProductName = req.getParameter("originalproductname");
-        String productName = req.getParameter("productname");
-        int productamount = Integer.parseInt(req.getParameter("productamount"));
-        double productprice = Double.parseDouble(req.getParameter("productprice"));
+
+        String originalProductName =    req.getParameter("originalproductname");
+        String productName =            req.getParameter("productname");
+        int productamount =             Integer.parseInt(req.getParameter("productamount"));
+        double productprice =           Double.parseDouble(req.getParameter("productprice"));
+
         synchronized (req.getParameter("productprice")) {
             productController.ammendProduct(originalProductName, productName, productamount, productprice);
         }
+
         req.setAttribute("products",((Data)req.getServletContext().getAttribute("data")).getProductController().getAllProducts());
+
         req.getRequestDispatcher("/viewproducts").forward(req, resp);
     }
 }
