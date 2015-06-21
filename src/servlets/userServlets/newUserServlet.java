@@ -9,7 +9,6 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
-import java.time.LocalDate;
 import java.util.Map;
 
 public class newUserServlet extends HttpServlet {
@@ -22,26 +21,31 @@ public class newUserServlet extends HttpServlet {
         String password = req.getParameter("password");
         String passwordRepeat = req.getParameter("password_repeat");
         String realName = req.getParameter("realname");
-        LocalDate dateOfBirth = LocalDate.parse(req.getParameter("date"));
+        String dateOfBirth = req.getParameter("date");
         String address = req.getParameter("address");
         String postal = req.getParameter("postal");
         String phoneNumber = req.getParameter("phonenumber");
         String userType = req.getParameter("usertype");
+        System.out.println(userType);
          try {
              switch (userType){
                  case "OWNER":
                      userController.newOwner(email,emailRepeat,password,passwordRepeat,realName,dateOfBirth,address,postal,phoneNumber);
+                     System.out.println("made new owner");
                      break;
                  case "CUSTOMER":
                      userController.newCustomer(email, emailRepeat, password, passwordRepeat, realName, dateOfBirth, address, postal, phoneNumber);
+                     System.out.println("made new customer");
                      break;
                  case "MECHANIC":
                      userController.newMechanic(email, emailRepeat, password, passwordRepeat, realName, dateOfBirth, address, postal, phoneNumber);
+                     System.out.println("made new mechanic");
                      break;
              }
         } catch (ValidateException e) {
             for(Map.Entry<String, String> entry : e.getErrorMap().entrySet())
                 req.setAttribute(entry.getKey(),entry.getValue());
+             req.getRequestDispatcher("/secure/adduser.jsp").forward(req,resp);
         }
         req.getRequestDispatcher("/viewusers").forward(req,resp);
     }

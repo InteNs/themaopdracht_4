@@ -9,7 +9,6 @@ import javax.servlet.ServletContext;
 import javax.servlet.ServletContextEvent;
 import javax.servlet.ServletContextListener;
 import java.io.*;
-import java.time.LocalDate;
 import java.util.logging.FileHandler;
 import java.util.logging.Handler;
 import java.util.logging.Level;
@@ -64,7 +63,7 @@ public class ServerContextListener implements ServletContextListener {
         }
         if (((Data)servletContext.getAttribute("data")).getUserController().findUser("admin@admin.nl")==null)
             try {
-                ((Data)servletContext.getAttribute("data")).getUserController().newOwner("admin@admin.nl", "admin@admin.nl", "admin", "admin", "admin", LocalDate.of(1990, 11, 10), "admin", "1111AA", "0000000");
+                ((Data)servletContext.getAttribute("data")).getUserController().newOwner("admin@admin.nl", "admin@admin.nl", "admin", "admin", "admin", "2005-11-12", "admin", "1111AA", "0612345678");
                 logger.info("admin account created");
             } catch (ValidateException ignored) {}
     }

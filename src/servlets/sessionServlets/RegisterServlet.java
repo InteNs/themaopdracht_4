@@ -11,7 +11,6 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
-import java.time.LocalDate;
 import java.util.Map;
 
 public class RegisterServlet extends HttpServlet {
@@ -27,7 +26,7 @@ public class RegisterServlet extends HttpServlet {
         String password = req.getParameter("password");
         String passwordRepeat = req.getParameter("password_repeat");
         String realName = req.getParameter("realname");
-        LocalDate dateOfBirth = LocalDate.parse(req.getParameter("date"));
+        String dateOfBirth = req.getParameter("date");
         String address = req.getParameter("address");
         String postal = req.getParameter("postal");
         String phoneNumber = req.getParameter("phonenumber");

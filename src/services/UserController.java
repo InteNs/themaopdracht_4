@@ -2,6 +2,7 @@ package services;
 
 import domain.Car;
 import domain.users.Customer;
+import domain.users.Mechanic;
 import domain.users.Owner;
 import domain.users.User;
 import services.exceptions.LoginException;
@@ -9,6 +10,7 @@ import services.exceptions.ValidateException;
 
 import java.io.Serializable;
 import java.time.LocalDate;
+import java.time.format.DateTimeParseException;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -104,9 +106,9 @@ public class UserController implements Serializable {
      * @param phoneNumber         phonenumber
      * @throws ValidateException
      */
-    public void newOwner(String email,String emailRepeat, String password,String passwordRepeat, String realName,LocalDate dateOfBirth, String address, String postal, String phoneNumber ) throws ValidateException {
+    public void newOwner(String email,String emailRepeat, String password,String passwordRepeat, String realName,String dateOfBirth, String address, String postal, String phoneNumber ) throws ValidateException {
         if(validateUser(email,emailRepeat,password,passwordRepeat,realName,dateOfBirth,address,postal,phoneNumber))
-            users.add(new Owner(email, password, realName, dateOfBirth, postal, address, phoneNumber));
+            users.add(new Owner(email, password, realName, LocalDate.parse(dateOfBirth), postal, address, phoneNumber));
     }
 
     /**
@@ -122,9 +124,9 @@ public class UserController implements Serializable {
      * @param phoneNumber         phonenumber
      * @throws ValidateException
      */
-    public void newCustomer(String email, String emailRepeat, String password, String passwordRepeat, String realName, LocalDate dateOfBirth, String address, String postal, String phoneNumber) throws ValidateException {
+    public void newCustomer(String email, String emailRepeat, String password, String passwordRepeat, String realName, String dateOfBirth, String address, String postal, String phoneNumber) throws ValidateException {
         if (validateUser(email, emailRepeat, password, passwordRepeat, realName, dateOfBirth, address, postal, phoneNumber))
-            users.add(new Customer(email, password, realName, dateOfBirth, postal, address, phoneNumber));
+            users.add(new Customer(email, password, realName, LocalDate.parse(dateOfBirth), postal, address, phoneNumber));
     }
 
     /**
@@ -140,9 +142,9 @@ public class UserController implements Serializable {
      * @param phoneNumber         phonenumber
      * @throws ValidateException
      */
-    public void newMechanic(String email,String emailRepeat, String password,String passwordRepeat, String realName,LocalDate dateOfBirth, String address, String postal, String phoneNumber ) throws ValidateException {
+    public void newMechanic(String email,String emailRepeat, String password,String passwordRepeat, String realName,String dateOfBirth, String address, String postal, String phoneNumber ) throws ValidateException {
         if(validateUser(email,emailRepeat,password,passwordRepeat,realName,dateOfBirth,address,postal,phoneNumber))
-            users.add(new Customer(email, password, realName, dateOfBirth, postal, address, phoneNumber));
+            users.add(new Mechanic(email, password, realName, LocalDate.parse(dateOfBirth), postal, address, phoneNumber));
     }
 
     /**
@@ -151,7 +153,7 @@ public class UserController implements Serializable {
      * @param emailRepeat         emailrepeat
      * @param password            password
      * @param passwordRepeat      password repeat
-     * @param dateOfBirth         date of birth
+     * @param stringDateOfBirth   date of birth
      * @param realName            realname
      * @param address             address
      * @param postal              postal
@@ -159,10 +161,12 @@ public class UserController implements Serializable {
      * @return true if the fields are correct
      * @throws ValidateException
      */
-    private boolean validateUser(String email,String emailRepeat, String password,String passwordRepeat, String realName,LocalDate dateOfBirth, String address, String postal, String phoneNumber ) throws ValidateException {
+    private boolean validateUser(String email,String emailRepeat, String password,String passwordRepeat, String realName,String stringDateOfBirth, String address, String postal, String phoneNumber ) throws ValidateException {
         boolean succes = true;
         String ERROR_NULL = "Dit veld mag niet leeg zijn!";
         HashMap<String,String> errorMap = new HashMap<>();
+        LocalDate dateofBirth = null;
+        System.out.println("validating");
         if(findUser(email)!=null) {
             succes = false;
             errorMap.put("email_error","Dit emailadres bestaat al in ons systeem!");
@@ -179,7 +183,7 @@ public class UserController implements Serializable {
             succes = false;
             errorMap.put("realname_error",ERROR_NULL);
         }
-        if(Objects.equals(dateOfBirth, null)) {
+        if(Objects.equals(stringDateOfBirth,"")) {
             succes = false;
             errorMap.put("dateofbirth_error",ERROR_NULL);
         }
@@ -207,16 +211,29 @@ public class UserController implements Serializable {
             succes = false;
             errorMap.put("password_error","minimaal 5 tekens");
         }
-        if(phoneNumber.matches("(^\\+[0-9]{2}|^\\+[0-9]{2}\\(0\\)|^\\(\\+[0-9]{2}\\)\\(0\\)|^00[0-9]{2}|^0)([0-9]{9}$|[0-9\\-\\s]{10}$)")) {
+        if(!phoneNumber.matches("(^\\+[0-9]{2}|^\\+[0-9]{2}\\(0\\)|^\\(\\+[0-9]{2}\\)\\(0\\)|^00[0-9]{2}|^0)([0-9]{9}$|[0-9\\-\\s]{10}$)")) {
             succes = false;
             errorMap.put("phonenumber_error","geen geldig telefoonnummer");
         }
-        if(!postal.matches("(([a-zA-Z]{3}[0-9]{3})|(\\w{2}-\\w{2}-\\w{2})|([0-9]{2}-[a-zA-Z]{3}-[0-9]{1})|([0-9]{1}-[a-zA-Z]{3}-[0-9]{2})|([a-zA-Z]{1}-[0-9]{3}-[a-zA-Z]{2}))")) {
+        if(!postal.matches("^[1-9][0-9]{3}\\s?[a-zA-Z]{2}$")) {
             succes = false;
             errorMap.put("postal_error","geen geldige postcode");
         }
-        if (!succes)
+        try {
+            dateofBirth = LocalDate.parse(stringDateOfBirth);
+        } catch (DateTimeParseException e) {
+            succes = false;
+            errorMap.put("dateofbirth_error","geen geldige datum");
+        }
+        assert dateofBirth != null;
+        if (dateofBirth.isAfter(LocalDate.now())){
+            succes = false;
+            errorMap.put("dateofbirth_error","te jong");
+        }
+        if (!succes){
+            System.out.println("incorrect");
             throw new ValidateException(errorMap);
+        }
         return succes;
     }
 
@@ -234,17 +251,19 @@ public class UserController implements Serializable {
      * @param phoneNumber         phonenumber
      * @throws ValidateException
      */
-    public void ammendUser(String originalEmail, String email, String emailRepeat, String password, String passwordRepeat, LocalDate dateOfBirth, String realName, String address, String postal, String phoneNumber) throws ValidateException {
+    public void ammendUser(String originalEmail, String email, String emailRepeat, String password, String passwordRepeat, String dateOfBirth, String realName, String address, String postal, String phoneNumber) throws ValidateException {
         if(validateUser(email,emailRepeat,password,passwordRepeat,realName,dateOfBirth,address,postal,phoneNumber)) {
             User user = findUser(originalEmail);
             user.setEmail(email);
             user.setPostal(postal);
             user.setPhoneNumber(phoneNumber);
-            user.setDateOfBirth(dateOfBirth);
+            user.setDateOfBirth(LocalDate.parse(dateOfBirth));
             user.setAddress(address);
             user.setPassword(password);
             user.setRealName(realName);
+
         }
+
     }
 
     /**

@@ -67,7 +67,11 @@
             </div>
             <div class="p">
                 <label class="formlabel" for="usertype">Type:</label>
-                <input class="text" type="tel" name="usertype" id="usertype" placeholder="Vul type gebruiker in."/>
+                <select id="usertype" name="usertype">
+                    <option value="CUSTOMER">Klant</option>
+                    <option value="OWNER">Eigenaar</option>
+                    <option value="MECHANIC">Monteur</option>
+                </select>
                 <label class="formlabel">&nbsp;</label>
             </div>
             <div class="p">

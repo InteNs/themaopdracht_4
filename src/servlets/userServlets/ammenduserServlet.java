@@ -9,7 +9,6 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
-import java.time.LocalDate;
 import java.util.Map;
 
 /**
@@ -24,12 +23,12 @@ public class ammenduserServlet extends HttpServlet {
         String password = req.getParameter("password");
         String passwordRepeat = req.getParameter("password_repeat");
         String realName = req.getParameter("realname");
-        LocalDate dateOfBirth = LocalDate.parse(req.getParameter("date"));
+        String dateOfBirth = req.getParameter("date");
         String address = req.getParameter("address");
         String postal = req.getParameter("postal");
         String phoneNumber = req.getParameter("phonenumber");
-        String userType = req.getParameter("usertype");
         String originalEmail = req.getParameter("originalemail");
+        System.out.println(originalEmail+email+password+realName+dateOfBirth+address+postal+phoneNumber);
 
         synchronized (userController) {
             try {
@@ -37,7 +36,7 @@ public class ammenduserServlet extends HttpServlet {
             } catch (ValidateException e) {
                 for (Map.Entry<String, String> entry : e.getErrorMap().entrySet())
                     req.setAttribute(entry.getKey(), entry.getValue());
-                req.getRequestDispatcher("/secure/ammenduser.jsp");
+                req.getRequestDispatcher("/secure/ammenduser.jsp").forward(req,resp);
             }
         }
         req.getRequestDispatcher("/viewusers").forward(req, resp);
