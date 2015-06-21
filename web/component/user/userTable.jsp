@@ -10,8 +10,8 @@
             <th>Gebruikerstype</th>
             <th>Email</th>
             <th>Naam</th>
-            <th>Postcode</th>
             <th>Adres</th>
+            <th>Postcode</th>
             <th>Geboortedatum</th>
             <th>Telefoonnummer</th>
             <th>Details</th>

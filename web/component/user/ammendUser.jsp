@@ -21,7 +21,7 @@
 <div class="container">
     <form action="<c:url value="/ammenduser"/>"  method="post">
     <fieldset name="adduser">
-      <legend>Gebruiker toevoegen</legend>
+      <legend>Gebruiker aanpssen</legend>
       <div class="p">
         <label class="formlabel" for="email">Email:</label>
         <input class="text" type="text" name="email" id="email" placeholder="Vul email in" value="${param.email}"/>
