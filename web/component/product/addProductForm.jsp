@@ -8,12 +8,11 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <link rel="stylesheet" href="<c:url value="/component/form.css"/>"/>
-<html>
-<head>
-    <title>Product Toevoegen</title>
-</head>
-<body>
-
+<form action="<c:url value="/viewproducts"/>" method="post">
+            <span class="navigationitem">
+              <input type="submit" name="button" value="Producten"/>
+            </span>
+</form>
 <div class="container">
   <form action="<c:url value="/addproduct"/>" id="addProduct" method="post">
     <fieldset name="Product toevoegen">
@@ -22,7 +21,7 @@
         <label class="formlabel" for="productname">Productnaam:</label>
         <input class="text" type="text" name="productname" id="productname" placeholder="Vul de Productnaam in"/>
         <label class="formlabel">&nbsp;</label>
-       <label class="text"><c:out value="${requestScope.name_error}"/></label>
+        <label class="text"><c:out value="${requestScope.name_error}"/></label>
       </div>
       <div class="p">
         <label class="formlabel" for="amount">Aantal:</label>
@@ -38,14 +37,10 @@
       </div>
 
       <div class="p">
-        <input type="button" name="button" value="Terug"/>
-        <input type="reset" name="reset" value="Reset"/>
-        <input type="submit" name="button" value="Toevoegen"/>
+        <input type="reset" name="reset" class="button" value="Reset"/>
+        <input type="submit" name="button" class="button" value="Toevoegen"/>
       </div>
 
-</fieldset>
-    </form>
-  </div>
-
-</body>
-</html>
+    </fieldset>
+  </form>
+</div>

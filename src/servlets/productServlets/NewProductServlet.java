@@ -27,7 +27,7 @@ public class NewProductServlet extends HttpServlet {
             } catch (ValidateException e) {
                 for(Map.Entry<String, String> entry : e.getErrorMap().entrySet())
                     req.setAttribute(entry.getKey(),entry.getValue());
-                req.getRequestDispatcher("/secure/product.jsp").forward(req,resp);
+                req.getRequestDispatcher("/secure/addproduct.jsp").forward(req,resp);
             }
         }
         req.getRequestDispatcher("/viewproducts").forward(req,resp);

@@ -6,11 +6,16 @@
     <link rel="stylesheet" href="<c:url value="/global.css"/>"/>
 </head>
 <body>
-
 <jsp:include page="/component/navigation/navigation.jsp"/>
-<c:if test="${empty sessionScope.current_user}">
+<c:choose>
+<c:when test="${empty sessionScope.current_user}">
     <jsp:include page="/component/login/loginForm.jsp"/>
-</c:if>
+</c:when>
+<c:otherwise>
+    <p>U bent al ingelogd. Ga door naar de welkomspagina.</p>
+    <a href="<c:url value="/secure/admin.jsp"/>"><input type="button" class="button" value="Welkomspagina" /></a>
+</c:otherwise>
+</c:choose>
 <c:out value="${requestScope.login_error}"/>
 </body>
 </html>

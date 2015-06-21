@@ -2,6 +2,8 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <link rel="stylesheet" href="<c:url value="/global.css"/>"/>
 <link rel="stylesheet" href="<c:url value="/component/table.css"/>"/>
+<a href="<c:url value="/secure/admin.jsp"/>"><input type="button" class="button" value="Terug" /></a>
+<%--<a href="<c:url value="/secure/addcar.jsp"/>"><input type="button" class="button" value="Auto Toevoegen" /></a>--%>
 <div class="container">
     <table>
         <tr>

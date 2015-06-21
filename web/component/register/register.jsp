@@ -1,8 +1,6 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <link rel="stylesheet" href="<c:url value="/component/form.css"/>"/>
-
-
 <div class="container">
     <form action="<c:url value="/register"/>"  method="post">
         <fieldset name="Registreren">
@@ -63,9 +61,9 @@
                 <label class="text"><c:out value="${requestScope.phonenumber_error}"/></label>
             </div>
             <div class="p">
-                <input type="submit" name="button" value="Terug"/>
-                <input type="reset" name="reset" value="Reset"/>
-                <input type="submit" name="button" value="Registreren"/>
+                <a href="<c:url value="/secure/admin.jsp"/>"><input type="button" class="button" value="Terug" /></a>
+                <input type="reset" class="button" name="reset" value="Reset"/>
+                <input type="submit" class="button" name="button" value="Registreren"/>
             </div>
         </fieldset>
     </form>

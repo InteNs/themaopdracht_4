@@ -9,48 +9,45 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <link rel="stylesheet" href="<c:url value="/component/form.css"/>"/>
-<html>
-<head>
-    <title>Product Aanpassen</title>
-</head>
-<body>
-<%--TODO: FIX THIS SHIT YO--%>
+<%--TODO: FIX THIS SHIT YO; Jorrit: YES SIR!--%>
+<form action="<c:url value="/viewproducts"/>" method="post">
+            <span class="navigationitem">
+              <input type="submit" name="button" value="Producten"/>
+            </span>
+</form>
 <div class="container">
   <form action="<c:url value="/ammendproduct"/>" id="ammendProduct" method="post">
     <fieldset name="Product Aanpassen">
       <legend>Product aanpassen</legend>
       <div class="p">
         <label class="formlabel" for="productname">Productnaam:</label>
-        <input class="text" type="text" name="productname" id="productname" value=""/>
+        <input type="hidden" name="originalproductname" value="${param.name}"/>
+        <input class="text" type="text" name="productname" id="productname" value="${param.name}"/>
         <label class="formlabel">&nbsp;</label>
         <%--<label class="text"><c:out value="${requestScope.name_error}"/></label>--%>
       </div>
       <div class="p">
-        <%--<label class="formlabel" for="amount">Aantal:</label>--%>
-        <%--<input class="text" type="text" name="amount" id="amount" value="${param.amount}"/>--%>
+        <label class="formlabel" for="productamount">Aantal:</label>
+        <input class="text" type="number" name="productamount" id="productamount" value="${param.amount}"/>
         <label class="formlabel">&nbsp;</label>
         <%--<label class="text"><c:out value="${requestScope.amount_error}"/></label>--%>
       </div>
       <div class="p">
-        <label class="formlabel" for="price">Prijs:</label>
-        <input class="text" type="text" name="price" id="price" value="${param.price}"/>
+        <label class="formlabel" for="productprice">Prijs:</label>
+        <input class="text" type="number" step="0.01" name="productprice" id="productprice" value="${param.price}"/>
         <label class="formlabel">&nbsp;</label>
         <%--<label class="text"><c:out value="${requestScope.price_error}"/></label>--%>
       </div>
       <div class="p">
-        <label class="formlabel" for="check">*Bevestig aanpassingen:</label>
+        <label class="formlabel" for="check">Bevestig:</label>
         <input class="text" type="checkbox" name="check" id="check" required/>
       </div>
 
       <div class="p">
-        <input type="button" name="button" value="Terug"/>
-        <input type="reset" name="reset" value="Reset"/>
-        <input type="submit" name="button" value="Aanpassen"/>
+        <input type="reset" name="reset" class="button" value="Reset"/>
+        <input type="submit" name="button" class="button" value="Aanpassen"/>
       </div>
 
     </fieldset>
   </form>
 </div>
-
-</body>
-</html>

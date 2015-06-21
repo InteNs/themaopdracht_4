@@ -104,11 +104,11 @@ public class ProductController implements Serializable {
      * ammend a product
      * @param originalProductName of the product to find
      */
-    public void ammendProduct(String originalProductName, String productName, int amount, double price) {
+    public void ammendProduct(String originalProductName, String productName, int productAmount, double productPrice) {
         Product product = findProduct(originalProductName);
         product.setName(productName);
-        product.setAmount(amount);
-        product.setPrice(price);
+        product.setAmount(productAmount);
+        product.setPrice(productPrice);
     }
 
     /**

@@ -18,13 +18,11 @@ public class AmmendProductServlet extends HttpServlet{
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         ProductController productController = ((Data)req.getServletContext().getAttribute("data")).getProductController();
         String originalProductName = req.getParameter("originalproductname");
-        int originalamount = Integer.parseInt(req.getParameter("originalamount"));
-        double originalprice = Double.parseDouble(req.getParameter("originalprice"));
         String productName = req.getParameter("productname");
-        int amount = Integer.parseInt(req.getParameter("amount"));
-        double price = Double.parseDouble(req.getParameter("price"));
-        synchronized (productController) {
-            productController.ammendProduct(originalProductName, productName, amount, price);
+        int productamount = Integer.parseInt(req.getParameter("productamount"));
+        double productprice = Double.parseDouble(req.getParameter("productprice"));
+        synchronized (req.getParameter("productprice")) {
+            productController.ammendProduct(originalProductName, productName, productamount, productprice);
         }
         req.setAttribute("products",((Data)req.getServletContext().getAttribute("data")).getProductController().getAllProducts());
         req.getRequestDispatcher("/viewproducts").forward(req, resp);

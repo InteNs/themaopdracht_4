@@ -21,7 +21,7 @@
             <div class="p">
                 <label class="formlabel" for="login">&nbsp;</label>
                 <input class="button" type="submit" name="button" id="login" value="Login"/>
-                <a href="<c:url value="/component/register/register.jsp"/>"><input type="button" class="button" value="Registreren" /></a>
+                <a href="<c:url value="/register.jsp"/>"><input type="button" class="button" value="Registreren" /></a>
             </div>
         </fieldset>
     </form>
