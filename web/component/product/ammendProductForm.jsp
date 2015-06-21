@@ -15,6 +15,14 @@
               <input type="submit" name="button" value="Producten"/>
             </span>
 </form>
+<c:if test="${not empty param.name}">
+<form action="<c:url value="/secure/detailsproduct.jsp"/>" method="post">
+  <input type="submit" name="button" value="Details"/>
+  <input type="hidden" name="name" value="${param.name}"/>
+  <input type="hidden" name="amount" value="${param.amount}"/>
+  <input type="hidden" name="price" value="${param.price}"/>
+</form>
+</c:if>
 <div class="container">
   <form action="<c:url value="/ammendproduct"/>" id="ammendProduct" method="post">
     <fieldset name="Product Aanpassen">

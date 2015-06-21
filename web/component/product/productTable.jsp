@@ -19,8 +19,8 @@
             <th>Aantal</th>
             <th>Prijs</th>
             <th>Details</th>
-            <th>Verwijderen</th>
             <th>Aanpassen</th>
+            <th>Verwijderen</th>
         </tr>
 
         <c:forEach items="${requestScope.products}" var="product">
