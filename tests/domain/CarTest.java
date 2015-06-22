@@ -1,4 +1,4 @@
-package domain;
+package JUnit_test.domain;
 
 import domain.Car;
 import org.junit.Before;
@@ -33,7 +33,12 @@ public class CarTest {
         assertEquals("type is niet juist gezet",type, car.getType());
 
     }
-
+    @Test
+    public void testSetTypeNull() throws Exception {
+        car.setType(type);
+        car.setType(null);
+        assertEquals("type is niet juist gezet",type, car.getType());
+    }
     @Test
     public void testSetNumberPlate() throws Exception {
         car.setNumberPlate(numberPlate);

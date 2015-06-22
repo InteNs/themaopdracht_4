@@ -64,7 +64,7 @@ public class ProductController implements Serializable {
         }
         if (!name.matches(".*[a-zA-Z].*")) {
             succes = false;
-            errorMap.put("price_error", "Een naam bestaat uit letters");
+            errorMap.put("name_error", "De naam is niet correct ingevuld");
         }
         if((""+amount).contains("-")) {
             succes = false;
