@@ -15,7 +15,7 @@ import java.util.regex.Pattern;
  * Created by Jorrit Meulenbeld & Oussama Aalili on 18/06/15.
  */
 public class ProductController implements Serializable {
-    private ArrayList<Product> products;
+    private static ArrayList<Product> products;
 
     /**
      * create a new controller(use only once)
@@ -30,7 +30,7 @@ public class ProductController implements Serializable {
      * @param stringAmount number of products(in stringformat)
      * @param stringPrice  price of the product(in stringformat)
      */
-    public void addProduct(String name, String stringAmount, String stringPrice) throws ValidateException {
+    public static void addProduct(String name, String stringAmount, String stringPrice) throws ValidateException {
         boolean succes = true;
         String ERROR_NULL = "Dit veld mag niet leeg zijn!";
         String ERROR_NUM = "vul een getal in!";
@@ -90,7 +90,7 @@ public class ProductController implements Serializable {
      * @param name name to check
      * @return true if the product exists
      */
-    public boolean productExists(String name) {
+    public static boolean productExists(String name) {
         return products.stream().anyMatch(product -> product.getName().equals(name));
     }
 
@@ -106,7 +106,7 @@ public class ProductController implements Serializable {
      * @param name of the product to find
      * @return the product with the given name
      */
-    public Product findProduct(String name) {
+    public static Product findProduct(String name) {
         for (Product product : products)
             if (product.getName().equals(name)) return product;
         return null;
@@ -116,7 +116,7 @@ public class ProductController implements Serializable {
      * ammend a product
      * @param originalProductName of the product to find
      */
-    public void ammendProduct(String originalProductName, String productName, int productAmount, double productPrice) {
+    public static void ammendProduct(String originalProductName, String productName, int productAmount, double productPrice) {
         Product product = findProduct(originalProductName);
         product.setName(productName);
         product.setAmount(productAmount);
@@ -129,7 +129,7 @@ public class ProductController implements Serializable {
      * @param name from the product to be removed
      */
 
-    public void removeProduct(String name) {
+    public static void removeProduct(String name) {
         for (Product product : products)
             if(product.getName().equals(name)) {
                 products.remove(product);

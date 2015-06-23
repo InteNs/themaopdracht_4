@@ -1,4 +1,4 @@
-package JUnit_test.domain;
+package domain;
 
 import domain.users.*;
 import domain.Car;
@@ -45,11 +45,11 @@ public class CarTest {
 
 
     }
-    @Test
-    public void testRemoveCar() throws Exception {
-        User user = new User();
-        assertEquals("nummerplaat is niet juist gezet",numberPlate, car.getNumberPlate());
-
-
-    }
+//    @Test
+//    public void testRemoveCar() throws Exception {
+//        User user = new User();
+//        assertEquals("nummerplaat is niet juist gezet",numberPlate, car.getNumberPlate());
+//
+//
+//    }
 }

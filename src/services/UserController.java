@@ -127,7 +127,7 @@ public class UserController implements Serializable {
     /**
      * creates a new admin(hardcoded)
      */
-    public void newAdmin(){
+    public static void newAdmin(){
         users.add(new Owner("admin@admin.nl","admin","admin",LocalDate.now(),"admin","admin","admin"));
     }
 
@@ -140,7 +140,7 @@ public class UserController implements Serializable {
      * @param address     adress(street + house number)
      * @param dateOfBirth dateOfBirth
      */
-    public void newCustomer(String email,String emailRepeat, String password,String passwordRepeat, String realName,LocalDate dateOfBirth, String address, String postal, String phoneNumber ) throws ValidateException {
+    public static void newCustomer(String email,String emailRepeat, String password,String passwordRepeat, String realName,LocalDate dateOfBirth, String address, String postal, String phoneNumber ) throws ValidateException {
         boolean succes = true;
         String ERROR_NULL = "Dit veld mag niet leeg zijn!";
         HashMap<String,String> errorMap = new HashMap<>();
@@ -333,4 +333,6 @@ public class UserController implements Serializable {
 
         }
     }
+
+
 }

@@ -15,7 +15,6 @@ import static org.junit.Assert.assertTrue;
 public class CustomerTest {
 
          private Customer customer;
-         Customer customer;
 
     @Before
     public void setUp() throws Exception {
@@ -76,7 +75,7 @@ public class CustomerTest {
     @Test
     public void testSetIsOnBlackList() throws Exception {
         customer.setIsOnBlackList(true);
-        assertEquals("Blacklist is niet juist ingesteld", customer.isOnBlackList());
+        assertTrue("", customer.isOnBlackList());
     }
 
 
