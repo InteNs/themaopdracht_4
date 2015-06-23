@@ -1,6 +1,7 @@
 package listeners;
 
 
+import services.MaintenanceController;
 import services.ProductController;
 import services.UserController;
 
@@ -14,6 +15,7 @@ import java.util.Locale;
 public class Data implements Serializable {
     private final UserController userController = new UserController();
     private final ProductController productController = new ProductController();
+    private final MaintenanceController maintenanceController = new MaintenanceController();
     public Data (){}
 
     public UserController getUserController(){
@@ -22,6 +24,10 @@ public class Data implements Serializable {
 
     public ProductController getProductController() {
         return productController;
+    }
+
+    public MaintenanceController getMaintenanceController() {
+        return maintenanceController;
     }
 
     public static String convert(double price) {

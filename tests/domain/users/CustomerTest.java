@@ -21,7 +21,7 @@ public class CustomerTest {
     @Test
     public void testSetLastMaintenance() throws Exception {
         customer.setLastMaintenance(LocalDate.now());
-        assertEquals("datum komt niet overeen", customer.getLastMaintenance());
+        assertEquals("datum komt niet overeen",LocalDate.now(), customer.getLastMaintenance());
     }
 
     @Test
