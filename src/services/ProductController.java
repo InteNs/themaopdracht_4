@@ -6,7 +6,6 @@ import services.exceptions.ValidateException;
 import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.HashMap;
-import java.util.Objects;
 
 
 /**
@@ -26,62 +25,13 @@ public class ProductController implements Serializable {
     /**
      * Create new product
      *  @param name name of the product
-     * @param stringAmount number of products(in stringformat)
-     * @param stringPrice  price of the product(in stringformat)
+     * @param amount number of products
+     * @param price  price of the product
      */
-    public void addProduct(String name, String stringAmount, String stringPrice) throws ValidateException {
-        boolean succes = true;
-        String ERROR_NULL = "Dit veld mag niet leeg zijn!";
-        String ERROR_NUM = "vul een getal in!";
-        int amount = 0;
-        double price = 0;
-        HashMap<String, String> errorMap = new HashMap<>();
-        if (productExists(name)) {
-            succes = false;
-            errorMap.put("name_error", "Deze naam bestaat al in ons systeem!");
+    public void addProduct(String name, int amount, double price) throws ValidateException {
+        if (!productExists(name)){
+            products.add(new Product(name,amount,price));
         }
-        if (Objects.equals(name, "")) {
-            succes = false;
-            errorMap.put("name_error", ERROR_NULL);
-        }
-        if (Objects.equals(stringAmount, "")) {
-            succes = false;
-            errorMap.put("amount_error", ERROR_NULL);
-        }
-
-        try {
-            amount = Integer.parseInt(stringAmount);
-        } catch (NumberFormatException e) {
-            succes = false;
-            errorMap.put("amount_error",ERROR_NUM);
-        }
-        try {
-            price = Double.parseDouble(stringPrice);
-        } catch (NumberFormatException e) {
-            succes = false;
-            errorMap.put("price_error", ERROR_NUM);
-        }
-        if (!name.matches(".*[a-zA-Z].*")) {
-            succes = false;
-            errorMap.put("price_error", "Een naam bestaat uit letters");
-        }
-        if((""+amount).contains("-")) {
-            succes = false;
-            errorMap.put("amount_error","Mag geen negatief getal worden ingevuld");
-        }
-        if((""+price).contains("-")) {
-            succes = false;
-            errorMap.put("price_error","Mag geen negatief getal worden ingevuld");
-        }
-        if (succes) {
-           Product test = new Product(name, amount,price);
-            products.add(test);
-            System.out.println(test);
-
-        }
-        else throw new ValidateException(errorMap);
-
-
     }
 
     /**
@@ -115,11 +65,20 @@ public class ProductController implements Serializable {
      * ammend a product
      * @param originalProductName of the product to find
      */
-    public void ammendProduct(String originalProductName, String productName, int productAmount, double productPrice) {
-        Product product = findProduct(originalProductName);
-        product.setName(productName);
-        product.setAmount(productAmount);
-        product.setPrice(productPrice);
+    public void ammendProduct(String originalProductName, String productName, int productAmount, double productPrice) throws ValidateException {
+        if (!productExists(productName)){
+            Product product = findProduct(originalProductName);
+            if (product != null) {
+                product.setName(productName);
+                product.setAmount(productAmount);
+                product.setPrice(productPrice);
+            }
+        }
+        else {
+            HashMap<String,String> errormap = new HashMap<>();
+            errormap.put("name_error","naam bestaat al");
+            throw new ValidateException(errormap);
+        }
     }
 
     /**

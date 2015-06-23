@@ -6,7 +6,7 @@
               <input type="submit" class="button" name="button" value="Gebruikers"/>
             </span>
 </form>
-<form action="<c:url value="/secure/detailsuser.jsp"/>" method="post">
+<form action="<c:url value="/secure/users/detailsuser.jsp"/>" method="post">
             <span class="navigationitem">
   <input type="hidden" name="email" value="${param.email}"/>
   <input type="hidden" name="name" value="${param.name}"/>
@@ -24,14 +24,14 @@
       <legend>Gebruiker aanpssen</legend>
       <div class="p">
         <label class="formlabel" for="email">Email:</label>
-        <input class="text" type="text" name="email" id="email" placeholder="Vul email in" value="${param.email}"/>
+        <input class="text" type="email" name="email" id="email" placeholder="Vul email in" value="${param.email}"/>
           <input type="hidden" name="originalemail" value="${param.email}"/>
         <label class="formlabel">&nbsp;</label>
         <label class="text"><c:out value="${requestScope.email_error}"/></label>
       </div>
       <div class="p">
         <label class="formlabel" for="emailrepeat">Herhaal:</label>
-        <input class="text" type="text" name="email_repeat" id="emailrepeat" placeholder="Herhaal email"/>
+        <input class="text" type="email" name="email_repeat" id="emailrepeat" placeholder="Herhaal email"/>
         <label class="formlabel">&nbsp;</label>
         <label class="text"><c:out value="${requestScope.email_repeat_error}"/></label>
       </div>

@@ -23,7 +23,7 @@ public class LoginServlet extends HttpServlet {
         try {
             userController.isLoginValid(email, password);
             req.getSession().setAttribute("current_user", userController.findUser(email));
-            requestDispatcher = req.getRequestDispatcher("/secure/admin.jsp");
+            requestDispatcher = req.getRequestDispatcher("/secure/user/homepage.jsp");
             if (req.getAttribute("keep_email") != null) resp.addCookie(new Cookie("c_email", email));
         } catch (LoginException e) {
             req.setAttribute("login_error", e.getMessage());

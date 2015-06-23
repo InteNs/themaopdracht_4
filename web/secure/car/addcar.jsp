@@ -7,6 +7,6 @@
 </head>
 <body>
 <jsp:include page="/component/navigation/navigation.jsp"/>
-<jsp:include page="/component/user/userTable.jsp"/>
+<jsp:include page="/component/car/addCarForm.jsp"/>
 </body>
 </html>

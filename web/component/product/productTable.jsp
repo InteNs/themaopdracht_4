@@ -2,8 +2,8 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <link rel="stylesheet" href="<c:url value="/global.css"/>"/>
 <link rel="stylesheet" href="<c:url value="/component/table.css"/>"/>
-<a href="<c:url value="/secure/admin.jsp"/>"><input type="button" class="button" value="Terug" /></a>
-<a href="<c:url value="/secure/addproduct.jsp"/>"><input type="button" class="button" value="Product Toevoegen" /></a>
+<a href="<c:url value="/secure/users/admin.jsp"/>"><input type="button" class="button" value="Terug" /></a>
+<a href="<c:url value="/secure/product/addproduct.jsp"/>"><input type="button" class="button" value="Product Toevoegen" /></a>
 <div class="container">
     <table>
 
@@ -23,7 +23,7 @@
                 <td>${product.getPrice()}</td>
 
                     <%-- Productdetails --%>
-                <td><form action="<c:url value="/secure/detailsproduct.jsp"/>" method="post">
+                <td><form action="<c:url value="/secure/product/detailsproduct.jsp"/>" method="post">
                     <input type="submit" name="button" value="Details"/>
                     <input type="hidden" name="name" value="${product.getName()}"/>
                     <input type="hidden" name="amount" value="${product.getAmount()}"/>
@@ -31,7 +31,7 @@
                 </form></td>
 
                     <%-- Ammend product --%>
-                <td><form action="<c:url value="/secure/ammendproduct.jsp"/>" method="post">
+                <td><form action="<c:url value="/secure/product/ammendproduct.jsp"/>" method="post">
                     <input type="submit" name="button"  value="Aanpassen"/>
                     <input type="hidden" name="name" value="${product.getName()}"/>
                     <input type="hidden" name="amount" value="${product.getAmount()}"/>

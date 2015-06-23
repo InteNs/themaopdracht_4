@@ -71,7 +71,7 @@
     <!-- view users-->
     <servlet>
         <servlet-name>viewUsersServlet</servlet-name>
-        <servlet-class>servlets.userServlets.viewUsersServlet</servlet-class>
+        <servlet-class>servlets.userServlets.ViewUsersServlet</servlet-class>
     </servlet>
     <servlet-mapping>
         <servlet-name>viewUsersServlet</servlet-name>
@@ -81,7 +81,7 @@
     <!-- view ammendUser-->
     <servlet>
         <servlet-name>ammendUserServlet</servlet-name>
-        <servlet-class>servlets.userServlets.ammenduserServlet</servlet-class>
+        <servlet-class>servlets.userServlets.AmmendUserServlet</servlet-class>
     </servlet>
     <servlet-mapping>
         <servlet-name>ammendUserServlet</servlet-name>
@@ -101,7 +101,7 @@
     <!-- createUser-->
     <servlet>
         <servlet-name>newUserServlet</servlet-name>
-        <servlet-class>servlets.userServlets.newUserServlet</servlet-class>
+        <servlet-class>servlets.userServlets.NewUserServlet</servlet-class>
     </servlet>
     <servlet-mapping>
         <servlet-name>newUserServlet</servlet-name>
@@ -156,5 +156,9 @@
     <filter-mapping>
         <filter-name>FilterForSecurity</filter-name>
         <url-pattern>/secure/*</url-pattern>
+    </filter-mapping>
+    <filter-mapping>
+        <filter-name>FilterForSecurity</filter-name>
+        <url-pattern>/component/*</url-pattern>
     </filter-mapping>
 </web-app>

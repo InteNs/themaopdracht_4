@@ -35,7 +35,7 @@
         <%--<label class="text"><c:out value="${requestScope.price_error}"/></label>--%>
       </div>
       <div class="p">
-        <form action="<c:url value="/secure/ammendproduct.jsp"/>" method="post">
+        <form action="<c:url value="/secure/product/ammendproduct.jsp"/>" method="post">
           <input type="submit" name="button"  value="Aanpassen"/>
           <input type="hidden" name="name" value="${param.name}"/>
           <input type="hidden" name="amount" value="${param.amount}"/>

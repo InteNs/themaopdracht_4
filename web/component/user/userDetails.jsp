@@ -7,7 +7,7 @@
             </span>
 </form>
 <div class="container">
-  <form action="<c:url value="/secure/ammenduser.jsp"/>"  method="post">
+  <form action="<c:url value="/secure/user/ammenduser.jsp"/>"  method="post">
     <fieldset name="userdetails">
       <legend>Details Gebruiker</legend>
       <div class="p">

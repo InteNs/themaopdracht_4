@@ -2,12 +2,11 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
-  <title>AutoTotaalDienst</title>
-  <link rel="stylesheet" href="<c:url value="/global.css"/>"/>
+    <title>AutoTotaalDienst</title>
+    <link rel="stylesheet" href="<c:url value="/global.css"/>"/>
 </head>
 <body>
 <jsp:include page="/component/navigation/navigation.jsp"/>
-<jsp:include page="/component/car/carTable.jsp"/>
-
+<jsp:include page="/component/user/userTable.jsp"/>
 </body>
 </html>

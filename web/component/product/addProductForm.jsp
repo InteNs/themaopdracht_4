@@ -19,19 +19,19 @@
       <legend>Product toevoegen</legend>
       <div class="p">
         <label class="formlabel" for="productname">Productnaam:</label>
-        <input class="text" type="text" name="productname" id="productname" placeholder="Vul de Productnaam in"/>
+        <input class="text" type="text" name="productname" id="productname" placeholder="Vul de Productnaam in" required/>
         <label class="formlabel">&nbsp;</label>
         <label class="text"><c:out value="${requestScope.name_error}"/></label>
       </div>
       <div class="p">
         <label class="formlabel" for="amount">Aantal:</label>
-        <input class="text" type="text" name="amount" id="amount" placeholder="Vul het aantal in"/>
+        <input class="text" type="text" name="amount" id="amount" placeholder="Vul het aantal in"required/>
         <label class="formlabel">&nbsp;</label>
         <label class="text"><c:out value="${requestScope.amount_error}"/></label>
       </div>
       <div class="p">
         <label class="formlabel" for="price">Prijs:</label>
-        <input class="text" type="text" name="price" id="price" placeholder="Vul de prijs in"/>
+        <input class="text" type="text" name="price" id="price" placeholder="Vul de prijs in"required/>
         <label class="formlabel">&nbsp;</label>
         <label class="text"><c:out value="${requestScope.price_error}"/></label>
       </div>

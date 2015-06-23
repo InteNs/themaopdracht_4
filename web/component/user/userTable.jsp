@@ -2,8 +2,8 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <link rel="stylesheet" href="<c:url value="/global.css"/>"/>
 <link rel="stylesheet" href="<c:url value="/component/table.css"/>"/>
-<a href="<c:url value="/secure/admin.jsp"/>"><input type="button" class="button" value="Terug" /></a>
-<a href="<c:url value="/secure/adduser.jsp"/>"><input type="button" class="button" value="Gebruiker Toevoegen" /></a>
+<a href="<c:url value="/secure/users/admin.jsp"/>"><input type="button" class="button" value="Terug" /></a>
+<a href="<c:url value="/secure/users/adduser.jsp"/>"><input type="button" class="button" value="Gebruiker Toevoegen" /></a>
 <div class="container">
     <table>
         <tr>
@@ -28,7 +28,7 @@
                 <td>${user.getDateOfBirth()}</td>
                 <td>${user.getPhoneNumber()}</td>
                 <td>
-                    <form action="<c:url value="/secure/detailsuser.jsp"/>" method="post">
+                    <form action="<c:url value="/secure/users/detailsuser.jsp"/>" method="post">
                         <input type="submit" name="button" value="Details"/>
                         <input type="hidden" name="usertype" value="${user.getUserType()}"/>
                         <input type="hidden" name="email" value="${user.getEmail()}"/>
@@ -40,7 +40,7 @@
                     </form>
                 </td>
                 <td>
-                    <form action="<c:url value="/secure/ammenduser.jsp"/>" method="post">
+                    <form action="<c:url value="/secure/users/ammenduser.jsp"/>" method="post">
                         <input type="submit" name="button" value="Aanpassen"/>
                         <input type="hidden" name="usertype" value="${user.getUserType()}"/>
                         <input type="hidden" name="email" value="${user.getEmail()}"/>

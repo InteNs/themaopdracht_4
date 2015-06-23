@@ -11,7 +11,7 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.util.Map;
 
-public class newUserServlet extends HttpServlet {
+public class NewUserServlet extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         UserController userController = ((Data)req.getServletContext().getAttribute("data")).getUserController();
@@ -45,7 +45,7 @@ public class newUserServlet extends HttpServlet {
         } catch (ValidateException e) {
             for(Map.Entry<String, String> entry : e.getErrorMap().entrySet())
                 req.setAttribute(entry.getKey(),entry.getValue());
-             req.getRequestDispatcher("/secure/adduser.jsp").forward(req,resp);
+             req.getRequestDispatcher("/secure/user/adduser.jsp").forward(req,resp);
         }
         req.getRequestDispatcher("/viewusers").forward(req,resp);
     }

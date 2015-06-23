@@ -14,7 +14,7 @@
             </span>
 </form>
 <c:if test="${not empty param.name}">
-<form action="<c:url value="/secure/detailsproduct.jsp"/>" method="post">
+<form action="<c:url value="/secure/product/detailsproduct.jsp"/>" method="post">
   <input type="submit" name="button" value="Details"/>
   <input type="hidden" name="name" value="${param.name}"/>
   <input type="hidden" name="amount" value="${param.amount}"/>
@@ -28,21 +28,19 @@
       <div class="p">
         <label class="formlabel" for="productname">Productnaam:</label>
         <input type="hidden" name="originalproductname" value="${param.name}"/>
-        <input class="text" type="text" name="productname" id="productname" value="${param.name}"/>
+        <input class="text" type="text" name="productname" id="productname" value="${param.name}" required/>
         <label class="formlabel">&nbsp;</label>
-        <%--<label class="text"><c:out value="${requestScope.name_error}"/></label>--%>
+        <label class="text"><c:out value="${requestScope.name_error}"/></label>
       </div>
       <div class="p">
         <label class="formlabel" for="productamount">Aantal:</label>
-        <input class="text" type="number" name="productamount" id="productamount" value="${param.amount}"/>
+        <input class="text" type="number" min="0" step="1" name="productamount" id="productamount" value="${param.amount}" required/>
         <label class="formlabel">&nbsp;</label>
-        <%--<label class="text"><c:out value="${requestScope.amount_error}"/></label>--%>
       </div>
       <div class="p">
         <label class="formlabel" for="productprice">Prijs:</label>
-        <input class="text" type="number" step="0.01" name="productprice" id="productprice" value="${param.price}"/>
+        <input class="text" type="number" min="0" step="0.01" name="productprice" id="productprice" value="${param.price}" required/>
         <label class="formlabel">&nbsp;</label>
-        <%--<label class="text"><c:out value="${requestScope.price_error}"/></label>--%>
       </div>
       <div class="p">
         <label class="formlabel" for="check">Bevestig:</label>

@@ -2,12 +2,14 @@ package servlets.productServlets;
 
 import listeners.Data;
 import services.ProductController;
+import services.exceptions.ValidateException;
 
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
+import java.util.Map;
 
 /**
  * Created by Jorrit Meulenbeld on 18/06/15.
@@ -23,12 +25,15 @@ public class AmmendProductServlet extends HttpServlet{
         int productamount =             Integer.parseInt(req.getParameter("productamount"));
         double productprice =           Double.parseDouble(req.getParameter("productprice"));
 
-        synchronized (req.getParameter("productprice")) {
-            productController.ammendProduct(originalProductName, productName, productamount, productprice);
+        synchronized (productController) {
+            try {
+                productController.ammendProduct(originalProductName, productName, productamount, productprice);
+            } catch (ValidateException e) {
+                for(Map.Entry<String, String> entry : e.getErrorMap().entrySet())
+                    req.setAttribute(entry.getKey(),entry.getValue());
+                req.getRequestDispatcher("/secure/product/ammendproduct.jsp").forward(req, resp);
+            }
         }
-
-        req.setAttribute("products",((Data)req.getServletContext().getAttribute("data")).getProductController().getAllProducts());
-
         req.getRequestDispatcher("/viewproducts").forward(req, resp);
     }
 }

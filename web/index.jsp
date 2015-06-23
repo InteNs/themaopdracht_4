@@ -13,7 +13,7 @@
 </c:when>
 <c:otherwise>
     <p>U bent al ingelogd. Ga door naar de welkomspagina.</p>
-    <a href="<c:url value="/secure/admin.jsp"/>"><input type="button" class="button" value="Welkomspagina" /></a>
+    <a href="<c:url value="/secure/user/homepage.jsp"/>"><input type="button" class="button" value="Welkomspagina" /></a>
 </c:otherwise>
 </c:choose>
 <c:out value="${requestScope.login_error}"/>

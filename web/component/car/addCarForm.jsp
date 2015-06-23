@@ -27,7 +27,6 @@
         <label class="formlabel" for="carType">Type:</label>
         <input class="text" type="text" name="cartype" id="carType" placeholder="Vul het type in"/>
         <label class="formlabel">&nbsp;</label>
-        <label class="text"><c:out value="${requestScope.type_error}"/></label>
       </div>
       <div class="p">
         <label class="formlabel" for="numberPlate">Kenteken:</label>
