@@ -1,9 +1,9 @@
 package JUnit_test.domain;
 
+import domain.users.*;
 import domain.Car;
 import org.junit.Before;
 import org.junit.Test;
-
 import static org.junit.Assert.assertEquals;
 
 /**
@@ -13,7 +13,6 @@ public class CarTest {
     private final static String type = "sportwagen" ;
     private final static String numberPlate = "aa-11-bb";
     Car car ;
-
     @Before
     public void setUp(){car = new Car(type, numberPlate);
     }
@@ -42,8 +41,15 @@ public class CarTest {
     @Test
     public void testSetNumberPlate() throws Exception {
         car.setNumberPlate(numberPlate);
-        assertEquals("nummerplaat is niet juist gezet",numberPlate, car.getNumberPlate());
+        assertEquals("nummerplaat is niet juist gezet", numberPlate, car.getNumberPlate());
+
 
     }
+    @Test
+    public void testRemoveCar() throws Exception {
+        User user = new User();
+        assertEquals("nummerplaat is niet juist gezet",numberPlate, car.getNumberPlate());
 
+
+    }
 }

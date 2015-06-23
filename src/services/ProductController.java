@@ -97,7 +97,7 @@ public class ProductController implements Serializable {
     /**
      * @return an arraylist with all the products
      */
-    public ArrayList<Product> getAllProducts() {
+    public static ArrayList<Product> getAllProducts() {
         return products;
     }
 

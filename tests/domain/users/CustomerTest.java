@@ -1,16 +1,20 @@
 package domain.users;
 
+import domain.Car;
 import org.junit.Before;
 import org.junit.Test;
 
 import java.time.LocalDate;
 
 import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertTrue;
 
 /**
  * Created by InteNs on 16.jun.2015.
  */
 public class CustomerTest {
+
+         private Customer customer;
          Customer customer;
 
     @Before
@@ -51,8 +55,16 @@ public class CustomerTest {
 
     @Test
     public void testRemoveCar() throws Exception {
-        customer.removeCar("a");
-        assertEquals("Auto-object is niet verwijderd", customer.getCars());
+
+        boolean autoBestaatnietmeer ;
+        Car auto = new Car("ferrari","XXX666");
+        customer.addCar(auto);
+        // er moet eerst eeen auto bestaan om het te kunnen verwijderen dus dan is die alvast true want het moet ook verwijderd worden
+        autoBestaatnietmeer = customer.getCars().contains(auto.getNumberPlate());
+        customer.removeCar(auto.getNumberPlate());
+        // bestond eerst wel dus, en nu niet meer!
+        autoBestaatnietmeer = autoBestaatnietmeer && !customer.getCars().contains(auto.getNumberPlate());
+        assertTrue(autoBestaatnietmeer);
     }
 
     @Test
@@ -66,5 +78,7 @@ public class CustomerTest {
         customer.setIsOnBlackList(true);
         assertEquals("Blacklist is niet juist ingesteld", customer.isOnBlackList());
     }
+
+
 }
 

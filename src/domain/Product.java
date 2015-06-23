@@ -40,5 +40,21 @@ public class Product implements Serializable {
         this.price = price;
     }
 
+    public boolean equals(Object obj) {
+        boolean b = false;
+        Product tijdelijk = null;
+        if(obj instanceof Product) {
+            tijdelijk = (Product)obj;
+            b = true;
+        }
+        if(b){
+            b= b && tijdelijk.getName().equals(getName());
+            b= b && tijdelijk.getAmount() == getAmount();
+            b= b && tijdelijk.getPrice() == (getPrice());
+
+        }
+        return b;
+    }
+
     // TODO Make getter & setter for Product-Supplier
 }
