@@ -8,11 +8,11 @@
             <legend>Login</legend>
             <div class="p">
                 <label class="formlabel" for="email">Email:</label>
-                <input class="text" type="email" name="email" id="email" placeholder="Vul hier uw email in."/>
+                <input class="text" type="email" name="email" id="email" placeholder="Vul hier uw email in." required/>
             </div>
             <div class="p">
                 <label class="formlabel" for="password">Wachtwoord:</label>
-                <input class="text" type="password" name="password" id="password" placeholder="Vul hier uw wachtwoord in."/>
+                <input class="text" type="password" name="password" id="password" placeholder="Vul hier uw wachtwoord in."required/>
             </div>
             <div class="p">
                 <label class="formlabel" for="staylogged">&nbsp;</label>
