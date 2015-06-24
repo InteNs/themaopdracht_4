@@ -2,6 +2,7 @@ package listeners;
 
 
 import services.MaintenanceController;
+import services.ParkingController;
 import services.ProductController;
 import services.UserController;
 
@@ -16,6 +17,7 @@ public class Data implements Serializable {
     private final UserController userController = new UserController();
     private final ProductController productController = new ProductController();
     private final MaintenanceController maintenanceController = new MaintenanceController();
+    private final ParkingController parkingController = new ParkingController();
     public Data (){}
 
     public UserController getUserController(){
@@ -28,6 +30,10 @@ public class Data implements Serializable {
 
     public MaintenanceController getMaintenanceController() {
         return maintenanceController;
+    }
+
+    public ParkingController getParkingController() {
+        return parkingController;
     }
 
     public static String convert(double price) {
