@@ -1,7 +1,5 @@
 package domain.users;
 
-import domain.Car;
-
 import java.io.Serializable;
 import java.time.LocalDate;
 import java.util.ArrayList;

@@ -3544,62 +3544,63 @@
   <thread>16</thread>
   <message>admin account created</message>
 </record>
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+</log>
+<?xml version="1.0" encoding="windows-1252" standalone="no"?>
 <!DOCTYPE log SYSTEM "logger.dtd">
 <log>
 <record>
-  <date>2015-06-24T10:20:28</date>
-  <millis>1435134028766</millis>
+  <date>2015-06-24T10:57:50</date>
+  <millis>1435136270236</millis>
   <sequence>34</sequence>
   <logger>listener.SessionCounterListener</logger>
   <level>INFO</level>
   <class>listeners.ServerContextListener</class>
   <method>contextInitialized</method>
-  <thread>17</thread>
+  <thread>18</thread>
   <message>Logger initialized</message>
 </record>
 <record>
-  <date>2015-06-24T10:20:28</date>
-  <millis>1435134028767</millis>
+  <date>2015-06-24T10:57:50</date>
+  <millis>1435136270237</millis>
   <sequence>35</sequence>
   <logger>listener.SessionCounterListener</logger>
   <level>INFO</level>
   <class>listeners.ServerContextListener</class>
   <method>contextInitialized</method>
-  <thread>17</thread>
+  <thread>18</thread>
   <message>reading data...</message>
 </record>
 <record>
-  <date>2015-06-24T10:20:28</date>
-  <millis>1435134028781</millis>
+  <date>2015-06-24T10:57:50</date>
+  <millis>1435136270249</millis>
   <sequence>36</sequence>
   <logger>listener.SessionCounterListener</logger>
   <level>WARNING</level>
   <class>listeners.ServerContextListener</class>
   <method>contextInitialized</method>
-  <thread>17</thread>
+  <thread>18</thread>
   <message>writing aborted; java.io.NotSerializableException: services.MaintenanceController</message>
 </record>
 <record>
-  <date>2015-06-24T10:20:28</date>
-  <millis>1435134028781</millis>
+  <date>2015-06-24T10:57:50</date>
+  <millis>1435136270249</millis>
   <sequence>37</sequence>
   <logger>listener.SessionCounterListener</logger>
   <level>WARNING</level>
   <class>listeners.ServerContextListener</class>
   <method>contextInitialized</method>
-  <thread>17</thread>
+  <thread>18</thread>
   <message>no data object found, making a new one...</message>
 </record>
 <record>
-  <date>2015-06-24T10:20:28</date>
-  <millis>1435134028810</millis>
+  <date>2015-06-24T10:57:50</date>
+  <millis>1435136270275</millis>
   <sequence>38</sequence>
   <logger>listener.SessionCounterListener</logger>
   <level>INFO</level>
   <class>listeners.ServerContextListener</class>
   <method>contextInitialized</method>
-  <thread>17</thread>
+  <thread>18</thread>
   <message>admin account created</message>
 </record>
 <?xml version="1.0" encoding="windows-1252" standalone="no"?>

@@ -1,6 +1,6 @@
 package domain.maintenance;
 
-import domain.Car;
+import domain.users.Car;
 import domain.Product;
 import domain.users.Customer;
 import domain.users.Mechanic;
@@ -9,8 +9,8 @@ import java.time.LocalDate;
 import java.util.HashMap;
 
 public class MaintenanceSession {
-    public enum sessionStatus{NIEUW,FINISHED,ACTIVE}
-
+    public enum sessionStatus{NEW,FINISHED,ACTIVE}
+    private int ID;
     private sessionStatus status;
     private Customer customer;
     private Mechanic mechanic;
@@ -18,14 +18,23 @@ public class MaintenanceSession {
     private Car car;
     private HashMap<Product,Integer> products;
     private int hours;
-    public MaintenanceSession(Customer customer, Mechanic mechanic, Car car){
+    public MaintenanceSession(int ID, Customer customer, Mechanic mechanic, Car car){
         this.customer = customer;
         this.mechanic = mechanic;
         products = new HashMap<>();
-        this.status = sessionStatus.NIEUW;
+        this.status = sessionStatus.NEW;
         this.date = LocalDate.now();
         this.car = car;
         this.hours = 0;
+        this.ID = ID;
+    }
+
+    public int getID() {
+        return ID;
+    }
+
+    public HashMap<Product, Integer> getProducts() {
+        return products;
     }
 
     public int getHours() {
