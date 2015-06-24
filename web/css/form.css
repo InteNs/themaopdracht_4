@@ -1,6 +1,7 @@
 fieldset {
     width: 450px;
-    margin-top: 15px;
+    margin: auto;
+    margin-bottom: 15px;
 }
 fieldset .p {
     clear: both;

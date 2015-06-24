@@ -1,10 +1,50 @@
 @import "form.css";
 @import "navigation.css";
 @import "table.css";
+body {
+    font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+    font-weight: 300;
+}
 .container {
     width: 100%;
     margin: auto auto;
 }
+
 .button {
     width: 125px;
+    background: #7a1f8c;
+    background-image: -webkit-linear-gradient(top, #7a1f8c, #43144d);
+    background-image: -moz-linear-gradient(top, #7a1f8c, #43144d);
+    background-image: -ms-linear-gradient(top, #7a1f8c, #43144d);
+    background-image: -o-linear-gradient(top, #7a1f8c, #43144d);
+    background-image: linear-gradient(to bottom, #7a1f8c, #43144d);
+    -webkit-border-top-right-radius: 3;
+    -webkit-border-top-left-radius: 3;
+    -webkit-border-bottom-right-radius: 3;
+    -webkit-border-bottom-left-radius: 3;
+    -moz-border-radius-topright: 3;
+    -moz-border-radius-topleft: 3;
+    -moz-border-radius-bottomright: 3;
+    -moz-border-radius-bottomleft: 3;
+    border-radius: 3px;
+    text-shadow: 1px 1px 5px #000000;
+    -webkit-box-shadow: 0px 1px 6px #666666;
+    -moz-box-shadow: 0px 1px 6px #666666;
+    box-shadow: 0px 1px 6px #666666;
+    font-family: Arial;
+    color: #ebebeb;
+    font-size: 16px;
+    padding: 5px 10px 5px 10px;
+    border: solid #4d3952 1px;
+    text-decoration: none;
+}
+
+.button:hover {
+    background: #844b8f;
+    background-image: -webkit-linear-gradient(top, #844b8f, #452f4a);
+    background-image: -moz-linear-gradient(top, #844b8f, #452f4a);
+    background-image: -ms-linear-gradient(top, #844b8f, #452f4a);
+    background-image: -o-linear-gradient(top, #844b8f, #452f4a);
+    background-image: linear-gradient(to bottom, #844b8f, #452f4a);
+    text-decoration: none;
 }

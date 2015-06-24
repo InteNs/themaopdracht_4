@@ -1,6 +1,7 @@
 .containernavigation {
     width: 100%;
     border-bottom: solid 1px black;
+    margin-bottom: 15px;
 }
 .navigationitem {
     display: inline;
