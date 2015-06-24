@@ -3544,3 +3544,120 @@
   <thread>16</thread>
   <message>admin account created</message>
 </record>
+<?xml version="1.0" encoding="windows-1252" standalone="no"?>
+<!DOCTYPE log SYSTEM "logger.dtd">
+<log>
+<record>
+  <date>2015-06-24T11:10:07</date>
+  <millis>1435137007141</millis>
+  <sequence>34</sequence>
+  <logger>listener.SessionCounterListener</logger>
+  <level>INFO</level>
+  <class>listeners.ServerContextListener</class>
+  <method>contextInitialized</method>
+  <thread>22</thread>
+  <message>Logger initialized</message>
+</record>
+<record>
+  <date>2015-06-24T11:10:07</date>
+  <millis>1435137007145</millis>
+  <sequence>35</sequence>
+  <logger>listener.SessionCounterListener</logger>
+  <level>INFO</level>
+  <class>listeners.ServerContextListener</class>
+  <method>contextInitialized</method>
+  <thread>22</thread>
+  <message>reading data...</message>
+</record>
+<record>
+  <date>2015-06-24T11:10:07</date>
+  <millis>1435137007184</millis>
+  <sequence>36</sequence>
+  <logger>listener.SessionCounterListener</logger>
+  <level>WARNING</level>
+  <class>listeners.ServerContextListener</class>
+  <method>contextInitialized</method>
+  <thread>22</thread>
+  <message>listeners.Data; local class incompatible: stream classdesc serialVersionUID = 6499561369894836637, local class serialVersionUID = 5991367248965936576</message>
+</record>
+<record>
+  <date>2015-06-24T11:10:07</date>
+  <millis>1435137007184</millis>
+  <sequence>37</sequence>
+  <logger>listener.SessionCounterListener</logger>
+  <level>WARNING</level>
+  <class>listeners.ServerContextListener</class>
+  <method>contextInitialized</method>
+  <thread>22</thread>
+  <message>no data object found, making a new one...</message>
+</record>
+<record>
+  <date>2015-06-24T11:10:07</date>
+  <millis>1435137007343</millis>
+  <sequence>38</sequence>
+  <logger>listener.SessionCounterListener</logger>
+  <level>INFO</level>
+  <class>listeners.ServerContextListener</class>
+  <method>contextInitialized</method>
+  <thread>22</thread>
+  <message>admin account created</message>
+</record>
+</log>
+<?xml version="1.0" encoding="windows-1252" standalone="no"?>
+<!DOCTYPE log SYSTEM "logger.dtd">
+<log>
+<record>
+  <date>2015-06-24T11:33:45</date>
+  <millis>1435138425086</millis>
+  <sequence>34</sequence>
+  <logger>listener.SessionCounterListener</logger>
+  <level>INFO</level>
+  <class>listeners.ServerContextListener</class>
+  <method>contextInitialized</method>
+  <thread>16</thread>
+  <message>Logger initialized</message>
+</record>
+<record>
+  <date>2015-06-24T11:33:45</date>
+  <millis>1435138425089</millis>
+  <sequence>35</sequence>
+  <logger>listener.SessionCounterListener</logger>
+  <level>INFO</level>
+  <class>listeners.ServerContextListener</class>
+  <method>contextInitialized</method>
+  <thread>16</thread>
+  <message>reading data...</message>
+</record>
+<record>
+  <date>2015-06-24T11:33:45</date>
+  <millis>1435138425168</millis>
+  <sequence>36</sequence>
+  <logger>listener.SessionCounterListener</logger>
+  <level>WARNING</level>
+  <class>listeners.ServerContextListener</class>
+  <method>contextInitialized</method>
+  <thread>16</thread>
+  <message>writing aborted; java.io.NotSerializableException: services.MaintenanceController</message>
+</record>
+<record>
+  <date>2015-06-24T11:33:45</date>
+  <millis>1435138425170</millis>
+  <sequence>37</sequence>
+  <logger>listener.SessionCounterListener</logger>
+  <level>WARNING</level>
+  <class>listeners.ServerContextListener</class>
+  <method>contextInitialized</method>
+  <thread>16</thread>
+  <message>no data object found, making a new one...</message>
+</record>
+<record>
+  <date>2015-06-24T11:33:45</date>
+  <millis>1435138425295</millis>
+  <sequence>38</sequence>
+  <logger>listener.SessionCounterListener</logger>
+  <level>INFO</level>
+  <class>listeners.ServerContextListener</class>
+  <method>contextInitialized</method>
+  <thread>16</thread>
+  <message>admin account created</message>
+</record>
