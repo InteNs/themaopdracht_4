@@ -16,7 +16,7 @@
         <c:forEach items="${sessionScope.current_user.cars}" var="car">
         <tr>
             <td>${car.getType()}</td>
-            <td>${car.getNumberPlate()}</td>
+            <td>${car.getLicensePlate()}</td>
             <td>
                 <form action="<c:url value="/removecar"/>" id="removecar" method="post">
                     <input type="submit" class="buttonsmall" value="&#10005;"/>

@@ -3,9 +3,10 @@ package domain.parking;
 import domain.users.Car;
 import domain.users.Customer;
 
+import java.io.Serializable;
 import java.time.LocalDate;
 
-public class Reservation {
+public class Reservation implements Serializable{
     private int ID;
     private LocalDate date;
     private ParkingSpot parkingSpot;
