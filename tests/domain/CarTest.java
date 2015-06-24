@@ -1,5 +1,6 @@
 package domain;
 
+import domain.users.Car;
 import org.junit.Before;
 import org.junit.Test;
 
