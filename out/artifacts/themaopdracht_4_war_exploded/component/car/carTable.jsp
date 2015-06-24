@@ -2,10 +2,10 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <div class="container">
     <div class="right">
-        <a href="<c:url value="/component/navigation/links.jsp"/>"><input type="button" class="button" value="Terug" /></a>
+        <a href="<c:url value="/secure/user/homepage.jsp"/>"><input type="button" class="button" value="Terug" /></a>
     </div>
     <div class="right">
-        <a href="<c:url value="/secure/car/addcar.jsp"/>"><input type="button" class="button" value="Auto Toevoegen" /></a>
+        <a href="<c:url value="/secure/car/addCar.jsp"/>"><input type="button" class="button" value="Auto Toevoegen" /></a>
     </div>
     <table>
         <tr>
@@ -16,7 +16,7 @@
         <c:forEach items="${sessionScope.current_user.cars}" var="car">
         <tr>
             <td>${car.getType()}</td>
-            <td>${car.getNumberPlate()}</td>
+            <td>${car.getLicensePlate()}</td>
             <td>
                 <form action="<c:url value="/removecar"/>" id="removecar" method="post">
                     <input type="submit" class="buttonsmall" value="&#10005;"/>

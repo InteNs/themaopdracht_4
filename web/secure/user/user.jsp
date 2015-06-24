@@ -5,8 +5,8 @@
     <title>AutoTotaalDienst</title>
     <link rel="stylesheet" href="<c:url value="/css/global.css"/>"/>
 </head>
-<body>
-<jsp:include page="/component/navigation/navigation.jsp"/>
-<jsp:include page="/component/user/userTable.jsp"/>
-</body>
+    <body>
+        <jsp:include page="/component/navigation/navigation.jsp"/>
+        <jsp:include page="/component/user/userTable.jsp"/>
+    </body>
 </html>

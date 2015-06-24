@@ -3544,124 +3544,1575 @@
   <thread>16</thread>
   <message>admin account created</message>
 </record>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE log SYSTEM "logger.dtd">
+<log>
+<record>
+  <date>2015-06-24T10:20:28</date>
+  <millis>1435134028766</millis>
+  <sequence>34</sequence>
+  <logger>listener.SessionCounterListener</logger>
+  <level>INFO</level>
+  <class>listeners.ServerContextListener</class>
+  <method>contextInitialized</method>
+  <thread>17</thread>
+  <message>Logger initialized</message>
+</record>
+<record>
+  <date>2015-06-24T10:20:28</date>
+  <millis>1435134028767</millis>
+  <sequence>35</sequence>
+  <logger>listener.SessionCounterListener</logger>
+  <level>INFO</level>
+  <class>listeners.ServerContextListener</class>
+  <method>contextInitialized</method>
+  <thread>17</thread>
+  <message>reading data...</message>
+</record>
+<record>
+  <date>2015-06-24T10:20:28</date>
+  <millis>1435134028781</millis>
+  <sequence>36</sequence>
+  <logger>listener.SessionCounterListener</logger>
+  <level>WARNING</level>
+  <class>listeners.ServerContextListener</class>
+  <method>contextInitialized</method>
+  <thread>17</thread>
+  <message>writing aborted; java.io.NotSerializableException: services.MaintenanceController</message>
+</record>
+<record>
+  <date>2015-06-24T10:20:28</date>
+  <millis>1435134028781</millis>
+  <sequence>37</sequence>
+  <logger>listener.SessionCounterListener</logger>
+  <level>WARNING</level>
+  <class>listeners.ServerContextListener</class>
+  <method>contextInitialized</method>
+  <thread>17</thread>
+  <message>no data object found, making a new one...</message>
+</record>
+<record>
+  <date>2015-06-24T10:20:28</date>
+  <millis>1435134028810</millis>
+  <sequence>38</sequence>
+  <logger>listener.SessionCounterListener</logger>
+  <level>INFO</level>
+  <class>listeners.ServerContextListener</class>
+  <method>contextInitialized</method>
+  <thread>17</thread>
+  <message>admin account created</message>
+</record>
+<?xml version="1.0" encoding="windows-1252" standalone="no"?>
+<!DOCTYPE log SYSTEM "logger.dtd">
+<log>
+<record>
+  <date>2015-06-24T12:00:41</date>
+  <millis>1435140041957</millis>
+  <sequence>34</sequence>
+  <logger>listener.SessionCounterListener</logger>
+  <level>INFO</level>
+  <class>listeners.ServerContextListener</class>
+  <method>contextInitialized</method>
+  <thread>16</thread>
+  <message>Logger initialized</message>
+</record>
+<record>
+  <date>2015-06-24T12:00:41</date>
+  <millis>1435140041958</millis>
+  <sequence>35</sequence>
+  <logger>listener.SessionCounterListener</logger>
+  <level>INFO</level>
+  <class>listeners.ServerContextListener</class>
+  <method>contextInitialized</method>
+  <thread>16</thread>
+  <message>reading data...</message>
+</record>
+<record>
+  <date>2015-06-24T12:00:41</date>
+  <millis>1435140041968</millis>
+  <sequence>36</sequence>
+  <logger>listener.SessionCounterListener</logger>
+  <level>WARNING</level>
+  <class>listeners.ServerContextListener</class>
+  <method>contextInitialized</method>
+  <thread>16</thread>
+  <message>writing aborted; java.io.NotSerializableException: services.MaintenanceController</message>
+</record>
+<record>
+  <date>2015-06-24T12:00:41</date>
+  <millis>1435140041969</millis>
+  <sequence>37</sequence>
+  <logger>listener.SessionCounterListener</logger>
+  <level>WARNING</level>
+  <class>listeners.ServerContextListener</class>
+  <method>contextInitialized</method>
+  <thread>16</thread>
+  <message>no data object found, making a new one...</message>
+</record>
+<record>
+  <date>2015-06-24T12:00:42</date>
+  <millis>1435140042001</millis>
+  <sequence>38</sequence>
+  <logger>listener.SessionCounterListener</logger>
+  <level>INFO</level>
+  <class>listeners.ServerContextListener</class>
+  <method>contextInitialized</method>
+  <thread>16</thread>
+  <message>admin account created</message>
+</record>
 </log>
 <?xml version="1.0" encoding="windows-1252" standalone="no"?>
 <!DOCTYPE log SYSTEM "logger.dtd">
 <log>
 <record>
-  <date>2015-06-24T10:57:50</date>
-  <millis>1435136270236</millis>
+  <date>2015-06-24T14:35:54</date>
+  <millis>1435149354917</millis>
   <sequence>34</sequence>
   <logger>listener.SessionCounterListener</logger>
   <level>INFO</level>
   <class>listeners.ServerContextListener</class>
   <method>contextInitialized</method>
-  <thread>18</thread>
+  <thread>14</thread>
   <message>Logger initialized</message>
 </record>
 <record>
-  <date>2015-06-24T10:57:50</date>
-  <millis>1435136270237</millis>
+  <date>2015-06-24T14:35:54</date>
+  <millis>1435149354918</millis>
   <sequence>35</sequence>
   <logger>listener.SessionCounterListener</logger>
   <level>INFO</level>
   <class>listeners.ServerContextListener</class>
   <method>contextInitialized</method>
-  <thread>18</thread>
+  <thread>14</thread>
   <message>reading data...</message>
 </record>
 <record>
-  <date>2015-06-24T10:57:50</date>
-  <millis>1435136270249</millis>
+  <date>2015-06-24T14:35:54</date>
+  <millis>1435149354928</millis>
   <sequence>36</sequence>
   <logger>listener.SessionCounterListener</logger>
   <level>WARNING</level>
   <class>listeners.ServerContextListener</class>
   <method>contextInitialized</method>
-  <thread>18</thread>
+  <thread>14</thread>
   <message>writing aborted; java.io.NotSerializableException: services.MaintenanceController</message>
 </record>
 <record>
-  <date>2015-06-24T10:57:50</date>
-  <millis>1435136270249</millis>
+  <date>2015-06-24T14:35:54</date>
+  <millis>1435149354929</millis>
   <sequence>37</sequence>
   <logger>listener.SessionCounterListener</logger>
   <level>WARNING</level>
   <class>listeners.ServerContextListener</class>
   <method>contextInitialized</method>
-  <thread>18</thread>
+  <thread>14</thread>
   <message>no data object found, making a new one...</message>
 </record>
 <record>
-  <date>2015-06-24T10:57:50</date>
-  <millis>1435136270275</millis>
+  <date>2015-06-24T14:35:54</date>
+  <millis>1435149354967</millis>
   <sequence>38</sequence>
   <logger>listener.SessionCounterListener</logger>
   <level>INFO</level>
   <class>listeners.ServerContextListener</class>
   <method>contextInitialized</method>
-  <thread>18</thread>
+  <thread>14</thread>
   <message>admin account created</message>
 </record>
-<<<<<<< HEAD
 </log>
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version="1.0" encoding="windows-1252" standalone="no"?>
 <!DOCTYPE log SYSTEM "logger.dtd">
 <log>
 <record>
-  <date>2015-06-24T14:09:54</date>
-  <millis>1435147794459</millis>
+  <date>2015-06-24T14:37:36</date>
+  <millis>1435149456464</millis>
+  <sequence>692</sequence>
+  <logger>listener.SessionCounterListener</logger>
+  <level>INFO</level>
+  <class>listeners.ServerContextListener</class>
+  <method>contextInitialized</method>
+  <thread>46</thread>
+  <message>Logger initialized</message>
+</record>
+<record>
+  <date>2015-06-24T14:37:36</date>
+  <millis>1435149456466</millis>
+  <sequence>693</sequence>
+  <logger>listener.SessionCounterListener</logger>
+  <level>INFO</level>
+  <class>listeners.ServerContextListener</class>
+  <method>contextInitialized</method>
+  <thread>46</thread>
+  <message>reading data...</message>
+</record>
+<record>
+  <date>2015-06-24T14:37:36</date>
+  <millis>1435149456488</millis>
+  <sequence>694</sequence>
+  <logger>listener.SessionCounterListener</logger>
+  <level>WARNING</level>
+  <class>listeners.ServerContextListener</class>
+  <method>contextInitialized</method>
+  <thread>46</thread>
+  <message>writing aborted; java.io.NotSerializableException: domain.parking.ParkingSpot</message>
+</record>
+<record>
+  <date>2015-06-24T14:37:36</date>
+  <millis>1435149456488</millis>
+  <sequence>695</sequence>
+  <logger>listener.SessionCounterListener</logger>
+  <level>WARNING</level>
+  <class>listeners.ServerContextListener</class>
+  <method>contextInitialized</method>
+  <thread>46</thread>
+  <message>no data object found, making a new one...</message>
+</record>
+<record>
+  <date>2015-06-24T14:37:36</date>
+  <millis>1435149456491</millis>
+  <sequence>696</sequence>
+  <logger>listener.SessionCounterListener</logger>
+  <level>INFO</level>
+  <class>listeners.ServerContextListener</class>
+  <method>contextInitialized</method>
+  <thread>46</thread>
+  <message>admin account created</message>
+</record>
+</log>
+<?xml version="1.0" encoding="windows-1252" standalone="no"?>
+<!DOCTYPE log SYSTEM "logger.dtd">
+<log>
+<record>
+  <date>2015-06-24T14:38:57</date>
+  <millis>1435149537703</millis>
+  <sequence>1005</sequence>
+  <logger>listener.SessionCounterListener</logger>
+  <level>INFO</level>
+  <class>listeners.ServerContextListener</class>
+  <method>contextInitialized</method>
+  <thread>14</thread>
+  <message>Logger initialized</message>
+</record>
+<record>
+  <date>2015-06-24T14:38:57</date>
+  <millis>1435149537703</millis>
+  <sequence>1006</sequence>
+  <logger>listener.SessionCounterListener</logger>
+  <level>INFO</level>
+  <class>listeners.ServerContextListener</class>
+  <method>contextInitialized</method>
+  <thread>14</thread>
+  <message>reading data...</message>
+</record>
+<record>
+  <date>2015-06-24T14:38:57</date>
+  <millis>1435149537731</millis>
+  <sequence>1007</sequence>
+  <logger>listener.SessionCounterListener</logger>
+  <level>WARNING</level>
+  <class>listeners.ServerContextListener</class>
+  <method>contextInitialized</method>
+  <thread>14</thread>
+  <message>writing aborted; java.io.NotSerializableException: domain.parking.ParkingSpot</message>
+</record>
+<record>
+  <date>2015-06-24T14:38:57</date>
+  <millis>1435149537732</millis>
+  <sequence>1008</sequence>
+  <logger>listener.SessionCounterListener</logger>
+  <level>WARNING</level>
+  <class>listeners.ServerContextListener</class>
+  <method>contextInitialized</method>
+  <thread>14</thread>
+  <message>no data object found, making a new one...</message>
+</record>
+<record>
+  <date>2015-06-24T14:38:57</date>
+  <millis>1435149537737</millis>
+  <sequence>1009</sequence>
+  <logger>listener.SessionCounterListener</logger>
+  <level>INFO</level>
+  <class>listeners.ServerContextListener</class>
+  <method>contextInitialized</method>
+  <thread>14</thread>
+  <message>admin account created</message>
+</record>
+</log>
+<?xml version="1.0" encoding="windows-1252" standalone="no"?>
+<!DOCTYPE log SYSTEM "logger.dtd">
+<log>
+<record>
+  <date>2015-06-24T14:40:41</date>
+  <millis>1435149641164</millis>
+  <sequence>2369</sequence>
+  <logger>listener.SessionCounterListener</logger>
+  <level>INFO</level>
+  <class>listeners.ServerContextListener</class>
+  <method>contextInitialized</method>
+  <thread>64</thread>
+  <message>Logger initialized</message>
+</record>
+<record>
+  <date>2015-06-24T14:40:41</date>
+  <millis>1435149641164</millis>
+  <sequence>2370</sequence>
+  <logger>listener.SessionCounterListener</logger>
+  <level>INFO</level>
+  <class>listeners.ServerContextListener</class>
+  <method>contextInitialized</method>
+  <thread>64</thread>
+  <message>reading data...</message>
+</record>
+<record>
+  <date>2015-06-24T14:40:41</date>
+  <millis>1435149641183</millis>
+  <sequence>2371</sequence>
+  <logger>listener.SessionCounterListener</logger>
+  <level>WARNING</level>
+  <class>listeners.ServerContextListener</class>
+  <method>contextInitialized</method>
+  <thread>64</thread>
+  <message>writing aborted; java.io.NotSerializableException: domain.parking.ParkingSpot</message>
+</record>
+<record>
+  <date>2015-06-24T14:40:41</date>
+  <millis>1435149641184</millis>
+  <sequence>2372</sequence>
+  <logger>listener.SessionCounterListener</logger>
+  <level>WARNING</level>
+  <class>listeners.ServerContextListener</class>
+  <method>contextInitialized</method>
+  <thread>64</thread>
+  <message>no data object found, making a new one...</message>
+</record>
+<record>
+  <date>2015-06-24T14:40:41</date>
+  <millis>1435149641187</millis>
+  <sequence>2373</sequence>
+  <logger>listener.SessionCounterListener</logger>
+  <level>INFO</level>
+  <class>listeners.ServerContextListener</class>
+  <method>contextInitialized</method>
+  <thread>64</thread>
+  <message>admin account created</message>
+</record>
+</log>
+<?xml version="1.0" encoding="windows-1252" standalone="no"?>
+<!DOCTYPE log SYSTEM "logger.dtd">
+<log>
+<record>
+  <date>2015-06-24T14:52:20</date>
+  <millis>1435150340283</millis>
+  <sequence>2375</sequence>
+  <logger>listener.SessionCounterListener</logger>
+  <level>INFO</level>
+  <class>listeners.ServerContextListener</class>
+  <method>contextInitialized</method>
+  <thread>81</thread>
+  <message>Logger initialized</message>
+</record>
+<record>
+  <date>2015-06-24T14:52:20</date>
+  <millis>1435150340284</millis>
+  <sequence>2376</sequence>
+  <logger>listener.SessionCounterListener</logger>
+  <level>INFO</level>
+  <class>listeners.ServerContextListener</class>
+  <method>contextInitialized</method>
+  <thread>81</thread>
+  <message>reading data...</message>
+</record>
+<record>
+  <date>2015-06-24T14:52:20</date>
+  <millis>1435150340305</millis>
+  <sequence>2377</sequence>
+  <logger>listener.SessionCounterListener</logger>
+  <level>WARNING</level>
+  <class>listeners.ServerContextListener</class>
+  <method>contextInitialized</method>
+  <thread>81</thread>
+  <message>writing aborted; java.io.NotSerializableException: domain.parking.ParkingSpot</message>
+</record>
+<record>
+  <date>2015-06-24T14:52:20</date>
+  <millis>1435150340305</millis>
+  <sequence>2378</sequence>
+  <logger>listener.SessionCounterListener</logger>
+  <level>WARNING</level>
+  <class>listeners.ServerContextListener</class>
+  <method>contextInitialized</method>
+  <thread>81</thread>
+  <message>no data object found, making a new one...</message>
+</record>
+<record>
+  <date>2015-06-24T14:52:20</date>
+  <millis>1435150340308</millis>
+  <sequence>2379</sequence>
+  <logger>listener.SessionCounterListener</logger>
+  <level>INFO</level>
+  <class>listeners.ServerContextListener</class>
+  <method>contextInitialized</method>
+  <thread>81</thread>
+  <message>admin account created</message>
+</record>
+</log>
+<?xml version="1.0" encoding="windows-1252" standalone="no"?>
+<!DOCTYPE log SYSTEM "logger.dtd">
+<log>
+<record>
+  <date>2015-06-24T14:59:05</date>
+  <millis>1435150745671</millis>
+  <sequence>2385</sequence>
+  <logger>listener.SessionCounterListener</logger>
+  <level>INFO</level>
+  <class>listeners.ServerContextListener</class>
+  <method>contextInitialized</method>
+  <thread>98</thread>
+  <message>Logger initialized</message>
+</record>
+<record>
+  <date>2015-06-24T14:59:05</date>
+  <millis>1435150745672</millis>
+  <sequence>2386</sequence>
+  <logger>listener.SessionCounterListener</logger>
+  <level>INFO</level>
+  <class>listeners.ServerContextListener</class>
+  <method>contextInitialized</method>
+  <thread>98</thread>
+  <message>reading data...</message>
+</record>
+<record>
+  <date>2015-06-24T14:59:05</date>
+  <millis>1435150745698</millis>
+  <sequence>2387</sequence>
+  <logger>listener.SessionCounterListener</logger>
+  <level>WARNING</level>
+  <class>listeners.ServerContextListener</class>
+  <method>contextInitialized</method>
+  <thread>98</thread>
+  <message>writing aborted; java.io.NotSerializableException: domain.parking.ParkingSpot</message>
+</record>
+<record>
+  <date>2015-06-24T14:59:05</date>
+  <millis>1435150745698</millis>
+  <sequence>2388</sequence>
+  <logger>listener.SessionCounterListener</logger>
+  <level>WARNING</level>
+  <class>listeners.ServerContextListener</class>
+  <method>contextInitialized</method>
+  <thread>98</thread>
+  <message>no data object found, making a new one...</message>
+</record>
+<record>
+  <date>2015-06-24T14:59:05</date>
+  <millis>1435150745701</millis>
+  <sequence>2389</sequence>
+  <logger>listener.SessionCounterListener</logger>
+  <level>INFO</level>
+  <class>listeners.ServerContextListener</class>
+  <method>contextInitialized</method>
+  <thread>98</thread>
+  <message>admin account created</message>
+</record>
+</log>
+<?xml version="1.0" encoding="windows-1252" standalone="no"?>
+<!DOCTYPE log SYSTEM "logger.dtd">
+<log>
+<record>
+  <date>2015-06-24T15:49:39</date>
+  <millis>1435153779188</millis>
+  <sequence>2394</sequence>
+  <logger>listener.SessionCounterListener</logger>
+  <level>INFO</level>
+  <class>listeners.ServerContextListener</class>
+  <method>contextInitialized</method>
+  <thread>115</thread>
+  <message>Logger initialized</message>
+</record>
+<record>
+  <date>2015-06-24T15:49:39</date>
+  <millis>1435153779189</millis>
+  <sequence>2395</sequence>
+  <logger>listener.SessionCounterListener</logger>
+  <level>INFO</level>
+  <class>listeners.ServerContextListener</class>
+  <method>contextInitialized</method>
+  <thread>115</thread>
+  <message>reading data...</message>
+</record>
+<record>
+  <date>2015-06-24T15:49:39</date>
+  <millis>1435153779268</millis>
+  <sequence>2396</sequence>
+  <logger>listener.SessionCounterListener</logger>
+  <level>WARNING</level>
+  <class>listeners.ServerContextListener</class>
+  <method>contextInitialized</method>
+  <thread>115</thread>
+  <message>writing aborted; java.io.NotSerializableException: domain.parking.ParkingSpot</message>
+</record>
+<record>
+  <date>2015-06-24T15:49:39</date>
+  <millis>1435153779268</millis>
+  <sequence>2397</sequence>
+  <logger>listener.SessionCounterListener</logger>
+  <level>WARNING</level>
+  <class>listeners.ServerContextListener</class>
+  <method>contextInitialized</method>
+  <thread>115</thread>
+  <message>no data object found, making a new one...</message>
+</record>
+<record>
+  <date>2015-06-24T15:49:39</date>
+  <millis>1435153779273</millis>
+  <sequence>2398</sequence>
+  <logger>listener.SessionCounterListener</logger>
+  <level>INFO</level>
+  <class>listeners.ServerContextListener</class>
+  <method>contextInitialized</method>
+  <thread>115</thread>
+  <message>admin account created</message>
+</record>
+</log>
+<?xml version="1.0" encoding="windows-1252" standalone="no"?>
+<!DOCTYPE log SYSTEM "logger.dtd">
+<log>
+<record>
+  <date>2015-06-24T15:58:56</date>
+  <millis>1435154336991</millis>
+  <sequence>2400</sequence>
+  <logger>listener.SessionCounterListener</logger>
+  <level>INFO</level>
+  <class>listeners.ServerContextListener</class>
+  <method>contextInitialized</method>
+  <thread>132</thread>
+  <message>Logger initialized</message>
+</record>
+<record>
+  <date>2015-06-24T15:58:56</date>
+  <millis>1435154336992</millis>
+  <sequence>2401</sequence>
+  <logger>listener.SessionCounterListener</logger>
+  <level>INFO</level>
+  <class>listeners.ServerContextListener</class>
+  <method>contextInitialized</method>
+  <thread>132</thread>
+  <message>reading data...</message>
+</record>
+<record>
+  <date>2015-06-24T15:58:57</date>
+  <millis>1435154337018</millis>
+  <sequence>2402</sequence>
+  <logger>listener.SessionCounterListener</logger>
+  <level>WARNING</level>
+  <class>listeners.ServerContextListener</class>
+  <method>contextInitialized</method>
+  <thread>132</thread>
+  <message>writing aborted; java.io.NotSerializableException: domain.parking.ParkingSpot</message>
+</record>
+<record>
+  <date>2015-06-24T15:58:57</date>
+  <millis>1435154337018</millis>
+  <sequence>2403</sequence>
+  <logger>listener.SessionCounterListener</logger>
+  <level>WARNING</level>
+  <class>listeners.ServerContextListener</class>
+  <method>contextInitialized</method>
+  <thread>132</thread>
+  <message>no data object found, making a new one...</message>
+</record>
+<record>
+  <date>2015-06-24T15:58:57</date>
+  <millis>1435154337021</millis>
+  <sequence>2404</sequence>
+  <logger>listener.SessionCounterListener</logger>
+  <level>INFO</level>
+  <class>listeners.ServerContextListener</class>
+  <method>contextInitialized</method>
+  <thread>132</thread>
+  <message>admin account created</message>
+</record>
+<record>
+  <date>2015-06-24T15:58:57</date>
+  <millis>1435154337022</millis>
+  <sequence>2405</sequence>
+  <logger>listener.SessionCounterListener</logger>
+  <level>INFO</level>
+  <class>listeners.ServerContextListener</class>
+  <method>contextInitialized</method>
+  <thread>132</thread>
+  <message>customer account created</message>
+</record>
+</log>
+<?xml version="1.0" encoding="windows-1252" standalone="no"?>
+<!DOCTYPE log SYSTEM "logger.dtd">
+<log>
+<record>
+  <date>2015-06-24T16:00:47</date>
+  <millis>1435154447250</millis>
+  <sequence>2407</sequence>
+  <logger>listener.SessionCounterListener</logger>
+  <level>INFO</level>
+  <class>listeners.ServerContextListener</class>
+  <method>contextInitialized</method>
+  <thread>145</thread>
+  <message>Logger initialized</message>
+</record>
+<record>
+  <date>2015-06-24T16:00:47</date>
+  <millis>1435154447251</millis>
+  <sequence>2408</sequence>
+  <logger>listener.SessionCounterListener</logger>
+  <level>INFO</level>
+  <class>listeners.ServerContextListener</class>
+  <method>contextInitialized</method>
+  <thread>145</thread>
+  <message>reading data...</message>
+</record>
+<record>
+  <date>2015-06-24T16:00:47</date>
+  <millis>1435154447275</millis>
+  <sequence>2409</sequence>
+  <logger>listener.SessionCounterListener</logger>
+  <level>WARNING</level>
+  <class>listeners.ServerContextListener</class>
+  <method>contextInitialized</method>
+  <thread>145</thread>
+  <message>writing aborted; java.io.NotSerializableException: domain.parking.ParkingSpot</message>
+</record>
+<record>
+  <date>2015-06-24T16:00:47</date>
+  <millis>1435154447276</millis>
+  <sequence>2410</sequence>
+  <logger>listener.SessionCounterListener</logger>
+  <level>WARNING</level>
+  <class>listeners.ServerContextListener</class>
+  <method>contextInitialized</method>
+  <thread>145</thread>
+  <message>no data object found, making a new one...</message>
+</record>
+<record>
+  <date>2015-06-24T16:00:47</date>
+  <millis>1435154447279</millis>
+  <sequence>2411</sequence>
+  <logger>listener.SessionCounterListener</logger>
+  <level>INFO</level>
+  <class>listeners.ServerContextListener</class>
+  <method>contextInitialized</method>
+  <thread>145</thread>
+  <message>admin account created</message>
+</record>
+<record>
+  <date>2015-06-24T16:00:47</date>
+  <millis>1435154447279</millis>
+  <sequence>2412</sequence>
+  <logger>listener.SessionCounterListener</logger>
+  <level>INFO</level>
+  <class>listeners.ServerContextListener</class>
+  <method>contextInitialized</method>
+  <thread>145</thread>
+  <message>customer account created</message>
+</record>
+</log>
+<?xml version="1.0" encoding="windows-1252" standalone="no"?>
+<!DOCTYPE log SYSTEM "logger.dtd">
+<log>
+<record>
+  <date>2015-06-24T16:01:19</date>
+  <millis>1435154479519</millis>
   <sequence>34</sequence>
   <logger>listener.SessionCounterListener</logger>
   <level>INFO</level>
   <class>listeners.ServerContextListener</class>
   <method>contextInitialized</method>
-  <thread>36</thread>
+  <thread>14</thread>
   <message>Logger initialized</message>
 </record>
 <record>
-  <date>2015-06-24T14:09:54</date>
-  <millis>1435147794460</millis>
+  <date>2015-06-24T16:01:19</date>
+  <millis>1435154479521</millis>
   <sequence>35</sequence>
   <logger>listener.SessionCounterListener</logger>
   <level>INFO</level>
   <class>listeners.ServerContextListener</class>
   <method>contextInitialized</method>
-  <thread>36</thread>
+  <thread>14</thread>
   <message>reading data...</message>
 </record>
 <record>
-  <date>2015-06-24T14:09:54</date>
-  <millis>1435147794473</millis>
+  <date>2015-06-24T16:01:19</date>
+  <millis>1435154479547</millis>
   <sequence>36</sequence>
   <logger>listener.SessionCounterListener</logger>
   <level>WARNING</level>
   <class>listeners.ServerContextListener</class>
   <method>contextInitialized</method>
-  <thread>36</thread>
-  <message>writing aborted; java.io.NotSerializableException: services.MaintenanceController</message>
+  <thread>14</thread>
+  <message>writing aborted; java.io.NotSerializableException: domain.parking.ParkingSpot</message>
 </record>
 <record>
-  <date>2015-06-24T14:09:54</date>
-  <millis>1435147794473</millis>
+  <date>2015-06-24T16:01:19</date>
+  <millis>1435154479547</millis>
   <sequence>37</sequence>
   <logger>listener.SessionCounterListener</logger>
   <level>WARNING</level>
   <class>listeners.ServerContextListener</class>
   <method>contextInitialized</method>
-  <thread>36</thread>
+  <thread>14</thread>
   <message>no data object found, making a new one...</message>
 </record>
 <record>
-  <date>2015-06-24T14:09:54</date>
-  <millis>1435147794519</millis>
+  <date>2015-06-24T16:01:19</date>
+  <millis>1435154479580</millis>
   <sequence>38</sequence>
   <logger>listener.SessionCounterListener</logger>
   <level>INFO</level>
   <class>listeners.ServerContextListener</class>
   <method>contextInitialized</method>
-  <thread>36</thread>
+  <thread>14</thread>
   <message>admin account created</message>
 </record>
-=======
->>>>>>> 22f2ad2bb769d5f31874529dda38ce43d0cb7f4f
+<record>
+  <date>2015-06-24T16:01:19</date>
+  <millis>1435154479581</millis>
+  <sequence>39</sequence>
+  <logger>listener.SessionCounterListener</logger>
+  <level>INFO</level>
+  <class>listeners.ServerContextListener</class>
+  <method>contextInitialized</method>
+  <thread>14</thread>
+  <message>customer account created</message>
+</record>
+</log>
+<?xml version="1.0" encoding="windows-1252" standalone="no"?>
+<!DOCTYPE log SYSTEM "logger.dtd">
+<log>
+<record>
+  <date>2015-06-24T16:26:10</date>
+  <millis>1435155970704</millis>
+  <sequence>43</sequence>
+  <logger>listener.SessionCounterListener</logger>
+  <level>INFO</level>
+  <class>listeners.ServerContextListener</class>
+  <method>contextInitialized</method>
+  <thread>47</thread>
+  <message>Logger initialized</message>
+</record>
+<record>
+  <date>2015-06-24T16:26:10</date>
+  <millis>1435155970704</millis>
+  <sequence>44</sequence>
+  <logger>listener.SessionCounterListener</logger>
+  <level>INFO</level>
+  <class>listeners.ServerContextListener</class>
+  <method>contextInitialized</method>
+  <thread>47</thread>
+  <message>reading data...</message>
+</record>
+<record>
+  <date>2015-06-24T16:26:10</date>
+  <millis>1435155970732</millis>
+  <sequence>45</sequence>
+  <logger>listener.SessionCounterListener</logger>
+  <level>WARNING</level>
+  <class>listeners.ServerContextListener</class>
+  <method>contextInitialized</method>
+  <thread>47</thread>
+  <message>writing aborted; java.io.NotSerializableException: domain.parking.ParkingSpot</message>
+</record>
+<record>
+  <date>2015-06-24T16:26:10</date>
+  <millis>1435155970735</millis>
+  <sequence>46</sequence>
+  <logger>listener.SessionCounterListener</logger>
+  <level>WARNING</level>
+  <class>listeners.ServerContextListener</class>
+  <method>contextInitialized</method>
+  <thread>47</thread>
+  <message>no data object found, making a new one...</message>
+</record>
+<record>
+  <date>2015-06-24T16:26:10</date>
+  <millis>1435155970741</millis>
+  <sequence>47</sequence>
+  <logger>listener.SessionCounterListener</logger>
+  <level>INFO</level>
+  <class>listeners.ServerContextListener</class>
+  <method>contextInitialized</method>
+  <thread>47</thread>
+  <message>admin account created</message>
+</record>
+<record>
+  <date>2015-06-24T16:26:10</date>
+  <millis>1435155970742</millis>
+  <sequence>48</sequence>
+  <logger>listener.SessionCounterListener</logger>
+  <level>INFO</level>
+  <class>listeners.ServerContextListener</class>
+  <method>contextInitialized</method>
+  <thread>47</thread>
+  <message>customer account created</message>
+</record>
+</log>
+<?xml version="1.0" encoding="windows-1252" standalone="no"?>
+<!DOCTYPE log SYSTEM "logger.dtd">
+<log>
+<record>
+  <date>2015-06-24T16:36:27</date>
+  <millis>1435156587809</millis>
+  <sequence>34</sequence>
+  <logger>listener.SessionCounterListener</logger>
+  <level>INFO</level>
+  <class>listeners.ServerContextListener</class>
+  <method>contextInitialized</method>
+  <thread>14</thread>
+  <message>Logger initialized</message>
+</record>
+<record>
+  <date>2015-06-24T16:36:27</date>
+  <millis>1435156587810</millis>
+  <sequence>35</sequence>
+  <logger>listener.SessionCounterListener</logger>
+  <level>INFO</level>
+  <class>listeners.ServerContextListener</class>
+  <method>contextInitialized</method>
+  <thread>14</thread>
+  <message>reading data...</message>
+</record>
+<record>
+  <date>2015-06-24T16:36:27</date>
+  <millis>1435156587828</millis>
+  <sequence>36</sequence>
+  <logger>listener.SessionCounterListener</logger>
+  <level>WARNING</level>
+  <class>listeners.ServerContextListener</class>
+  <method>contextInitialized</method>
+  <thread>14</thread>
+  <message>writing aborted; java.io.NotSerializableException: domain.parking.ParkingSpot</message>
+</record>
+<record>
+  <date>2015-06-24T16:36:27</date>
+  <millis>1435156587829</millis>
+  <sequence>37</sequence>
+  <logger>listener.SessionCounterListener</logger>
+  <level>WARNING</level>
+  <class>listeners.ServerContextListener</class>
+  <method>contextInitialized</method>
+  <thread>14</thread>
+  <message>no data object found, making a new one...</message>
+</record>
+<record>
+  <date>2015-06-24T16:36:27</date>
+  <millis>1435156587864</millis>
+  <sequence>38</sequence>
+  <logger>listener.SessionCounterListener</logger>
+  <level>INFO</level>
+  <class>listeners.ServerContextListener</class>
+  <method>contextInitialized</method>
+  <thread>14</thread>
+  <message>admin account created</message>
+</record>
+<record>
+  <date>2015-06-24T16:36:27</date>
+  <millis>1435156587865</millis>
+  <sequence>39</sequence>
+  <logger>listener.SessionCounterListener</logger>
+  <level>INFO</level>
+  <class>listeners.ServerContextListener</class>
+  <method>contextInitialized</method>
+  <thread>14</thread>
+  <message>customer account created</message>
+</record>
+</log>
+<?xml version="1.0" encoding="windows-1252" standalone="no"?>
+<!DOCTYPE log SYSTEM "logger.dtd">
+<log>
+<record>
+  <date>2015-06-24T16:39:42</date>
+  <millis>1435156782467</millis>
+  <sequence>34</sequence>
+  <logger>listener.SessionCounterListener</logger>
+  <level>INFO</level>
+  <class>listeners.ServerContextListener</class>
+  <method>contextInitialized</method>
+  <thread>14</thread>
+  <message>Logger initialized</message>
+</record>
+<record>
+  <date>2015-06-24T16:39:42</date>
+  <millis>1435156782468</millis>
+  <sequence>35</sequence>
+  <logger>listener.SessionCounterListener</logger>
+  <level>INFO</level>
+  <class>listeners.ServerContextListener</class>
+  <method>contextInitialized</method>
+  <thread>14</thread>
+  <message>reading data...</message>
+</record>
+<record>
+  <date>2015-06-24T16:39:42</date>
+  <millis>1435156782489</millis>
+  <sequence>36</sequence>
+  <logger>listener.SessionCounterListener</logger>
+  <level>WARNING</level>
+  <class>listeners.ServerContextListener</class>
+  <method>contextInitialized</method>
+  <thread>14</thread>
+  <message>writing aborted; java.io.NotSerializableException: domain.parking.ParkingSpot</message>
+</record>
+<record>
+  <date>2015-06-24T16:39:42</date>
+  <millis>1435156782489</millis>
+  <sequence>37</sequence>
+  <logger>listener.SessionCounterListener</logger>
+  <level>WARNING</level>
+  <class>listeners.ServerContextListener</class>
+  <method>contextInitialized</method>
+  <thread>14</thread>
+  <message>no data object found, making a new one...</message>
+</record>
+<record>
+  <date>2015-06-24T16:39:42</date>
+  <millis>1435156782514</millis>
+  <sequence>38</sequence>
+  <logger>listener.SessionCounterListener</logger>
+  <level>INFO</level>
+  <class>listeners.ServerContextListener</class>
+  <method>contextInitialized</method>
+  <thread>14</thread>
+  <message>admin account created</message>
+</record>
+<record>
+  <date>2015-06-24T16:39:42</date>
+  <millis>1435156782514</millis>
+  <sequence>39</sequence>
+  <logger>listener.SessionCounterListener</logger>
+  <level>INFO</level>
+  <class>listeners.ServerContextListener</class>
+  <method>contextInitialized</method>
+  <thread>14</thread>
+  <message>customer account created</message>
+</record>
+</log>
+<?xml version="1.0" encoding="windows-1252" standalone="no"?>
+<!DOCTYPE log SYSTEM "logger.dtd">
+<log>
+<record>
+  <date>2015-06-24T17:06:24</date>
+  <millis>1435158384296</millis>
+  <sequence>43</sequence>
+  <logger>listener.SessionCounterListener</logger>
+  <level>INFO</level>
+  <class>listeners.ServerContextListener</class>
+  <method>contextInitialized</method>
+  <thread>46</thread>
+  <message>Logger initialized</message>
+</record>
+<record>
+  <date>2015-06-24T17:06:24</date>
+  <millis>1435158384297</millis>
+  <sequence>44</sequence>
+  <logger>listener.SessionCounterListener</logger>
+  <level>INFO</level>
+  <class>listeners.ServerContextListener</class>
+  <method>contextInitialized</method>
+  <thread>46</thread>
+  <message>reading data...</message>
+</record>
+<record>
+  <date>2015-06-24T17:06:24</date>
+  <millis>1435158384326</millis>
+  <sequence>45</sequence>
+  <logger>listener.SessionCounterListener</logger>
+  <level>WARNING</level>
+  <class>listeners.ServerContextListener</class>
+  <method>contextInitialized</method>
+  <thread>46</thread>
+  <message>writing aborted; java.io.NotSerializableException: domain.parking.ParkingSpot</message>
+</record>
+<record>
+  <date>2015-06-24T17:06:24</date>
+  <millis>1435158384326</millis>
+  <sequence>46</sequence>
+  <logger>listener.SessionCounterListener</logger>
+  <level>WARNING</level>
+  <class>listeners.ServerContextListener</class>
+  <method>contextInitialized</method>
+  <thread>46</thread>
+  <message>no data object found, making a new one...</message>
+</record>
+<record>
+  <date>2015-06-24T17:06:24</date>
+  <millis>1435158384329</millis>
+  <sequence>47</sequence>
+  <logger>listener.SessionCounterListener</logger>
+  <level>INFO</level>
+  <class>listeners.ServerContextListener</class>
+  <method>contextInitialized</method>
+  <thread>46</thread>
+  <message>admin account created</message>
+</record>
+<record>
+  <date>2015-06-24T17:06:24</date>
+  <millis>1435158384330</millis>
+  <sequence>48</sequence>
+  <logger>listener.SessionCounterListener</logger>
+  <level>INFO</level>
+  <class>listeners.ServerContextListener</class>
+  <method>contextInitialized</method>
+  <thread>46</thread>
+  <message>customer account created</message>
+</record>
+</log>
+<?xml version="1.0" encoding="windows-1252" standalone="no"?>
+<!DOCTYPE log SYSTEM "logger.dtd">
+<log>
+<record>
+  <date>2015-06-24T18:34:10</date>
+  <millis>1435163650527</millis>
+  <sequence>34</sequence>
+  <logger>listener.SessionCounterListener</logger>
+  <level>INFO</level>
+  <class>listeners.ServerContextListener</class>
+  <method>contextInitialized</method>
+  <thread>14</thread>
+  <message>Logger initialized</message>
+</record>
+<record>
+  <date>2015-06-24T18:34:10</date>
+  <millis>1435163650528</millis>
+  <sequence>35</sequence>
+  <logger>listener.SessionCounterListener</logger>
+  <level>INFO</level>
+  <class>listeners.ServerContextListener</class>
+  <method>contextInitialized</method>
+  <thread>14</thread>
+  <message>reading data...</message>
+</record>
+<record>
+  <date>2015-06-24T18:34:10</date>
+  <millis>1435163650551</millis>
+  <sequence>36</sequence>
+  <logger>listener.SessionCounterListener</logger>
+  <level>WARNING</level>
+  <class>listeners.ServerContextListener</class>
+  <method>contextInitialized</method>
+  <thread>14</thread>
+  <message>writing aborted; java.io.NotSerializableException: domain.parking.ParkingSpot</message>
+</record>
+<record>
+  <date>2015-06-24T18:34:10</date>
+  <millis>1435163650551</millis>
+  <sequence>37</sequence>
+  <logger>listener.SessionCounterListener</logger>
+  <level>WARNING</level>
+  <class>listeners.ServerContextListener</class>
+  <method>contextInitialized</method>
+  <thread>14</thread>
+  <message>no data object found, making a new one...</message>
+</record>
+<record>
+  <date>2015-06-24T18:34:10</date>
+  <millis>1435163650585</millis>
+  <sequence>38</sequence>
+  <logger>listener.SessionCounterListener</logger>
+  <level>INFO</level>
+  <class>listeners.ServerContextListener</class>
+  <method>contextInitialized</method>
+  <thread>14</thread>
+  <message>admin account created</message>
+</record>
+<record>
+  <date>2015-06-24T18:34:10</date>
+  <millis>1435163650586</millis>
+  <sequence>39</sequence>
+  <logger>listener.SessionCounterListener</logger>
+  <level>INFO</level>
+  <class>listeners.ServerContextListener</class>
+  <method>contextInitialized</method>
+  <thread>14</thread>
+  <message>customer account created</message>
+</record>
+</log>
+<?xml version="1.0" encoding="windows-1252" standalone="no"?>
+<!DOCTYPE log SYSTEM "logger.dtd">
+<log>
+<record>
+  <date>2015-06-24T18:41:24</date>
+  <millis>1435164084645</millis>
+  <sequence>43</sequence>
+  <logger>listener.SessionCounterListener</logger>
+  <level>INFO</level>
+  <class>listeners.ServerContextListener</class>
+  <method>contextInitialized</method>
+  <thread>51</thread>
+  <message>Logger initialized</message>
+</record>
+<record>
+  <date>2015-06-24T18:41:24</date>
+  <millis>1435164084646</millis>
+  <sequence>44</sequence>
+  <logger>listener.SessionCounterListener</logger>
+  <level>INFO</level>
+  <class>listeners.ServerContextListener</class>
+  <method>contextInitialized</method>
+  <thread>51</thread>
+  <message>reading data...</message>
+</record>
+<record>
+  <date>2015-06-24T18:41:24</date>
+  <millis>1435164084667</millis>
+  <sequence>45</sequence>
+  <logger>listener.SessionCounterListener</logger>
+  <level>WARNING</level>
+  <class>listeners.ServerContextListener</class>
+  <method>contextInitialized</method>
+  <thread>51</thread>
+  <message>writing aborted; java.io.NotSerializableException: domain.parking.ParkingSpot</message>
+</record>
+<record>
+  <date>2015-06-24T18:41:24</date>
+  <millis>1435164084667</millis>
+  <sequence>46</sequence>
+  <logger>listener.SessionCounterListener</logger>
+  <level>WARNING</level>
+  <class>listeners.ServerContextListener</class>
+  <method>contextInitialized</method>
+  <thread>51</thread>
+  <message>no data object found, making a new one...</message>
+</record>
+<record>
+  <date>2015-06-24T18:41:24</date>
+  <millis>1435164084671</millis>
+  <sequence>47</sequence>
+  <logger>listener.SessionCounterListener</logger>
+  <level>INFO</level>
+  <class>listeners.ServerContextListener</class>
+  <method>contextInitialized</method>
+  <thread>51</thread>
+  <message>admin account created</message>
+</record>
+<record>
+  <date>2015-06-24T18:41:24</date>
+  <millis>1435164084672</millis>
+  <sequence>48</sequence>
+  <logger>listener.SessionCounterListener</logger>
+  <level>INFO</level>
+  <class>listeners.ServerContextListener</class>
+  <method>contextInitialized</method>
+  <thread>51</thread>
+  <message>customer account created</message>
+</record>
+</log>
+<?xml version="1.0" encoding="windows-1252" standalone="no"?>
+<!DOCTYPE log SYSTEM "logger.dtd">
+<log>
+<record>
+  <date>2015-06-24T18:44:16</date>
+  <millis>1435164256845</millis>
+  <sequence>50</sequence>
+  <logger>listener.SessionCounterListener</logger>
+  <level>INFO</level>
+  <class>listeners.ServerContextListener</class>
+  <method>contextInitialized</method>
+  <thread>65</thread>
+  <message>Logger initialized</message>
+</record>
+<record>
+  <date>2015-06-24T18:44:16</date>
+  <millis>1435164256846</millis>
+  <sequence>51</sequence>
+  <logger>listener.SessionCounterListener</logger>
+  <level>INFO</level>
+  <class>listeners.ServerContextListener</class>
+  <method>contextInitialized</method>
+  <thread>65</thread>
+  <message>reading data...</message>
+</record>
+<record>
+  <date>2015-06-24T18:44:16</date>
+  <millis>1435164256876</millis>
+  <sequence>52</sequence>
+  <logger>listener.SessionCounterListener</logger>
+  <level>WARNING</level>
+  <class>listeners.ServerContextListener</class>
+  <method>contextInitialized</method>
+  <thread>65</thread>
+  <message>writing aborted; java.io.NotSerializableException: domain.parking.ParkingSpot</message>
+</record>
+<record>
+  <date>2015-06-24T18:44:16</date>
+  <millis>1435164256876</millis>
+  <sequence>53</sequence>
+  <logger>listener.SessionCounterListener</logger>
+  <level>WARNING</level>
+  <class>listeners.ServerContextListener</class>
+  <method>contextInitialized</method>
+  <thread>65</thread>
+  <message>no data object found, making a new one...</message>
+</record>
+<record>
+  <date>2015-06-24T18:44:16</date>
+  <millis>1435164256880</millis>
+  <sequence>54</sequence>
+  <logger>listener.SessionCounterListener</logger>
+  <level>INFO</level>
+  <class>listeners.ServerContextListener</class>
+  <method>contextInitialized</method>
+  <thread>65</thread>
+  <message>admin account created</message>
+</record>
+<record>
+  <date>2015-06-24T18:44:16</date>
+  <millis>1435164256880</millis>
+  <sequence>55</sequence>
+  <logger>listener.SessionCounterListener</logger>
+  <level>INFO</level>
+  <class>listeners.ServerContextListener</class>
+  <method>contextInitialized</method>
+  <thread>65</thread>
+  <message>customer account created</message>
+</record>
+</log>
+<?xml version="1.0" encoding="windows-1252" standalone="no"?>
+<!DOCTYPE log SYSTEM "logger.dtd">
+<log>
+<record>
+  <date>2015-06-24T18:48:21</date>
+  <millis>1435164501508</millis>
+  <sequence>57</sequence>
+  <logger>listener.SessionCounterListener</logger>
+  <level>INFO</level>
+  <class>listeners.ServerContextListener</class>
+  <method>contextInitialized</method>
+  <thread>81</thread>
+  <message>Logger initialized</message>
+</record>
+<record>
+  <date>2015-06-24T18:48:21</date>
+  <millis>1435164501508</millis>
+  <sequence>58</sequence>
+  <logger>listener.SessionCounterListener</logger>
+  <level>INFO</level>
+  <class>listeners.ServerContextListener</class>
+  <method>contextInitialized</method>
+  <thread>81</thread>
+  <message>reading data...</message>
+</record>
+<record>
+  <date>2015-06-24T18:48:21</date>
+  <millis>1435164501546</millis>
+  <sequence>59</sequence>
+  <logger>listener.SessionCounterListener</logger>
+  <level>WARNING</level>
+  <class>listeners.ServerContextListener</class>
+  <method>contextInitialized</method>
+  <thread>81</thread>
+  <message>writing aborted; java.io.NotSerializableException: domain.parking.ParkingSpot</message>
+</record>
+<record>
+  <date>2015-06-24T18:48:21</date>
+  <millis>1435164501546</millis>
+  <sequence>60</sequence>
+  <logger>listener.SessionCounterListener</logger>
+  <level>WARNING</level>
+  <class>listeners.ServerContextListener</class>
+  <method>contextInitialized</method>
+  <thread>81</thread>
+  <message>no data object found, making a new one...</message>
+</record>
+<record>
+  <date>2015-06-24T18:48:21</date>
+  <millis>1435164501551</millis>
+  <sequence>61</sequence>
+  <logger>listener.SessionCounterListener</logger>
+  <level>INFO</level>
+  <class>listeners.ServerContextListener</class>
+  <method>contextInitialized</method>
+  <thread>81</thread>
+  <message>admin account created</message>
+</record>
+<record>
+  <date>2015-06-24T18:48:21</date>
+  <millis>1435164501552</millis>
+  <sequence>62</sequence>
+  <logger>listener.SessionCounterListener</logger>
+  <level>INFO</level>
+  <class>listeners.ServerContextListener</class>
+  <method>contextInitialized</method>
+  <thread>81</thread>
+  <message>customer account created</message>
+</record>
+<record>
+  <date>2015-06-24T18:51:40</date>
+  <millis>1435164700727</millis>
+  <sequence>66</sequence>
+  <logger>listener.SessionCounterListener</logger>
+  <level>INFO</level>
+  <class>listeners.ServerContextListener</class>
+  <method>contextDestroyed</method>
+  <thread>98</thread>
+  <message>data saved to file</message>
+</record>
+</log>
+<?xml version="1.0" encoding="windows-1252" standalone="no"?>
+<!DOCTYPE log SYSTEM "logger.dtd">
+<log>
+<record>
+  <date>2015-06-24T18:51:41</date>
+  <millis>1435164701171</millis>
+  <sequence>68</sequence>
+  <logger>listener.SessionCounterListener</logger>
+  <level>INFO</level>
+  <class>listeners.ServerContextListener</class>
+  <method>contextInitialized</method>
+  <thread>98</thread>
+  <message>Logger initialized</message>
+</record>
+<record>
+  <date>2015-06-24T18:51:41</date>
+  <millis>1435164701171</millis>
+  <sequence>69</sequence>
+  <logger>listener.SessionCounterListener</logger>
+  <level>INFO</level>
+  <class>listeners.ServerContextListener</class>
+  <method>contextInitialized</method>
+  <thread>98</thread>
+  <message>reading data...</message>
+</record>
+<record>
+  <date>2015-06-24T18:51:41</date>
+  <millis>1435164701207</millis>
+  <sequence>70</sequence>
+  <logger>listener.SessionCounterListener</logger>
+  <level>INFO</level>
+  <class>listeners.ServerContextListener</class>
+  <method>contextInitialized</method>
+  <thread>98</thread>
+  <message>data found, loading...</message>
+</record>
+<record>
+  <date>2015-06-24T18:54:00</date>
+  <millis>1435164840372</millis>
+  <sequence>76</sequence>
+  <logger>listener.SessionCounterListener</logger>
+  <level>INFO</level>
+  <class>listeners.ServerContextListener</class>
+  <method>contextDestroyed</method>
+  <thread>112</thread>
+  <message>data saved to file</message>
+</record>
+</log>
+<?xml version="1.0" encoding="windows-1252" standalone="no"?>
+<!DOCTYPE log SYSTEM "logger.dtd">
+<log>
+<record>
+  <date>2015-06-24T18:54:00</date>
+  <millis>1435164840952</millis>
+  <sequence>78</sequence>
+  <logger>listener.SessionCounterListener</logger>
+  <level>INFO</level>
+  <class>listeners.ServerContextListener</class>
+  <method>contextInitialized</method>
+  <thread>112</thread>
+  <message>Logger initialized</message>
+</record>
+<record>
+  <date>2015-06-24T18:54:00</date>
+  <millis>1435164840952</millis>
+  <sequence>79</sequence>
+  <logger>listener.SessionCounterListener</logger>
+  <level>INFO</level>
+  <class>listeners.ServerContextListener</class>
+  <method>contextInitialized</method>
+  <thread>112</thread>
+  <message>reading data...</message>
+</record>
+<record>
+  <date>2015-06-24T18:54:00</date>
+  <millis>1435164840979</millis>
+  <sequence>80</sequence>
+  <logger>listener.SessionCounterListener</logger>
+  <level>INFO</level>
+  <class>listeners.ServerContextListener</class>
+  <method>contextInitialized</method>
+  <thread>112</thread>
+  <message>data found, loading...</message>
+</record>
+<record>
+  <date>2015-06-24T19:20:28</date>
+  <millis>1435166428255</millis>
+  <sequence>85</sequence>
+  <logger>listener.SessionCounterListener</logger>
+  <level>INFO</level>
+  <class>listeners.ServerContextListener</class>
+  <method>contextDestroyed</method>
+  <thread>129</thread>
+  <message>data saved to file</message>
+</record>
+</log>
+<?xml version="1.0" encoding="windows-1252" standalone="no"?>
+<!DOCTYPE log SYSTEM "logger.dtd">
+<log>
+<record>
+  <date>2015-06-24T19:20:36</date>
+  <millis>1435166436937</millis>
+  <sequence>34</sequence>
+  <logger>listener.SessionCounterListener</logger>
+  <level>INFO</level>
+  <class>listeners.ServerContextListener</class>
+  <method>contextInitialized</method>
+  <thread>14</thread>
+  <message>Logger initialized</message>
+</record>
+<record>
+  <date>2015-06-24T19:20:36</date>
+  <millis>1435166436939</millis>
+  <sequence>35</sequence>
+  <logger>listener.SessionCounterListener</logger>
+  <level>INFO</level>
+  <class>listeners.ServerContextListener</class>
+  <method>contextInitialized</method>
+  <thread>14</thread>
+  <message>reading data...</message>
+</record>
+<record>
+  <date>2015-06-24T19:20:36</date>
+  <millis>1435166436963</millis>
+  <sequence>36</sequence>
+  <logger>listener.SessionCounterListener</logger>
+  <level>INFO</level>
+  <class>listeners.ServerContextListener</class>
+  <method>contextInitialized</method>
+  <thread>14</thread>
+  <message>data found, loading...</message>
+</record>
+<record>
+  <date>2015-06-24T19:27:10</date>
+  <millis>1435166830854</millis>
+  <sequence>39</sequence>
+  <logger>listener.SessionCounterListener</logger>
+  <level>INFO</level>
+  <class>listeners.ServerContextListener</class>
+  <method>contextDestroyed</method>
+  <thread>46</thread>
+  <message>data saved to file</message>
+</record>
+</log>
+<?xml version="1.0" encoding="windows-1252" standalone="no"?>
+<!DOCTYPE log SYSTEM "logger.dtd">
+<log>
+<record>
+  <date>2015-06-24T19:27:11</date>
+  <millis>1435166831371</millis>
+  <sequence>41</sequence>
+  <logger>listener.SessionCounterListener</logger>
+  <level>INFO</level>
+  <class>listeners.ServerContextListener</class>
+  <method>contextInitialized</method>
+  <thread>46</thread>
+  <message>Logger initialized</message>
+</record>
+<record>
+  <date>2015-06-24T19:27:11</date>
+  <millis>1435166831372</millis>
+  <sequence>42</sequence>
+  <logger>listener.SessionCounterListener</logger>
+  <level>INFO</level>
+  <class>listeners.ServerContextListener</class>
+  <method>contextInitialized</method>
+  <thread>46</thread>
+  <message>reading data...</message>
+</record>
+<record>
+  <date>2015-06-24T19:27:11</date>
+  <millis>1435166831405</millis>
+  <sequence>43</sequence>
+  <logger>listener.SessionCounterListener</logger>
+  <level>INFO</level>
+  <class>listeners.ServerContextListener</class>
+  <method>contextInitialized</method>
+  <thread>46</thread>
+  <message>data found, loading...</message>
+</record>
+<record>
+  <date>2015-06-24T19:42:23</date>
+  <millis>1435167743971</millis>
+  <sequence>49</sequence>
+  <logger>listener.SessionCounterListener</logger>
+  <level>INFO</level>
+  <class>listeners.ServerContextListener</class>
+  <method>contextDestroyed</method>
+  <thread>63</thread>
+  <message>data saved to file</message>
+</record>
+</log>
+<?xml version="1.0" encoding="windows-1252" standalone="no"?>
+<!DOCTYPE log SYSTEM "logger.dtd">
+<log>
+<record>
+  <date>2015-06-24T19:43:22</date>
+  <millis>1435167802022</millis>
+  <sequence>34</sequence>
+  <logger>listener.SessionCounterListener</logger>
+  <level>INFO</level>
+  <class>listeners.ServerContextListener</class>
+  <method>contextInitialized</method>
+  <thread>14</thread>
+  <message>Logger initialized</message>
+</record>
+<record>
+  <date>2015-06-24T19:43:22</date>
+  <millis>1435167802023</millis>
+  <sequence>35</sequence>
+  <logger>listener.SessionCounterListener</logger>
+  <level>INFO</level>
+  <class>listeners.ServerContextListener</class>
+  <method>contextInitialized</method>
+  <thread>14</thread>
+  <message>reading data...</message>
+</record>
+<record>
+  <date>2015-06-24T19:43:22</date>
+  <millis>1435167802036</millis>
+  <sequence>36</sequence>
+  <logger>listener.SessionCounterListener</logger>
+  <level>WARNING</level>
+  <class>listeners.ServerContextListener</class>
+  <method>contextInitialized</method>
+  <thread>14</thread>
+  <message>services.ParkingController; local class incompatible: stream classdesc serialVersionUID = 6154723509245312523, local class serialVersionUID = 2914238372141376656</message>
+</record>
+<record>
+  <date>2015-06-24T19:43:22</date>
+  <millis>1435167802037</millis>
+  <sequence>37</sequence>
+  <logger>listener.SessionCounterListener</logger>
+  <level>WARNING</level>
+  <class>listeners.ServerContextListener</class>
+  <method>contextInitialized</method>
+  <thread>14</thread>
+  <message>no data object found, making a new one...</message>
+</record>
+<record>
+  <date>2015-06-24T19:43:22</date>
+  <millis>1435167802064</millis>
+  <sequence>38</sequence>
+  <logger>listener.SessionCounterListener</logger>
+  <level>INFO</level>
+  <class>listeners.ServerContextListener</class>
+  <method>contextInitialized</method>
+  <thread>14</thread>
+  <message>admin account created</message>
+</record>
+<record>
+  <date>2015-06-24T19:43:22</date>
+  <millis>1435167802064</millis>
+  <sequence>39</sequence>
+  <logger>listener.SessionCounterListener</logger>
+  <level>INFO</level>
+  <class>listeners.ServerContextListener</class>
+  <method>contextInitialized</method>
+  <thread>14</thread>
+  <message>customer account created</message>
+</record>

@@ -3,6 +3,7 @@
 @import "table.css";
 @import "button.css";
 body {
+    min-width: 1000px;
     background-color: #f0f0f0;
     font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
     font-weight: 300;
@@ -39,9 +40,17 @@ h2 {
     color: #7a1f8c;
 }
 
+h4 {
+    color: #7a1f8c;
+}
+
 p {
     font-size: medium;
     font-weight: 200;
+}
+
+.atdlink {
+    color: #7a1f8c;
 }
 
 .textBox {

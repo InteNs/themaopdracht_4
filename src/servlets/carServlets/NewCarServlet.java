@@ -28,6 +28,9 @@ public class NewCarServlet extends HttpServlet {
             } catch (ValidateException e) {
                 for(Map.Entry<String, String> entry : e.getErrorMap().entrySet())
                     req.setAttribute(entry.getKey(),entry.getValue());
+
+                req.getRequestDispatcher("/secure/car/addCar.jsp").forward(req,resp);
+
             }
         }
         req.getRequestDispatcher("/viewcars").forward(req,resp);
