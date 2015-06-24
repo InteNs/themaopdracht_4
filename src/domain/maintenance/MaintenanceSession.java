@@ -8,9 +8,6 @@ import domain.users.Mechanic;
 import java.time.LocalDate;
 import java.util.HashMap;
 
-/**
- * Created by InteNs on 23.jun.2015.
- */
 public class MaintenanceSession {
     public enum sessionStatus{NIEUW,FINISHED,ACTIVE}
 
