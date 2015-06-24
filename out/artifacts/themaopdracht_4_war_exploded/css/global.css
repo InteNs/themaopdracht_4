@@ -1,42 +1,69 @@
 @import "form.css";
 @import "navigation.css";
 @import "table.css";
+@import "button.css";
 body {
+    background-color: #f0f0f0;
     font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
     font-weight: 300;
 }
+/*center element on page*/
 .container {
-    width: 100%;
-    margin: auto auto;
-}
-
-.button {
-    width: 125px;
-    background: #7a1f8c;
-    background-image: -webkit-linear-gradient(top, #7a1f8c, #43144d);
-    background-image: -moz-linear-gradient(top, #7a1f8c, #43144d);
-    background-image: -ms-linear-gradient(top, #7a1f8c, #43144d);
-    background-image: -o-linear-gradient(top, #7a1f8c, #43144d);
-    background-image: linear-gradient(to bottom, #7a1f8c, #43144d);
+    background-color: #ffffff;
+    min-width: 600px;
+    margin: auto;
+    margin-bottom: 15px;
+    padding: 15px;
+    border: 1px solid #88209B;
     border-radius: 3px;
-    text-shadow: 1px 1px 5px #000000;
-    -webkit-box-shadow: 0px 1px 6px #666666;
-    -moz-box-shadow: 0px 1px 6px #666666;
-    box-shadow: 0px 1px 6px #666666;
-    font-family: Arial;
-    color: #ebebeb;
-    font-size: 16px;
-    padding: 5px 10px 5px 10px;
-    border: solid #4d3952 1px;
-    text-decoration: none;
+    -webkit-box-shadow: 0px 2px 2px #666666;
+    -moz-box-shadow: 0px 2px 2px #666666;
+    box-shadow: 0px 2px 2px #666666;
 }
 
-.button:hover {
-    background: #844b8f;
-    background-image: -webkit-linear-gradient(top, #844b8f, #452f4a);
-    background-image: -moz-linear-gradient(top, #844b8f, #452f4a);
-    background-image: -ms-linear-gradient(top, #844b8f, #452f4a);
-    background-image: -o-linear-gradient(top, #844b8f, #452f4a);
-    background-image: linear-gradient(to bottom, #844b8f, #452f4a);
-    text-decoration: none;
+.logRegContainter {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
 }
+
+.blankContainer {
+    min-width: 600px;
+    max-width: 894px;
+    margin: auto;
+    margin-bottom: 15px;
+}
+
+h2 {
+    color: #7a1f8c;
+}
+
+p {
+    font-size: medium;
+    font-weight: 200;
+}
+
+.textBox {
+    background-color: #ffffff;
+    min-width: 600px;
+    max-width: 894px;
+    margin: auto;
+    margin-bottom: 15px;
+    padding: 15px;
+    border: 1px solid #88209B;
+    border-radius: 3px;
+    -webkit-box-shadow: 0px 2px 2px #666666;
+    -moz-box-shadow: 0px 2px 2px #666666;
+    box-shadow: 0px 2px 2px #666666;
+}
+
+.center-align {
+    text-align: center;
+}
+
+.right {
+    float: right;
+    margin-left: 5px;
+}
+
