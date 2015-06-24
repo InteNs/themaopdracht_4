@@ -9,14 +9,8 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/themaopdracht_4/services/UserController.class" afterPath="$PROJECT_DIR$/out/production/themaopdracht_4/services/UserController.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/themaopdracht_4_war_exploded/data.obj" afterPath="$PROJECT_DIR$/out/artifacts/themaopdracht_4_war_exploded/data.obj" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/themaopdracht_4_war_exploded/blogLog.xml" afterPath="$PROJECT_DIR$/out/artifacts/themaopdracht_4_war_exploded/blogLog.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/contact.jsp" afterPath="$PROJECT_DIR$/web/contact.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/css/global.css" afterPath="$PROJECT_DIR$/web/css/global.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/themaopdracht_4_war_exploded/component/navigation/links.jsp" afterPath="$PROJECT_DIR$/out/artifacts/themaopdracht_4_war_exploded/component/navigation/links.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/component/navigation/links.jsp" afterPath="$PROJECT_DIR$/web/component/navigation/links.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/css/navigation.css" afterPath="$PROJECT_DIR$/web/css/navigation.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/themaopdracht_4_war_exploded/component/navigation/navigation.jsp" afterPath="$PROJECT_DIR$/out/artifacts/themaopdracht_4_war_exploded/component/navigation/navigation.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/component/navigation/navigation.jsp" afterPath="$PROJECT_DIR$/web/component/navigation/navigation.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/component/parking/parkingTable.jsp" afterPath="$PROJECT_DIR$/web/component/parking/parkingTable.jsp" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="themaopdracht_4.iws" />
@@ -134,10 +128,10 @@
         </entry>
       </file>
       <file leaf-file-name="Probeersel1.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/tests/Probeersel1.java">
+        <entry file="file://$PROJECT_DIR$/tests/blackbox/Probeersel1.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.135436">
-              <caret line="91" column="43" selection-start-line="91" selection-start-column="43" selection-end-line="91" selection-end-column="43" />
+            <state vertical-scroll-proportion="-3.0686457">
+              <caret line="11" column="13" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
               <folding />
             </state>
           </provider>
@@ -177,7 +171,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/domain/users/Mechanic.java" />
         <option value="$PROJECT_DIR$/src/domain/users/maintenance/MaintenanceSession.java" />
         <option value="$PROJECT_DIR$/src/services/MaintenanceController.java" />
         <option value="$PROJECT_DIR$/src/servlets/maintenance/NewMaintenanceServlet.java" />
@@ -228,6 +221,7 @@
         <option value="$PROJECT_DIR$/web/css/navigation.css" />
         <option value="$PROJECT_DIR$/web/component/parking/parkingTable.jsp" />
         <option value="$PROJECT_DIR$/tests/Probeersel1.java" />
+        <option value="$PROJECT_DIR$/tests/blackbox/Probeersel1.java" />
       </list>
     </option>
   </component>
@@ -581,6 +575,24 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="tests" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="themaopdracht_4" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Thema Opdracht 4 Clean" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="tests" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="blackbox" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -1418,7 +1430,7 @@
       <workItem from="1435139696922" duration="44000" />
       <workItem from="1435148763240" duration="38000" />
       <workItem from="1435148845372" duration="13554000" />
-      <workItem from="1435162931503" duration="6294000" />
+      <workItem from="1435162931503" duration="6333000" />
     </task>
     <task id="LOCAL-00001" summary="2nd commit">
       <created>1433428505945</created>
@@ -1594,11 +1606,17 @@
       <option name="project" value="LOCAL" />
       <updated>1435166493450</updated>
     </task>
-    <option name="localTasksCounter" value="30" />
+    <task id="LOCAL-00030" summary="AAAAHAHHAHAHAHA SLAAPGEBREK =D">
+      <created>1435170062082</created>
+      <option name="number" value="00030" />
+      <option name="project" value="LOCAL" />
+      <updated>1435170062082</updated>
+    </task>
+    <option name="localTasksCounter" value="31" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="123375000" />
+    <option name="totallyTimeSpent" value="123414000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1610,7 +1628,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1284" height="776" extended-state="0" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32929516" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
@@ -1625,7 +1643,7 @@
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.22204968" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Remote Host" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.20179738" sideWeight="0.5" order="3" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.20179738" sideWeight="0.5" order="3" side_tool="false" content_ui="combo" />
       <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
@@ -2129,10 +2147,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/tests/Probeersel1.java">
+    <entry file="file://$PROJECT_DIR$/tests/blackbox/Probeersel1.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.135436">
-          <caret line="91" column="43" selection-start-line="91" selection-start-column="43" selection-end-line="91" selection-end-column="43" />
+        <state vertical-scroll-proportion="-3.0686457">
+          <caret line="11" column="13" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
           <folding />
         </state>
       </provider>
