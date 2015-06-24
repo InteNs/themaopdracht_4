@@ -44,7 +44,7 @@ public class Customer extends User implements Serializable {
 
     public void removeCar(String numberPlate){
         for(Car car:cars)
-            if (car.getNumberPlate().equals(numberPlate)) {
+            if (car.getLicensePlate().equals(numberPlate)) {
                 cars.remove(car);
                 return;
             }

@@ -23,7 +23,7 @@ public class CarTest {
 
     @Test
     public void testGetNumberPlate() throws Exception {
-        assertEquals("nummerplaat komt niet overeen",numberPlate, car.getNumberPlate());
+        assertEquals("nummerplaat komt niet overeen",numberPlate, car.getLicensePlate());
     }
 
     @Test
@@ -35,8 +35,8 @@ public class CarTest {
 
     @Test
     public void testSetNumberPlate() throws Exception {
-        car.setNumberPlate(numberPlate);
-        assertEquals("nummerplaat is niet juist gezet",numberPlate, car.getNumberPlate());
+        car.setLicensePlate(numberPlate);
+        assertEquals("nummerplaat is niet juist gezet",numberPlate, car.getLicensePlate());
 
     }
 
