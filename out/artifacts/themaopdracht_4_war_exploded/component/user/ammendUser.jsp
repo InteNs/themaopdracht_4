@@ -28,52 +28,72 @@
             <div class="p">
                 <input type="hidden" name="originalemail" value="${param.email}"/>
                 <label class="notice"><c:out value="${requestScope.email_error}"/></label>
-                <label class="formlabel" for="email">Email</label>
+                <label class="formlabel" for="email">Email
+                    <span class="requiredColor"> *</span>
+                </label>
                 <input class="text" type="email" name="email" id="email" placeholder="Vul email in" value="${param.email}"/>
             </div>
             <div class="p">
                 <label class="notice"><c:out value="${requestScope.email_repeat_error}"/></label>
-                <label class="formlabel" for="emailrepeat">Herhaal</label>
+                <label class="formlabel" for="emailrepeat">Herhaal
+                    <span class="requiredColor"> *</span>
+                </label>
                 <input class="text" type="email" name="email_repeat" id="emailrepeat" placeholder="Herhaal email"/>
             </div>
             <div class="p">
                 <label class="notice"><c:out value="${requestScope.password_error}"/></label>
-                <label class="formlabel" for="password">Wachtwoord</label>
+                <label class="formlabel" for="password">Wachtwoord
+                    <span class="requiredColor"> *</span>
+                </label>
                 <input class="text" type="password" name="password" id="password" placeholder="Vul wachtwoord in"/>
             </div>
             <div class="p">
                 <label class="notice"><c:out value="${requestScope.password_repeat_error}"/></label>
-                <label class="formlabel" for="passwordrepeat">Herhaal</label>
+                <label class="formlabel" for="passwordrepeat">Herhaal
+                    <span class="requiredColor"> *</span>
+                </label>
                 <input class="text" type="password" name="password_repeat" id="passwordrepeat" placeholder="Herhaal wachtwoord"/>
             </div>
             <div class="p">
                 <label class="notice"><c:out value="${requestScope.realname_error}"/></label>
-                <label class="formlabel" for="realname">Naam</label>
+                <label class="formlabel" for="realname">Naam
+                    <span class="requiredColor"> *</span>
+                </label>
                 <input class="text" type="text" name="realname" id="realname" placeholder="Vul voor- en achternaam in"  value="${param.name}"/>
             </div>
             <div class="p">
                 <label class="notice"><c:out value="${requestScope.dateofbirth_error}"/></label>
-                <label class="formlabel" for="date">Geboortedatum</label>
+                <label class="formlabel" for="date">Geboortedatum
+                    <span class="requiredColor"> *</span>
+                </label>
                 <input class="text" type="date" name="date" id="date" value="${param.dateofbirth}"/>
             </div>
             <div class="p">
                 <label class="notice"><c:out value="${requestScope.address_error}"/></label>
-                <label class="formlabel" for="address">Adres</label>
+                <label class="formlabel" for="address">Adres
+                    <span class="requiredColor"> *</span>
+                </label>
                 <input class="text" type="text" name="address" id="address" placeholder="Vul adres in" value="${param.address}"/>
             </div>
             <div class="p">
                 <label class="notice"><c:out value="${requestScope.postal_error}"/></label>
-                <label class="formlabel" for="postalcode">Postcode</label>
+                <label class="formlabel" for="postalcode">Postcode
+                    <span class="requiredColor"> *</span>
+                </label>
                 <input class="text" type="text" name="postal" id="postalcode" placeholder="Vul postcode in" value="${param.postal}"/>
             </div>
             <div class="p">
                 <label class="notice"><c:out value="${requestScope.phonenumber_error}"/></label>
-                <label class="formlabel" for="phonenumber">Telefoonnummer</label>
+                <label class="formlabel" for="phonenumber">Telefoonnummer
+                    <span class="requiredColor"> *</span>
+                </label>
                 <input class="text" type="tel" name="phonenumber" id="phonenumber" placeholder="Vul telefoonnummer in." value="${param.phonenumber}"/>
             </div>
             <div class="p">
                 <label class="notice"><c:out value="${requestScope.usertype_error}"/></label>
-                <label class="formlabel" for="usertype">Type</label>
+                <label class="formlabel" for="usertype">Type
+                    <span class="requiredColor"> *</span>
+                </label>
                 <select class="text" id="usertype" name="usertype">
                     <option value="CUSTOMER">Klant</option>
                     <option value="OWNER">Eigenaar</option>
