@@ -2,19 +2,20 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="af85fd23-e1b4-47d2-9362-72aab21f40db" name="Default" comment="comm">
-      <change type="DELETED" beforePath="C:\Users\oussama\IdeaProjects\themaopdracht_4_end\out\artifacts\themaopdracht_4_war_exploded\WEB-INF\classes\domain\Car.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\oussama\IdeaProjects\themaopdracht_4_end\out\production\themaopdracht_4\domain\Car.class" afterPath="" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tests/domain/users/ProductControllerTest.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/themaopdracht_4_war_exploded/WEB-INF/classes/servlets/userServlets/AmmendCustomerServlet.class" afterPath="$PROJECT_DIR$/out/artifacts/themaopdracht_4_war_exploded/WEB-INF/classes/servlets/userServlets/AmmendCustomerServlet.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/themaopdracht_4/servlets/userServlets/AmmendCustomerServlet.class" afterPath="$PROJECT_DIR$/out/production/themaopdracht_4/servlets/userServlets/AmmendCustomerServlet.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/test/themaopdracht_4/domain/CarTest.class" afterPath="$PROJECT_DIR$/out/test/themaopdracht_4/domain/CarTest.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/themaopdracht_4_war_exploded/WEB-INF/classes/domain/users/Customer.class" afterPath="$PROJECT_DIR$/out/artifacts/themaopdracht_4_war_exploded/WEB-INF/classes/domain/users/Customer.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/themaopdracht_4/domain/users/Customer.class" afterPath="$PROJECT_DIR$/out/production/themaopdracht_4/domain/users/Customer.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/test/themaopdracht_4/domain/users/CustomerTest.class" afterPath="$PROJECT_DIR$/out/test/themaopdracht_4/domain/users/CustomerTest.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/themaopdracht_4_war_exploded/WEB-INF/classes/listeners/ServerContextListener.class" afterPath="$PROJECT_DIR$/out/artifacts/themaopdracht_4_war_exploded/WEB-INF/classes/listeners/ServerContextListener.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/themaopdracht_4/listeners/ServerContextListener.class" afterPath="$PROJECT_DIR$/out/production/themaopdracht_4/listeners/ServerContextListener.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/themaopdracht_4_war_exploded/WEB-INF/classes/services/UserController.class" afterPath="$PROJECT_DIR$/out/artifacts/themaopdracht_4_war_exploded/WEB-INF/classes/services/UserController.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/themaopdracht_4/services/UserController.class" afterPath="$PROJECT_DIR$/out/production/themaopdracht_4/services/UserController.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/themaopdracht_4_war_exploded/data.obj" afterPath="$PROJECT_DIR$/out/artifacts/themaopdracht_4_war_exploded/data.obj" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/test/themaopdracht_4/domain/users/UserTest.class" afterPath="$PROJECT_DIR$/out/test/themaopdracht_4/domain/users/UserTest.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/domain/CarTest.java" afterPath="$PROJECT_DIR$/tests/domain/CarTest.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/domain/users/CustomerTest.java" afterPath="$PROJECT_DIR$/tests/domain/users/CustomerTest.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/domain/users/UserTest.java" afterPath="$PROJECT_DIR$/tests/domain/users/UserTest.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/themaopdracht_4_war_exploded/blogLog.xml" afterPath="$PROJECT_DIR$/out/artifacts/themaopdracht_4_war_exploded/blogLog.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/themaopdracht_4_war_exploded/component/user/userDetails.jsp" afterPath="$PROJECT_DIR$/out/artifacts/themaopdracht_4_war_exploded/component/user/userDetails.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/themaopdracht_4_war_exploded/WEB-INF/web.xml" afterPath="$PROJECT_DIR$/out/artifacts/themaopdracht_4_war_exploded/WEB-INF/web.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="themaopdracht_4.iws" />
@@ -38,21 +39,21 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="CustomerTest.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/tests/domain/users/CustomerTest.java">
+      <file leaf-file-name="ProductController.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/services/ProductController.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="12" column="13" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
+              <caret line="19" column="7" selection-start-line="19" selection-start-column="7" selection-end-line="19" selection-end-column="7" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="UserTest.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/tests/domain/users/UserTest.java">
+      <file leaf-file-name="ProductControllerTest.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/tests/domain/users/ProductControllerTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.53994846">
-              <caret line="111" column="1" selection-start-line="111" selection-start-column="1" selection-end-line="111" selection-end-column="1" />
+            <state vertical-scroll-proportion="0.68686867">
+              <caret line="38" column="0" selection-start-line="38" selection-start-column="0" selection-end-line="38" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -62,7 +63,7 @@
         <entry file="file://$PROJECT_DIR$/tests/domain/CarTest.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="43" column="17" selection-start-line="43" selection-start-column="4" selection-end-line="47" selection-end-column="0" />
+              <caret line="18" column="35" selection-start-line="18" selection-start-column="35" selection-end-line="18" selection-end-column="35" />
               <folding />
             </state>
           </provider>
@@ -73,11 +74,11 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="JUnit4 Test Class" />
         <option value="Singleton" />
         <option value="Jsp File" />
         <option value="Class" />
         <option value="CSS File" />
+        <option value="JUnit4 Test Class" />
       </list>
     </option>
   </component>
@@ -103,9 +104,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/web/secure/user/user.jsp" />
-        <option value="$PROJECT_DIR$/src/servlets/userServlets/ViewUsersServlet.java" />
-        <option value="$PROJECT_DIR$/src/servlets/userServlets/NewUserServlet.java" />
         <option value="$PROJECT_DIR$/src/servlets/userServlets/AmmendUserServlet.java" />
         <option value="$PROJECT_DIR$/src/servlets/productServlets/ViewProductServlet.java" />
         <option value="$PROJECT_DIR$/src/servlets/productServlets/NewProductServlet.java" />
@@ -117,10 +115,8 @@
         <option value="$PROJECT_DIR$/web/css/global.css" />
         <option value="$PROJECT_DIR$/web/register.jsp" />
         <option value="$PROJECT_DIR$/web/index.jsp" />
-        <option value="$PROJECT_DIR$/tests/domain/users/CustomerTest.java" />
         <option value="$PROJECT_DIR$/src/domain/users/Mechanic.java" />
         <option value="$PROJECT_DIR$/src/domain/users/maintenance/MaintenanceSession.java" />
-        <option value="$PROJECT_DIR$/src/services/MaintenanceController.java" />
         <option value="$PROJECT_DIR$/src/servlets/maintenance/NewMaintenanceServlet.java" />
         <option value="$PROJECT_DIR$/web/component/parking/addParking.jsp" />
         <option value="$PROJECT_DIR$/web/secure/Parking/detailsparking.jsp" />
@@ -152,8 +148,13 @@
         <option value="$PROJECT_DIR$/web/component/car/carTable.jsp" />
         <option value="$PROJECT_DIR$/web/component/product/productDetails.jsp" />
         <option value="$PROJECT_DIR$/web/component/car/addCarForm.jsp" />
+        <option value="$PROJECT_DIR$/tests/Selenium_test/Userstory1_Test1.java" />
+        <option value="$PROJECT_DIR$/src/services/MaintenanceController.java" />
+        <option value="$PROJECT_DIR$/tests/services/MaintenanceControllerTest.java" />
         <option value="$PROJECT_DIR$/tests/domain/CarTest.java" />
         <option value="$PROJECT_DIR$/tests/domain/users/UserTest.java" />
+        <option value="$PROJECT_DIR$/tests/domain/users/CustomerTest.java" />
+        <option value="$PROJECT_DIR$/tests/domain/users/ProductControllerTest.java" />
       </list>
     </option>
   </component>
@@ -179,8 +180,9 @@
     <order />
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="960" />
-    <option name="width" value="960" />
+    <option name="x" value="734" />
+    <option name="y" value="8" />
+    <option name="width" value="1926" />
     <option name="height" value="1032" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
@@ -208,7 +210,6 @@
     <panes>
       <pane id="Scope" />
       <pane id="Scratches" />
-      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -281,8 +282,41 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="themaopdracht_4" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="themaopdracht_4_end" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="themaopdracht_4" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="themaopdracht_4_end" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="services" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
         </subPane>
       </pane>
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -329,50 +363,11 @@
       <recent name="domain" />
     </key>
     <key name="CreateTestDialog.RecentsKey">
-      <recent name="services" />
       <recent name="domain.users" />
+      <recent name="services" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.CarTest">
-    <configuration default="false" name="register.jsp" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" temporary="true" APPLICATION_SERVER_NAME="Tomcat 8.0.21" ALTERNATIVE_JRE_ENABLED="false">
-      <option name="OPEN_IN_BROWSER_URL" value="http://localhost:8080/component/register/register.jsp" />
-      <deployment>
-        <artifact name="themaopdracht_4:war exploded">
-          <settings>
-            <option name="CONTEXT_PATH" value="/" />
-          </settings>
-        </artifact>
-      </deployment>
-      <server-settings>
-        <option name="BASE_DIRECTORY_NAME" value="register_jsp_themaopdracht_4" />
-      </server-settings>
-      <predefined_log_file id="Tomcat" enabled="true" />
-      <predefined_log_file id="Tomcat Catalina" enabled="true" />
-      <predefined_log_file id="Tomcat Manager" enabled="false" />
-      <predefined_log_file id="Tomcat Host Manager" enabled="false" />
-      <predefined_log_file id="Tomcat Localhost Access" enabled="false" />
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
-      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Run">
-        <option name="USE_ENV_VARIABLES" value="true" />
-        <STARTUP>
-          <option name="USE_DEFAULT" value="true" />
-          <option name="SCRIPT" value="" />
-          <option name="VM_PARAMETERS" value="" />
-          <option name="PROGRAM_PARAMETERS" value="" />
-        </STARTUP>
-        <SHUTDOWN>
-          <option name="USE_DEFAULT" value="true" />
-          <option name="SCRIPT" value="" />
-          <option name="VM_PARAMETERS" value="" />
-          <option name="PROGRAM_PARAMETERS" value="" />
-        </SHUTDOWN>
-      </ConfigurationWrapper>
-      <method>
-        <option name="BuildArtifacts" enabled="true">
-          <artifact name="themaopdracht_4:war exploded" />
-        </option>
-      </method>
-    </configuration>
+  <component name="RunManager" selected="JUnit.ProductControllerTest.testAmmendProduct">
     <configuration default="false" name="CarTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
         <pattern>
@@ -387,6 +382,110 @@
       <option name="MAIN_CLASS_NAME" value="domain.CarTest" />
       <option name="METHOD_NAME" />
       <option name="TEST_OBJECT" value="class" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <envs />
+      <patterns />
+      <method />
+    </configuration>
+    <configuration default="false" name="CustomerTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="domain.users.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <module name="themaopdracht_4" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="domain.users" />
+      <option name="MAIN_CLASS_NAME" value="domain.users.CustomerTest" />
+      <option name="METHOD_NAME" />
+      <option name="TEST_OBJECT" value="class" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <envs />
+      <patterns />
+      <method />
+    </configuration>
+    <configuration default="false" name="CustomerTest.testSetIsOnBlackList" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="domain.users.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <module name="themaopdracht_4" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="domain.users" />
+      <option name="MAIN_CLASS_NAME" value="domain.users.CustomerTest" />
+      <option name="METHOD_NAME" value="testSetIsOnBlackList" />
+      <option name="TEST_OBJECT" value="method" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <envs />
+      <patterns />
+      <method />
+    </configuration>
+    <configuration default="false" name="ProductControllerTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="domain.users.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <module name="themaopdracht_4" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="domain.users" />
+      <option name="MAIN_CLASS_NAME" value="domain.users.ProductControllerTest" />
+      <option name="METHOD_NAME" />
+      <option name="TEST_OBJECT" value="class" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <envs />
+      <patterns />
+      <method />
+    </configuration>
+    <configuration default="false" name="ProductControllerTest.testAmmendProduct" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="domain.users.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <module name="themaopdracht_4" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="domain.users" />
+      <option name="MAIN_CLASS_NAME" value="domain.users.ProductControllerTest" />
+      <option name="METHOD_NAME" value="testAmmendProduct" />
+      <option name="TEST_OBJECT" value="method" />
       <option name="VM_PARAMETERS" value="-ea" />
       <option name="PARAMETERS" />
       <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
@@ -659,15 +758,21 @@
     <configuration default="true" type="osgi.bnd.run" factoryName="Test Launcher (JUnit)">
       <method />
     </configuration>
-    <list size="3">
+    <list size="6">
       <item index="0" class="java.lang.String" itemvalue="Tomcat Server.web_server_tomcat" />
-      <item index="1" class="java.lang.String" itemvalue="Tomcat Server.register.jsp" />
-      <item index="2" class="java.lang.String" itemvalue="JUnit.CarTest" />
+      <item index="1" class="java.lang.String" itemvalue="JUnit.CarTest" />
+      <item index="2" class="java.lang.String" itemvalue="JUnit.CustomerTest" />
+      <item index="3" class="java.lang.String" itemvalue="JUnit.CustomerTest.testSetIsOnBlackList" />
+      <item index="4" class="java.lang.String" itemvalue="JUnit.ProductControllerTest" />
+      <item index="5" class="java.lang.String" itemvalue="JUnit.ProductControllerTest.testAmmendProduct" />
     </list>
     <recent_temporary>
-      <list size="2">
-        <item index="0" class="java.lang.String" itemvalue="JUnit.CarTest" />
-        <item index="1" class="java.lang.String" itemvalue="Tomcat Server.register.jsp" />
+      <list size="5">
+        <item index="0" class="java.lang.String" itemvalue="JUnit.ProductControllerTest.testAmmendProduct" />
+        <item index="1" class="java.lang.String" itemvalue="JUnit.ProductControllerTest" />
+        <item index="2" class="java.lang.String" itemvalue="JUnit.CustomerTest" />
+        <item index="3" class="java.lang.String" itemvalue="JUnit.CustomerTest.testSetIsOnBlackList" />
+        <item index="4" class="java.lang.String" itemvalue="JUnit.CarTest" />
       </list>
     </recent_temporary>
   </component>
@@ -709,6 +814,7 @@
       <workItem from="1435139824289" duration="2179000" />
       <workItem from="1435150730707" duration="1934000" />
       <workItem from="1435157578381" duration="1650000" />
+      <workItem from="1435161722139" duration="6219000" />
     </task>
     <task id="LOCAL-00001" summary="2nd commit">
       <created>1433428505945</created>
@@ -882,7 +988,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="133696000" />
+    <option name="totallyTimeSpent" value="139915000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -893,22 +999,23 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="960" y="0" width="960" height="1032" extended-state="0" />
+    <frame x="734" y="8" width="1926" height="1032" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32929516" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32298136" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32929516" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.41740087" sideWeight="0.50479746" order="0" side_tool="true" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32929516" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.053801168" sideWeight="0.49520257" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.26783624" sideWeight="0.4968017" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.053801168" sideWeight="0.49520257" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.26666668" sideWeight="0.4968017" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32919255" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Remote Host" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.23542601" sideWeight="0.5" order="3" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.13132401" sideWeight="0.5" order="3" side_tool="false" content_ui="combo" />
       <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
@@ -920,7 +1027,6 @@
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="7" side_tool="false" content_ui="combo" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32298136" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3325301" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
     </layout>
@@ -1004,48 +1110,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/domain/parking/ParkingSpot.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="12" column="15" selection-start-line="12" selection-start-column="15" selection-end-line="12" selection-end-column="15" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/domain/Product.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="8" column="23" selection-start-line="8" selection-start-column="23" selection-end-line="8" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/component/parking/parkingDetails.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.6040609">
-          <caret line="26" column="23" selection-start-line="26" selection-start-column="23" selection-end-line="26" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/domain/parking/Reservation.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="40" column="0" selection-start-line="40" selection-start-column="0" selection-end-line="40" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/WEB-INF/web.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="174" column="22" selection-start-line="174" selection-start-column="22" selection-end-line="174" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/servlets/productServlets/AmmendProductServlet.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="19" column="0" selection-start-line="16" selection-start-column="42" selection-end-line="19" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/servlets/parkingServlets/DeleteParkingServlet.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -1319,13 +1383,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/services/MaintenanceController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.9279661">
-          <caret line="36" column="0" selection-start-line="36" selection-start-column="0" selection-end-line="36" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/servlets/sessionServlets/LogoutServlet.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.25211865">
@@ -1340,10 +1397,58 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/tests/Selenium_test/Userstory30_Test1.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.7154882">
+          <caret line="32" column="54" selection-start-line="32" selection-start-column="54" selection-end-line="32" selection-end-column="54" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tests/Selenium_test/Userstory1_Test2.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.28619528">
+          <caret line="17" column="11" selection-start-line="17" selection-start-column="11" selection-end-line="17" selection-end-column="11" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tests/Selenium_test/Userstory1_Test1.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.39730638">
+          <caret line="39" column="64" selection-start-line="39" selection-start-column="64" selection-end-line="39" selection-end-column="64" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/services/ParkingController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.11447811">
+          <caret line="14" column="13" selection-start-line="14" selection-start-column="13" selection-end-line="14" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/services/MaintenanceController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.2003367">
+          <caret line="14" column="20" selection-start-line="14" selection-start-column="20" selection-end-line="14" selection-end-column="20" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tests/domain/users/UserTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.8299663">
+          <caret line="92" column="31" selection-start-line="92" selection-start-column="31" selection-end-line="92" selection-end-column="31" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/tests/domain/users/CustomerTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="12" column="13" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
+        <state vertical-scroll-proportion="0.4276094">
+          <caret line="59" column="0" selection-start-line="59" selection-start-column="0" selection-end-line="59" selection-end-column="0" />
           <folding />
         </state>
       </provider>
@@ -1351,15 +1456,23 @@
     <entry file="file://$PROJECT_DIR$/tests/domain/CarTest.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="43" column="17" selection-start-line="43" selection-start-column="4" selection-end-line="47" selection-end-column="0" />
+          <caret line="18" column="35" selection-start-line="18" selection-start-column="35" selection-end-line="18" selection-end-column="35" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/tests/domain/users/UserTest.java">
+    <entry file="file://$PROJECT_DIR$/src/services/ProductController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.53994846">
-          <caret line="111" column="1" selection-start-line="111" selection-start-column="1" selection-end-line="111" selection-end-column="1" />
+        <state vertical-scroll-proportion="0.0">
+          <caret line="19" column="7" selection-start-line="19" selection-start-column="7" selection-end-line="19" selection-end-column="7" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tests/domain/users/ProductControllerTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.68686867">
+          <caret line="38" column="0" selection-start-line="38" selection-start-column="0" selection-end-line="38" selection-end-column="0" />
           <folding />
         </state>
       </provider>

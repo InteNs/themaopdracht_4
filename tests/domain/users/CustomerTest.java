@@ -41,17 +41,20 @@ public class CustomerTest {
 
     @Test
     public void testGetCars() throws Exception {
+        Car auto = new Car("sportwagen","aa-22-bb");
+        customer.getCars();
         assertEquals("Auto-object is niet juist", customer.getCars());
     }
 
     @Test
     public void testAddCar() throws Exception {
+        Car auto = new Car("sportwagen","aa-22-bb");
+        customer.addCar(auto);
         assertEquals("Auto-object is toegevoegd", customer.getCars());
     }
 
     @Test
     public void testRemoveCar() throws Exception {
-        customer.removeCar("a");
         assertEquals("Auto-object is niet verwijderd", customer.getCars());
     }
 

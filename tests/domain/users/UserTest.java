@@ -77,45 +77,45 @@ public class UserTest {
 
     @Test
     public void testSetEmail() throws Exception {
-        user.setEmail(EMAIL_1);
+        user.setEmail(EMAIL);
         assertEquals("email is niet juist gezet",EMAIL, user.getEmail());
 
     }
 
     @Test
     public void testSetPassword() throws Exception {
-        user.setPassword(PASSWORD_1);
+        user.setPassword(PASSWORD);
         assertEquals("wachtwoord is niet juist gezet",PASSWORD, user.getPassword());
     }
 
     @Test
     public void testSetRealName() throws Exception {
-        user.setRealName(REAL_NAME_1);
+        user.setRealName(REAL_NAME);
         assertEquals("echte naam is niet juist gezet",REAL_NAME, user.getRealName());
     }
 
     @Test
     public void testSetAddress() throws Exception {
-        user.setAddress(ADDRESS_1);
+        user.setAddress(ADDRESS);
         assertEquals("adres is niet juist gezet",ADDRESS, user.getAddress());
     }
 
     @Test
     public void testSetDateOfBirth() throws Exception {
         user.setDateOfBirth(DATE_OF_BIRTH);
-        assertEquals("geboortedatum is niet juist gezet",DATE_OF_BIRTH_1, user.getDateOfBirth());
+        assertEquals("geboortedatum is niet juist gezet",DATE_OF_BIRTH, user.getDateOfBirth());
     }
 
     @Test
     public void testSetPhoneNumber() throws Exception {
         user.setPhoneNumber(PHONE_NUMBER);
-        assertEquals("telefoonnummer is niet juist gezet",PHONE_NUMBER_1, user.getPhoneNumber());
+        assertEquals("telefoonnummer is niet juist gezet",PHONE_NUMBER, user.getPhoneNumber());
     }
 
     @Test
     public void testSetPostal() throws Exception {
         user.setPostal(POSTAL);
-        assertEquals("postcode is niet juist gezet",POSTAL_1, user.getPostal());
+        assertEquals("postcode is niet juist gezet",POSTAL, user.getPostal());
     }
 
     @Test(expected = AssertionError.class)

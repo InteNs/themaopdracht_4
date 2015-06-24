@@ -11,7 +11,7 @@ import static org.junit.Assert.assertEquals;
  */
 public class CarTest {
     final static String type = "sportwagen" ;
-    final static String typewr = " " ;
+    final static String typewr = "" ;
     final static String numberPlate = "aa-11-bb";
     private Car car ;
 
