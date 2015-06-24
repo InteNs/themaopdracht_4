@@ -5,12 +5,6 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="af85fd23-e1b4-47d2-9362-72aab21f40db" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/themaopdracht_4_war_exploded/WEB-INF/classes/services/UserController.class" afterPath="$PROJECT_DIR$/out/artifacts/themaopdracht_4_war_exploded/WEB-INF/classes/services/UserController.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/themaopdracht_4/services/UserController.class" afterPath="$PROJECT_DIR$/out/production/themaopdracht_4/services/UserController.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/themaopdracht_4_war_exploded/data.obj" afterPath="$PROJECT_DIR$/out/artifacts/themaopdracht_4_war_exploded/data.obj" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/themaopdracht_4_war_exploded/blogLog.xml" afterPath="$PROJECT_DIR$/out/artifacts/themaopdracht_4_war_exploded/blogLog.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/themaopdracht_4_war_exploded/component/navigation/links.jsp" afterPath="$PROJECT_DIR$/out/artifacts/themaopdracht_4_war_exploded/component/navigation/links.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/themaopdracht_4_war_exploded/component/navigation/navigation.jsp" afterPath="$PROJECT_DIR$/out/artifacts/themaopdracht_4_war_exploded/component/navigation/navigation.jsp" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="themaopdracht_4.iws" />
@@ -130,7 +124,7 @@
       <file leaf-file-name="Probeersel1.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/tests/blackbox/Probeersel1.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-3.0686457">
+            <state vertical-scroll-proportion="0.34871796">
               <caret line="11" column="13" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
               <folding />
             </state>
@@ -1430,7 +1424,7 @@
       <workItem from="1435139696922" duration="44000" />
       <workItem from="1435148763240" duration="38000" />
       <workItem from="1435148845372" duration="13554000" />
-      <workItem from="1435162931503" duration="6333000" />
+      <workItem from="1435162931503" duration="6440000" />
     </task>
     <task id="LOCAL-00001" summary="2nd commit">
       <created>1433428505945</created>
@@ -1612,11 +1606,29 @@
       <option name="project" value="LOCAL" />
       <updated>1435170062082</updated>
     </task>
-    <option name="localTasksCounter" value="31" />
+    <task id="LOCAL-00031" summary="AAAAHAHHAHAHAHA SLAAPGEBREK =D">
+      <created>1435170098905</created>
+      <option name="number" value="00031" />
+      <option name="project" value="LOCAL" />
+      <updated>1435170098905</updated>
+    </task>
+    <task id="LOCAL-00032" summary="AAAAHAHHAHAHAHA SLAAPGEBREK =D">
+      <created>1435170158792</created>
+      <option name="number" value="00032" />
+      <option name="project" value="LOCAL" />
+      <updated>1435170158792</updated>
+    </task>
+    <task id="LOCAL-00033" summary="AAAAHAHHAHAHAHA SLAAPGEBREK =D">
+      <created>1435170174751</created>
+      <option name="number" value="00033" />
+      <option name="project" value="LOCAL" />
+      <updated>1435170174751</updated>
+    </task>
+    <option name="localTasksCounter" value="34" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="123414000" />
+    <option name="totallyTimeSpent" value="123521000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1638,12 +1650,12 @@
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.41740087" sideWeight="0.50479746" order="0" side_tool="true" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.0931677" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.0077639753" sideWeight="0.49520257" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.08074534" sideWeight="0.4968017" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.61490685" sideWeight="0.49520257" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.64440995" sideWeight="0.4968017" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.22204968" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Remote Host" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.20179738" sideWeight="0.5" order="3" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.20179738" sideWeight="0.5" order="3" side_tool="false" content_ui="combo" />
       <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
@@ -2149,7 +2161,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/tests/blackbox/Probeersel1.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-3.0686457">
+        <state vertical-scroll-proportion="0.34871796">
           <caret line="11" column="13" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
           <folding />
         </state>
