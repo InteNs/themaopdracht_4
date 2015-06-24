@@ -1,16 +1,16 @@
-package Selenium_test;
 
-import org.junit.After;
-import org.junit.Before;
-import org.junit.Test;
+package blackbox;
+
+import java.util.regex.Pattern;
+import java.util.concurrent.TimeUnit;
+import org.junit.*;
+import static org.junit.Assert.*;
+import static org.hamcrest.CoreMatchers.*;
 import org.openqa.selenium.*;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.support.ui.Select;
 
-import java.util.concurrent.TimeUnit;
-
-import static org.junit.Assert.fail;
-
-public class Userstory35_Test1 {
+public class Userstory2 {
     private WebDriver driver;
     private String baseUrl;
     private boolean acceptNextAlert = true;
@@ -24,43 +24,46 @@ public class Userstory35_Test1 {
     }
 
     @Test
-    public void testUserstory35Test1() throws Exception {
+    public void testUserStory2() throws Exception {
         driver.get(baseUrl + "/");
-        driver.findElement(By.cssSelector("a > input.button")).click();
         driver.findElement(By.id("email")).clear();
-        driver.findElement(By.id("email")).sendKeys("a@hotmail.com");
+        driver.findElement(By.id("email")).sendKeys("admin@admin.nl");
+        driver.findElement(By.id("password")).clear();
+        driver.findElement(By.id("password")).sendKeys("admin");
+        driver.findElement(By.id("login")).click();
+        driver.findElement(By.cssSelector("form.formMainmenu > input[name=\"button\"]")).click();
+        try {
+            assertEquals("Huidig ingelogde gebruiker: admin.", driver.findElement(By.id("currentuserinfo")).getText());
+        } catch (Error e) {
+            verificationErrors.append(e.toString());
+        }
+        driver.findElement(By.cssSelector("div.container.table > div.right > a > input.button")).click();
+        try {
+            assertEquals("Gebruiker Toevoegen", driver.findElement(By.cssSelector("legend")).getText());
+        } catch (Error e) {
+            verificationErrors.append(e.toString());
+        }
+        driver.findElement(By.id("email")).clear();
+        driver.findElement(By.id("email")).sendKeys("test@hotmail.com");
         driver.findElement(By.id("emailrepeat")).clear();
-        driver.findElement(By.id("emailrepeat")).sendKeys("a@hotmail.com");
+        driver.findElement(By.id("emailrepeat")).sendKeys("test@hotmail.com");
         driver.findElement(By.id("password")).clear();
         driver.findElement(By.id("password")).sendKeys("12345");
         driver.findElement(By.id("passwordrepeat")).clear();
         driver.findElement(By.id("passwordrepeat")).sendKeys("12345");
         driver.findElement(By.id("realname")).clear();
-        driver.findElement(By.id("realname")).sendKeys("Oussama");
+        driver.findElement(By.id("realname")).sendKeys("Tester");
         driver.findElement(By.id("date")).clear();
-        driver.findElement(By.id("date")).sendKeys("2015-06-01");
+        driver.findElement(By.id("date")).sendKeys("2015-06-06");
         driver.findElement(By.id("address")).clear();
-        driver.findElement(By.id("address")).sendKeys("dreefstraat 123");
+        driver.findElement(By.id("address")).sendKeys("mijnstraat 123");
         driver.findElement(By.id("postalcode")).clear();
         driver.findElement(By.id("postalcode")).sendKeys("3511AA");
         driver.findElement(By.id("phonenumber")).clear();
         driver.findElement(By.id("phonenumber")).sendKeys("0612345678");
+        driver.findElement(By.cssSelector("div.buttonBox > input[name=\"button\"]")).click();
+        driver.findElement(By.xpath("(//input[@name='button'])[18]")).click();
         driver.findElement(By.name("button")).click();
-        driver.findElement(By.id("email")).clear();
-        driver.findElement(By.id("email")).sendKeys("a@hotmail.com");
-        driver.findElement(By.id("password")).clear();
-        driver.findElement(By.id("password")).sendKeys("12345");
-        driver.findElement(By.id("login")).click();
-        driver.findElement(By.xpath("(//input[@name='button'])[3]")).click();
-        driver.findElement(By.xpath("//input[@value='Auto Toevoegen']")).click();
-        driver.findElement(By.id("carBrand")).clear();
-        driver.findElement(By.id("carBrand")).sendKeys("ferrari");
-        driver.findElement(By.id("carType")).clear();
-        driver.findElement(By.id("carType")).sendKeys("sportwagen");
-        driver.findElement(By.id("numberPlate")).clear();
-        driver.findElement(By.id("numberPlate")).sendKeys("11-22-AA");
-        driver.findElement(By.cssSelector("div.p > input[name=\"button\"]")).click();
-        driver.findElement(By.cssSelector("#removecar > input[name=\"button\"]")).click();
     }
 
     @After
