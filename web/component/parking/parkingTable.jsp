@@ -22,6 +22,8 @@
       <th>Kenteken</th>
       <th><span class="smalltext">Details</span></th>
     </tr>
+    <c:choose>
+      <c:when test="${sessionScope.current_user.getUserType() == 'CUSTOMER'}">
     <c:forEach items="${requestScope.reservations}" var="reservation">
       <tr>
         <td>${reservation.getID()}</td>
@@ -41,5 +43,12 @@
         </td>
       </tr>
     </c:forEach>
+      </c:when>
+      <c:otherwise>
+        <div>
+          Er staan momenteel geen reserveringen in het systeem.
+        </div>
+      </c:otherwise>
+    </c:choose>
   </table>
 </div>
