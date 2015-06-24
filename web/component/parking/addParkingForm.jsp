@@ -1,19 +1,19 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core_1_1" %>
-<form action="<c:url value="/viewparking"/>" method="post">
-    <span class="navigationitem">
-        <input type="submit" class="button" name="button" value="Parkeren overzicht"/>
-    </span>
-</form>
 <div class="container">
-    <form action="<c:url value="/addparking"/>"  method="post">
         <fieldset name="addParking">
-            <legend>Reservering toevoegen</legend>
-
+            <legend>Reservering Toevoegen</legend>
+            <div class="buttonBoxLeft">
+                <form action="<c:url value="/viewparking"/>" method="post">
+                    <span class="navigationitem">
+                        <input type="submit" class="button" name="button" value="Terug naar Reserveringen Overzicht"/>
+                    </span>
+                </form>
+            </div>
+            <form action="<c:url value="/addparking"/>"  method="post">
             <div class="p">
-                <label class="formlabel" for="date">Kies datum:</label>
+                <label class="notify"><c:out value="${requestScope.date_error}"/></label>
+                <label class="formlabel" for="date">Kies een datum</label>
                 <input class="text" type="date" name="date" id="date" value="" required/>
-                <label class="formlabel">&nbsp;</label>
-                <label class="text"><c:out value="${requestScope.date_error}"/></label>
             </div>
 
             <div class="p">
@@ -30,11 +30,9 @@
                     <label class="text">U moet eerst een auto aanmaken voordat u een parkeerplek kan reserveren.</label>
                 </c:otherwise>
             </div>
-
-            <div class="p">
-                <input type="submit" class="button" name="button" value="Reservering toevoegen"/>
+            <div class="buttonBox">
+                <input type="submit" class="button" name="button" value="Reservering Toevoegen"/>
             </div>
-
+            </form>
         </fieldset>
-    </form>
 </div>

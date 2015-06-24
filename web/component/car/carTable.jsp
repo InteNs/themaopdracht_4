@@ -2,10 +2,10 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <div class="container">
     <div class="right">
-        <a href="<c:url value="/component/navigation/links.jsp"/>"><input type="button" class="button" value="Terug" /></a>
+        <a href="<c:url value="/secure/user/homepage.jsp"/>"><input type="button" class="button" value="Terug" /></a>
     </div>
     <div class="right">
-        <a href="<c:url value="/secure/car/addcar.jsp"/>"><input type="button" class="button" value="Auto Toevoegen" /></a>
+        <a href="<c:url value="/secure/car/addCar.jsp"/>"><input type="button" class="button" value="Auto Toevoegen" /></a>
     </div>
     <table>
         <tr>

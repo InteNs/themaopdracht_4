@@ -28,7 +28,6 @@ public class User implements Serializable {
         this.address = address;
         this.dateOfBirth = dateOfBirth;
         this.phoneNumber = phoneNumber;
-
     }
 
     public User.userType getUserType() {

@@ -88,6 +88,16 @@
         <url-pattern>/ammenduser</url-pattern>
     </servlet-mapping>
 
+    <!-- view ammendUserCustomer-->
+    <servlet>
+        <servlet-name>AmmendUserServlet</servlet-name>
+        <servlet-class>servlets.userServlets.AmmendCustomerServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>AmmendUserServlet</servlet-name>
+        <url-pattern>/ammendusercustomer</url-pattern>
+    </servlet-mapping>
+
     <!-- deleteUser-->
     <servlet>
         <servlet-name>DeleteUserServlet</servlet-name>
