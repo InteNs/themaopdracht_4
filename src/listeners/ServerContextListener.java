@@ -61,12 +61,20 @@ public class ServerContextListener implements ServletContextListener {
             }
 
         }
+
+//        Test ADMIN
         if (((Data)servletContext.getAttribute("data")).getUserController().findUser("admin@admin.nl")==null)
             try {
                 ((Data)servletContext.getAttribute("data")).getUserController().newOwner("admin@admin.nl", "admin@admin.nl", "admin", "admin", "admin", "2005-11-12", "admin", "1111AA", "0612345678");
                 logger.info("admin account created");
             } catch (ValidateException ignored) {}
-    }
+//        Test CUSTOMER
+        if (((Data)servletContext.getAttribute("data")).getUserController().findUser("customer@customer.nl")==null)
+            try {
+                ((Data)servletContext.getAttribute("data")).getUserController().newCustomer("customer@customer.nl", "customer@customer.nl", "customer", "customer", "customer", "2005-11-12", "customer", "1111AA", "0612345678");
+                logger.info("customer account created");
+            } catch (ValidateException ignored) {}
+        }
 
     @Override
     public void contextDestroyed(ServletContextEvent servletContextEvent) {

@@ -1,13 +1,13 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <div class="container">
-  <fieldset name="Auto toevoegen">
+  <fieldset name="Auto Toevoegen">
     <legend>Auto Toevoegen</legend>
     <div class="buttonBoxLeft">
       <form action="<c:url value="/viewcars"/>" method="post">
-    <span class="navigationitem">
-      <input type="submit" name="button" value="Terug naar Auto Overzicht"/>
-    </span>
+        <span class="navigationitem">
+          <input type="submit" class="button" name="button" value="Terug naar Auto Overzicht"/>
+        </span>
       </form>
     </div>
     <form action="<c:url value="/addcar"/>" id="addCar" method="post">

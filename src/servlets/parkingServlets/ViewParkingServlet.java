@@ -18,6 +18,6 @@ public class ViewParkingServlet extends HttpServlet {
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         ParkingController parkingController = ((Data)req.getServletContext().getAttribute("data")).getParkingController();
         req.setAttribute("reservations", parkingController.getReservations());
-        req.getRequestDispatcher("viewparking").forward(req,resp);
+        req.getRequestDispatcher("/secure/parking/parking.jsp").forward(req,resp);
     }
 }

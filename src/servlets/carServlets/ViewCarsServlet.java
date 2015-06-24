@@ -15,8 +15,6 @@ public class ViewCarsServlet extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         Customer customer = (Customer)request.getSession().getAttribute("current_user");
         request.setAttribute("cars",customer.getCars());
-        request.getRequestDispatcher("/secure/user/customer.jsp").forward(request,response);
-
+        request.getRequestDispatcher("/secure/car/car.jsp").forward(request,response);
     }
-
 }
