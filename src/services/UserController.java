@@ -278,7 +278,7 @@ public class UserController implements Serializable {
         ArrayList<Car>cars = new ArrayList<>();
         users.stream().filter(user -> user instanceof Customer).forEach(user -> cars.addAll(((Customer) user).getCars()));
         for(Car car:cars)
-            if (car.getNumberPlate().equals(numberPlate))
+            if (car.getLicensePlate().equals(numberPlate))
                 return car;
         return null;
     }

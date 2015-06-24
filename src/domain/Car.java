@@ -8,11 +8,11 @@ import java.io.Serializable;
 public class Car implements Serializable {
 
     private String type;
-    private String numberPlate;
+    private String licensePlate;
 
     public Car(String type, String kenteken) {
         this.type = type;
-        this.numberPlate = kenteken;
+        this.licensePlate = kenteken;
 
     }
 
@@ -24,16 +24,16 @@ public class Car implements Serializable {
         this.type = type;
     }
 
-    public String getNumberPlate() {
-        return numberPlate;
+    public String getLicensePlate() {
+        return licensePlate;
     }
 
-    public void setNumberPlate(String numberPlate) {
-        this.numberPlate = numberPlate;
+    public void setLicensePlate(String licensePlate) {
+        this.licensePlate = licensePlate;
     }
 
     @Override
     public String toString() {
-        return numberPlate;
+        return licensePlate;
     }
 }

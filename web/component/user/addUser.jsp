@@ -44,7 +44,6 @@
                 <input class="text" type="date" name="date" id="date" value="" required/>
                 <label class="formlabel">&nbsp;</label>
                 <label class="text"><c:out value="${requestScope.dateofbirth_error}"/></label>
-
             </div>
             <div class="p">
                 <label class="formlabel" for="address">Adres:</label>

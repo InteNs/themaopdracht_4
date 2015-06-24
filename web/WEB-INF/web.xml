@@ -148,6 +148,32 @@
         <url-pattern>/viewproducts</url-pattern>
     </servlet-mapping>
 
+    <!-- todo add parking servlets -->
+    <servlet>
+        <servlet-name>NewParkingServlet</servlet-name>
+        <servlet-class>servlets.parkingServlets.NewParkingServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>NewParkingServlet</servlet-name>
+        <url-pattern>/addparking</url-pattern>
+    </servlet-mapping>
+    <servlet>
+        <servlet-name>ViewParkingServlet</servlet-name>
+        <servlet-class>servlets.parkingServlets.ViewParkingServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>ViewParkingServlet</servlet-name>
+        <url-pattern>/viewparking</url-pattern>
+    </servlet-mapping>
+    <servlet>
+        <servlet-name>DeleteParkingServlet</servlet-name>
+        <servlet-class>servlets.parkingServlets.DeleteParkingServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>DeleteParkingServlet</servlet-name>
+        <url-pattern>/deleteparking</url-pattern>
+    </servlet-mapping>
+
     <!--filters-->
     <filter>
         <filter-name>FilterForSecurity</filter-name>
