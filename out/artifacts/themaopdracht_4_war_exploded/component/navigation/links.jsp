@@ -6,14 +6,14 @@
 </p>
 <c:if test="${sessionScope.current_user.getUserType() == 'OWNER'}">
         <form class="formMainmenu" action="<c:url value="/viewusers"/>" method="post">
-            <input type="submit" class="mainmenu button" name="button" value="Gebruikers"/>
+            <input type="submit" class="mainmenu button" name="button" value="Gebruikers&#10;Beheren"/>
         </form>
 
         <form class="formMainmenu" action="<c:url value="/viewproducts"/>" method="post">
-            <input type="submit" class="mainmenu button" name="button" value="Producten"/>
+            <input type="submit" class="mainmenu button" name="button" value="Producten&#10;Beheren"/>
         </form>
         <form class="formMainmenu" action="<c:url value="/viewparking"/>" method="post">
-            <input type="submit" class="mainmenu button" name="button" value="Parkeren"/>
+            <input type="submit" class="mainmenu button" name="button" value="Reserveringen&#10;Parkeergarage"/>
         </form>
         <p>
             U kunt ten alle tijden uitloggen met de knop in de menubalk aan de top van de pagina.
@@ -22,10 +22,10 @@
 </c:if>
 <c:if test="${sessionScope.current_user.getUserType() == 'CUSTOMER'}">
         <form class="formMainmenu" action="<c:url value="/viewcars"/>" method="post">
-            <input type="submit" class="mainmenu button" name="button" value="Auto's Aanpassen"/>
+            <input type="submit" class="mainmenu button" name="button" value="Auto's&#10;Beheren"/>
         </form>
         <form class="formMainmenu" action="<c:url value="/secure/user/detailsuser.jsp"/>" method="post">
-            <input type="submit" class="mainmenu button" name="button" value="Gegevens Aanpassen"/>
+            <input type="submit" class="mainmenu button" name="button" value="Persoonsgegeven&#10;Beheren"/>
             <%--current_user param's--%>
             <input type="hidden" name="usertype" value="${sessionScope.current_user.getUserType()}"/>
             <input type="hidden" name="email" value="${sessionScope.current_user.getEmail()}"/>

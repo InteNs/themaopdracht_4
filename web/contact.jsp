@@ -8,11 +8,6 @@
 <body>
 <jsp:include page="/component/navigation/navigation.jsp"/>
 <div class="textBox">
-    <div class="buttonBoxLeft">
-        <form action="<c:url value="/viewproducts"/>" method="post">
-            <input type="submit" class="button" name="button" value="Terug naar Productenoverzicht"/>
-        </form>
-    </div>
     <h2 class="center-align">Contact</h2>
     <p class="center-align">Als u liever telefonisch een afspraak wilt maken,vragen heeft of een parkeerplek wilt huren.</p>
     <p class="center-align">Voor u staan onze deuren staan 7 dagen per week open bij onze vestiging op de Nebraskadreef.</p>

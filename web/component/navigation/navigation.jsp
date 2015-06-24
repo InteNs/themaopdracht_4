@@ -72,6 +72,12 @@
                 </form>
             </div>
         </c:if>
+
+        <div class="right navigationitem">
+            <form action="<c:url value="/secure/user/homepage.jsp"/>" method="post">
+                <input type="submit" class="button" name="button" value="Start"/>
+            </form>
+        </div>
 </div>
 
 <%-- Huidig ingelogde gebruiker --%>
