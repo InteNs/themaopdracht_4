@@ -18,14 +18,6 @@ body {
     background-image: -ms-linear-gradient(top, #7a1f8c, #43144d);
     background-image: -o-linear-gradient(top, #7a1f8c, #43144d);
     background-image: linear-gradient(to bottom, #7a1f8c, #43144d);
-    -webkit-border-top-right-radius: 3;
-    -webkit-border-top-left-radius: 3;
-    -webkit-border-bottom-right-radius: 3;
-    -webkit-border-bottom-left-radius: 3;
-    -moz-border-radius-topright: 3;
-    -moz-border-radius-topleft: 3;
-    -moz-border-radius-bottomright: 3;
-    -moz-border-radius-bottomleft: 3;
     border-radius: 3px;
     text-shadow: 1px 1px 5px #000000;
     -webkit-box-shadow: 0px 1px 6px #666666;

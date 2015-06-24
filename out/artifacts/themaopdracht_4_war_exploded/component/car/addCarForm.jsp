@@ -29,8 +29,8 @@
         <label class="formlabel">&nbsp;</label>
       </div>
       <div class="p">
-        <label class="formlabel" for="numberPlate">Kenteken:</label>
-        <input class="text" type="text" name="numberplate" id="numberPlate" placeholder="Vul het kenteken in"/>
+        <label class="formlabel" for="licensePlate">Kenteken:</label>
+        <input class="text" type="text" name="numberplate" id="licensePlate" placeholder="Vul het kenteken in"/>
         <label class="formlabel">&nbsp;</label>
         <label class="text"><c:out value="${requestScope.numberplate_error}"/></label>
       </div>

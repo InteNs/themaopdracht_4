@@ -12,6 +12,11 @@
               <input type="submit" class="button" name="button" value="Producten"/>
             </span>
         </form>
+        <form action="<c:url value="/viewparking"/>" method="post">
+            <span class="navigationitem">
+              <input type="submit" class="button" name="button" value="Parkeren"/>
+            </span>
+        </form>
     </c:if>
     <c:if test="${sessionScope.current_user.getUserType() == 'CUSTOMER'}">
         <form action="<c:url value="/viewcars"/>" method="post">
