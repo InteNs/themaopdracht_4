@@ -272,7 +272,7 @@ public class UserController implements Serializable {
      * @param numberPlate searchword
      * @return null if car doesn't exist, the car otherwise
      */
-    private Car findCar(String numberPlate){
+    public Car findCar(String numberPlate){
         ArrayList<Car>cars = new ArrayList<>();
         users.stream().filter(user -> user instanceof Customer).forEach(user -> cars.addAll(((Customer) user).getCars()));
         for(Car car:cars)
