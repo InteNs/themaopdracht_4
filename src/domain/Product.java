@@ -2,8 +2,6 @@ package domain;
 
 import java.io.Serializable;
 
-/**
- * Created by Jorrit Meulenbeld & Oussama Aalili on 18/06/15. */
 public class Product implements Serializable {
     private String name;
     private int amount;

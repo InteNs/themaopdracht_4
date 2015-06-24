@@ -11,9 +11,6 @@ import java.util.List;
 import java.util.Optional;
 import java.util.stream.Collectors;
 
-/**
- * Created by InteNs on 24.jun.2015.
- */
 public class ParkingController {
     private ArrayList<Reservation> reservations;
     private ArrayList<ParkingSpot> parkingSpots;

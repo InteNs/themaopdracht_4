@@ -3486,3 +3486,61 @@
   <message>data saved to file</message>
 </record>
 </log>
+<?xml version="1.0" encoding="windows-1252" standalone="no"?>
+<!DOCTYPE log SYSTEM "logger.dtd">
+<log>
+<record>
+  <date>2015-06-24T02:52:37</date>
+  <millis>1435107157845</millis>
+  <sequence>34</sequence>
+  <logger>listener.SessionCounterListener</logger>
+  <level>INFO</level>
+  <class>listeners.ServerContextListener</class>
+  <method>contextInitialized</method>
+  <thread>16</thread>
+  <message>Logger initialized</message>
+</record>
+<record>
+  <date>2015-06-24T02:52:37</date>
+  <millis>1435107157846</millis>
+  <sequence>35</sequence>
+  <logger>listener.SessionCounterListener</logger>
+  <level>INFO</level>
+  <class>listeners.ServerContextListener</class>
+  <method>contextInitialized</method>
+  <thread>16</thread>
+  <message>reading data...</message>
+</record>
+<record>
+  <date>2015-06-24T02:52:37</date>
+  <millis>1435107157853</millis>
+  <sequence>36</sequence>
+  <logger>listener.SessionCounterListener</logger>
+  <level>WARNING</level>
+  <class>listeners.ServerContextListener</class>
+  <method>contextInitialized</method>
+  <thread>16</thread>
+  <message>listeners.Data; local class incompatible: stream classdesc serialVersionUID = 6499561369894836637, local class serialVersionUID = 5991367248965936576</message>
+</record>
+<record>
+  <date>2015-06-24T02:52:37</date>
+  <millis>1435107157854</millis>
+  <sequence>37</sequence>
+  <logger>listener.SessionCounterListener</logger>
+  <level>WARNING</level>
+  <class>listeners.ServerContextListener</class>
+  <method>contextInitialized</method>
+  <thread>16</thread>
+  <message>no data object found, making a new one...</message>
+</record>
+<record>
+  <date>2015-06-24T02:52:37</date>
+  <millis>1435107157882</millis>
+  <sequence>38</sequence>
+  <logger>listener.SessionCounterListener</logger>
+  <level>INFO</level>
+  <class>listeners.ServerContextListener</class>
+  <method>contextInitialized</method>
+  <thread>16</thread>
+  <message>admin account created</message>
+</record>

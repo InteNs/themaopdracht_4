@@ -5,9 +5,6 @@ import domain.users.Customer;
 
 import java.time.LocalDate;
 
-/**
- * Created by InteNs on 24.jun.2015.
- */
 public class Reservation {
     private int ID;
     private LocalDate date;
