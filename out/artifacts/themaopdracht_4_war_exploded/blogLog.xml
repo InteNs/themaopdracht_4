@@ -3603,6 +3603,7 @@
   <thread>18</thread>
   <message>admin account created</message>
 </record>
+<<<<<<< HEAD
 </log>
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <!DOCTYPE log SYSTEM "logger.dtd">
@@ -3662,3 +3663,5 @@
   <thread>36</thread>
   <message>admin account created</message>
 </record>
+=======
+>>>>>>> 22f2ad2bb769d5f31874529dda38ce43d0cb7f4f
