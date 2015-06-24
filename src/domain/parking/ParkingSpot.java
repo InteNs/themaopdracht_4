@@ -1,8 +1,9 @@
 package domain.parking;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 
-public class ParkingSpot {
+public class ParkingSpot implements Serializable {
     private int ID;
     private ArrayList<Reservation> reservations;
     public ParkingSpot(int ID){

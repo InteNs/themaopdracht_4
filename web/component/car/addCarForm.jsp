@@ -16,20 +16,20 @@
         <label class="formlabel" for="carBrand">Merk
           <span class="requiredColor"> *</span>
         </label>
-        <input class="text" type="text" name="carbrand" id="carBrand" placeholder="Vul het merk in"/>
+        <input class="text" type="text" name="carbrand" id="carBrand" placeholder="Vul het merk in" required/>
       </div>
       <div class="p">
         <label class="formlabel" for="carType">Type
           <span class="requiredColor"> *</span>
         </label>
-        <input class="text" type="text" name="cartype" id="carType" placeholder="Vul het type in"/>
+        <input class="text" type="text" name="cartype" id="carType" placeholder="Vul het type in" required/>
       </div>
       <div class="p">
         <label class="notice"><c:out value="${requestScope.numberplate_error}"/></label>
         <label class="formlabel" for="licensePlate">Kenteken
           <span class="requiredColor"> *</span>
         </label>
-        <input class="text" type="text" name="numberplate" id="licensePlate" placeholder="Vul het kenteken in"/>
+        <input class="text" type="text" name="numberplate" id="licensePlate" placeholder="Vul het kenteken in" required/>
       </div>
       <div class="p">
         <div class="buttonBox">
