@@ -1,6 +1,6 @@
 package services;
 
-import domain.Car;
+import domain.users.Car;
 import domain.users.Customer;
 import domain.users.Mechanic;
 import domain.users.Owner;
@@ -161,9 +161,7 @@ public class UserController implements Serializable {
      */
     private boolean validateUser(String email,String emailRepeat, String password,String passwordRepeat, String stringDateOfBirth, String postal, String phoneNumber ) throws ValidateException {
         boolean succes = true;
-        String ERROR_NULL = "Dit veld mag niet leeg zijn!";
         HashMap<String,String> errorMap = new HashMap<>();
-        System.out.println("validating");
 //        TODO only with new
 //        if(findUser(email)!=null) {
 //            succes = false;

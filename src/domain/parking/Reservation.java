@@ -1,6 +1,6 @@
 package domain.parking;
 
-import domain.Car;
+import domain.users.Car;
 import domain.users.Customer;
 
 import java.time.LocalDate;
