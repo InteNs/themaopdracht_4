@@ -15,11 +15,16 @@ import java.util.stream.Collectors;
 public class ParkingController implements Serializable {
     private ArrayList<Reservation> reservations;
     private ArrayList<ParkingSpot> parkingSpots;
+    int count = -1;
     public ParkingController(){
         reservations = new ArrayList<>();
         parkingSpots = new ArrayList<>();
         for (int i = 0; i < 10; i++)
             parkingSpots.add(new ParkingSpot(i));
+    }
+    private int getNewID(){
+        count++;
+        return count;
     }
 
     /**
@@ -56,7 +61,7 @@ public class ParkingController implements Serializable {
      * @param date date to check for availability
      * @return List with ParkingSpots
      */
-    public List getAvailableParkingSpots(LocalDate date){
+    public List<ParkingSpot> getAvailableParkingSpots(LocalDate date){
         return parkingSpots.stream()
                 .filter(parkingSpot -> isParkingSpotAvailable(parkingSpot, date))
                 .collect(Collectors.toList());
@@ -64,14 +69,13 @@ public class ParkingController implements Serializable {
 
     /**
      * adds a reservation
-     * @param ID    reservation ID
      * @param date  day the reservation is active
      * @param parkingSpot parkingSpot assigned to the reservation
      * @param customer  customer paying for the reservation
      * @param car car in question
      */
-    public void addReservation(int ID, LocalDate date, ParkingSpot parkingSpot, Customer customer, Car car){
-            reservations.add(new Reservation(ID,date,parkingSpot,customer,car));
+    public void addReservation(LocalDate date, ParkingSpot parkingSpot, Customer customer, Car car){
+            reservations.add(new Reservation(getNewID(),date,parkingSpot,customer,car));
     }
 
     /**

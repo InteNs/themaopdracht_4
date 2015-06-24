@@ -3,7 +3,7 @@
 <div class="container">
     <fieldset name="adduser">
         <legend>Gebruiker Bewerken</legend>
-        <div class="buttonBoxLeftAmmend">
+        <div class="buttonBoxLeft">
             <form action="<c:url value="/secure/user/detailsuser.jsp"/>" method="post">
                       <span class="navigationitem">
                           <input type="hidden" name="email" value="${param.email}"/>

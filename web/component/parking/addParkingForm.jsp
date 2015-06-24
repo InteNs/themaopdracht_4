@@ -12,11 +12,12 @@
             <form action="<c:url value="/addparking"/>"  method="post">
             <div class="p">
                 <label class="notify"><c:out value="${requestScope.date_error}"/></label>
-                <label class="formlabel" for="date">Kies een datum</label>
+                <label class="formlabel" for="date">Gewenste datum</label>
                 <input class="text" type="date" name="date" id="date" value="" required/>
             </div>
 
             <div class="p">
+                <c:choose>
                 <c:when test="${not empty sessionScope.current_user.getCars()}">
                 <label class="formlabel" for="licenseplate">Auto:</label>
                 <select id="licenseplate" name="licenseplate" required>
@@ -24,14 +25,16 @@
                     <option value="${car.getLicensePlate()}">${car.getLicensePlate()}</option>
                     </c:forEach>
                 </select>
+                <div class="buttonBox">
+                    <input type="submit" class="button" name="button" value="Reservering Toevoegen"/>
+                </div>
                 </c:when>
                 <c:otherwise>
-                    <label class="formlabel">&nbsp;</label>
-                    <label class="text">U moet eerst een auto aanmaken voordat u een parkeerplek kan reserveren.</label>
+                    <label class="formlabel" for="licenseplate">Auto:</label>
+                    <input class="text requiredColor" value="Registreer eerst een auto!"/>
+
                 </c:otherwise>
-            </div>
-            <div class="buttonBox">
-                <input type="submit" class="button" name="button" value="Reservering Toevoegen"/>
+                </c:choose>
             </div>
             </form>
         </fieldset>

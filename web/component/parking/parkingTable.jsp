@@ -32,11 +32,11 @@
         <td>
           <form class="buttonform" action="<c:url value="/secure/parking/detailsparking.jsp"/>" method="post">
             <input type="submit" name="button" class="buttonsmall" value="&#9636;"/>
-            <input type="hidden" name="usertype" value="${reservation.getID()}"/>
-            <input type="hidden" name="email" value="${reservation.getDate()}"/>
-            <input type="hidden" name="name" value="${reservation.getParkingSpot()}"/>
-            <input type="hidden" name="address" value="${reservation.getCustomer()}"/>
-            <input type="hidden" name="postal" value="${reservation.getCar()}"/>
+            <input type="hidden" name="reservationid" value="${reservation.getID()}"/>
+            <input type="hidden" name="date" value="${reservation.getDate()}"/>
+            <input type="hidden" name="parkingspot" value="${reservation.getParkingSpot()}"/>
+            <input type="hidden" name="customer" value="${reservation.getCustomer()}"/>
+            <input type="hidden" name="car" value="${reservation.getCar()}"/>
           </form>
         </td>
       </tr>

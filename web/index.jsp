@@ -20,7 +20,9 @@
                 om door te gaan naar de welkomspagina.
             </p>
             <p class="center-align">Wilt u inloggen met een andere account? Klik dan eerst
-                <a href="<c:url value="/logout"/>">hier</a>
+            <form action="<c:url value="/logout"/>" id="navigation" method="post">
+                <a type="submit" href="<c:url value="/logout"/>">hier</a>
+            </form>
                 om uit te loggen.
             </p>
         </div>

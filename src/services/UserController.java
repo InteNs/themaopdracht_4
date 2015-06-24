@@ -242,21 +242,12 @@ public class UserController implements Serializable {
      */
     public void newCar(String email,String type,String numberPlate) throws ValidateException {
         boolean succes = true;
-        String ERROR_NULL = "Dit veld mag niet leeg zijn!";
         HashMap<String,String> errorMap = new HashMap<>();
-        if(Objects.equals(type,"")){
-            succes = false;
-            errorMap.put("type_error",ERROR_NULL);
-        }
-        if(Objects.equals(numberPlate,"")){
-            succes = false;
-            errorMap.put("numberplate_error",ERROR_NULL);
-        }
         if(findCar(numberPlate) != null) {
             succes = false;
             errorMap.put("numberplate_error","dit kenteken bestaat al");
         }
-        if(!numberPlate.matches(".*[a-zA-Z]{4,}+[0-9]{2,}.*")) {
+        if(!numberPlate.matches("^[0-9]{2}-?[aA-zZ]{2}-?[0-9]{2}$")) {
             errorMap.put("numberplate_error","geen geldig kenteken");
             succes = false;
         }
@@ -272,7 +263,7 @@ public class UserController implements Serializable {
      * @param numberPlate searchword
      * @return null if car doesn't exist, the car otherwise
      */
-    private Car findCar(String numberPlate){
+    public Car findCar(String numberPlate){
         ArrayList<Car>cars = new ArrayList<>();
         users.stream().filter(user -> user instanceof Customer).forEach(user -> cars.addAll(((Customer) user).getCars()));
         for(Car car:cars)
