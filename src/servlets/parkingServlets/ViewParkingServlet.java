@@ -1,5 +1,8 @@
 package servlets.parkingServlets;
 
+import listeners.Data;
+import services.ParkingController;
+
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
@@ -13,5 +16,8 @@ import java.io.IOException;
 public class ViewParkingServlet extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+        ParkingController parkingController = ((Data)req.getServletContext().getAttribute("data")).getParkingController();
+        req.setAttribute("reservations", parkingController.getReservations());
+        req.getRequestDispatcher("viewparking").forward(req,resp);
     }
 }
