@@ -1,4 +1,4 @@
-package Selenium_test;
+package blackbox;
 
 import java.util.regex.Pattern;
 import java.util.concurrent.TimeUnit;
@@ -23,7 +23,7 @@ public class Userstory6_Test3 {
     }
 
     @Test
-    public void testUserstory6Test3() throws Exception {
+    public void testUserStory6_Test3() throws Exception {
         driver.get(baseUrl + "/");
         driver.findElement(By.id("email")).clear();
         driver.findElement(By.id("email")).sendKeys("admin@admin.nl");
@@ -31,14 +31,30 @@ public class Userstory6_Test3 {
         driver.findElement(By.id("password")).sendKeys("admin");
         driver.findElement(By.id("login")).click();
         driver.findElement(By.xpath("(//input[@name='button'])[4]")).click();
-        driver.findElement(By.xpath("//input[@value='Product Toevoegen']")).click();
+        try {
+            assertEquals("Huidig ingelogde gebruiker: admin.", driver.findElement(By.id("currentuserinfo")).getText());
+        } catch (Error e) {
+            verificationErrors.append(e.toString());
+        }
+        try {
+            assertEquals("Details", driver.findElement(By.cssSelector("span.smalltext")).getText());
+        } catch (Error e) {
+            verificationErrors.append(e.toString());
+        }
+        driver.findElement(By.cssSelector("div.container > div.right > a > input.button")).click();
         driver.findElement(By.id("productname")).clear();
-        driver.findElement(By.id("productname")).sendKeys("Banden");
+        driver.findElement(By.id("productname")).sendKeys("Schroeven");
         driver.findElement(By.id("amount")).clear();
-        driver.findElement(By.id("amount")).sendKeys("2");
+        driver.findElement(By.id("amount")).sendKeys("3");
         driver.findElement(By.id("price")).clear();
-        driver.findElement(By.id("price")).sendKeys("dertien");
-        driver.findElement(By.cssSelector("div.p > input[name=\"button\"]")).click();
+        driver.findElement(By.id("price")).sendKeys("twintig");
+        try {
+            assertEquals("Product Toevoegen", driver.findElement(By.cssSelector("legend")).getText());
+        } catch (Error e) {
+            verificationErrors.append(e.toString());
+        }
+        driver.findElement(By.cssSelector("div.buttonBox > input[name=\"button\"]")).click();
+        driver.findElement(By.name("button")).click();
     }
 
     @After

@@ -1,4 +1,4 @@
-package Selenium_test;
+package blackbox;
 
 import java.util.regex.Pattern;
 import java.util.concurrent.TimeUnit;
@@ -23,15 +23,25 @@ public class Userstory1_Test2 {
     }
 
     @Test
-    public void testUserstory1Test2() throws Exception {
-        driver.get(baseUrl + "/secure/admin.jsp");
+    public void testUserStory1_Test2() throws Exception {
+        driver.get(baseUrl + "/");
         driver.findElement(By.id("email")).clear();
         driver.findElement(By.id("email")).sendKeys("admin@admin.nl");
         driver.findElement(By.id("password")).clear();
         driver.findElement(By.id("password")).sendKeys("admin");
         driver.findElement(By.id("login")).click();
-        driver.findElement(By.xpath("(//input[@name='button'])[3]")).click();
-        driver.findElement(By.xpath("//input[@value='Gebruiker Toevoegen']")).click();
+        driver.findElement(By.cssSelector("form.formMainmenu > input[name=\"button\"]")).click();
+        try {
+            assertEquals("Huidig ingelogde gebruiker: admin.", driver.findElement(By.id("currentuserinfo")).getText());
+        } catch (Error e) {
+            verificationErrors.append(e.toString());
+        }
+        driver.findElement(By.cssSelector("div.container.table > div.right > a > input.button")).click();
+        try {
+            assertEquals("Gebruiker Toevoegen", driver.findElement(By.cssSelector("legend")).getText());
+        } catch (Error e) {
+            verificationErrors.append(e.toString());
+        }
         driver.findElement(By.id("email")).clear();
         driver.findElement(By.id("email")).sendKeys("test@hotmail.com");
         driver.findElement(By.id("emailrepeat")).clear();
@@ -41,9 +51,9 @@ public class Userstory1_Test2 {
         driver.findElement(By.id("passwordrepeat")).clear();
         driver.findElement(By.id("passwordrepeat")).sendKeys("123456");
         driver.findElement(By.id("realname")).clear();
-        driver.findElement(By.id("realname")).sendKeys("tester");
+        driver.findElement(By.id("realname")).sendKeys("Tester");
         driver.findElement(By.id("date")).clear();
-        driver.findElement(By.id("date")).sendKeys("2015-06-01");
+        driver.findElement(By.id("date")).sendKeys("2015-06-06");
         driver.findElement(By.id("address")).clear();
         driver.findElement(By.id("address")).sendKeys("mijnstraat 123");
         driver.findElement(By.id("postalcode")).clear();
@@ -51,7 +61,8 @@ public class Userstory1_Test2 {
         driver.findElement(By.id("phonenumber")).clear();
         driver.findElement(By.id("phonenumber")).sendKeys("0612345678");
         new Select(driver.findElement(By.id("usertype"))).selectByVisibleText("Monteur");
-        driver.findElement(By.cssSelector("div.p > input[name=\"button\"]")).click();
+        driver.findElement(By.cssSelector("div.buttonBox > input[name=\"button\"]")).click();
+
     }
 
     @After

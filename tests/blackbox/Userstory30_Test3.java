@@ -1,4 +1,4 @@
-package Selenium_test;
+package blackbox;
 
 import java.util.regex.Pattern;
 import java.util.concurrent.TimeUnit;
@@ -23,9 +23,14 @@ public class Userstory30_Test3 {
     }
 
     @Test
-    public void testUserstory30Test3() throws Exception {
+    public void testUserstory30_Test3() throws Exception {
         driver.get(baseUrl + "/");
-        driver.findElement(By.cssSelector("a > input.button")).click();
+        driver.findElement(By.cssSelector("div.p > a > input.button")).click();
+        try {
+            assertEquals("Registreren", driver.findElement(By.cssSelector("legend")).getText());
+        } catch (Error e) {
+            verificationErrors.append(e.toString());
+        }
         driver.findElement(By.id("email")).clear();
         driver.findElement(By.id("email")).sendKeys("joop@hotmail.com");
         driver.findElement(By.id("emailrepeat")).clear();
@@ -44,7 +49,22 @@ public class Userstory30_Test3 {
         driver.findElement(By.id("postalcode")).sendKeys("3500");
         driver.findElement(By.id("phonenumber")).clear();
         driver.findElement(By.id("phonenumber")).sendKeys("0612345678");
-        driver.findElement(By.name("button")).click();
+        driver.findElement(By.cssSelector("div.buttonBox > input[name=\"button\"]")).click();
+        try {
+            assertEquals("Inloggen", driver.findElement(By.cssSelector("legend")).getText());
+        } catch (Error e) {
+            verificationErrors.append(e.toString());
+        }
+        driver.findElement(By.id("email")).clear();
+        driver.findElement(By.id("email")).sendKeys("joop@hotmail.com");
+        driver.findElement(By.id("password")).clear();
+        driver.findElement(By.id("password")).sendKeys("12345");
+        driver.findElement(By.id("login")).click();
+        try {
+            assertEquals("Welkom joopie,", driver.findElement(By.cssSelector("h2")).getText());
+        } catch (Error e) {
+            verificationErrors.append(e.toString());
+        }
     }
 
     @After

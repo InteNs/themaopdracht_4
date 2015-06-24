@@ -9,7 +9,7 @@ import org.openqa.selenium.*;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.support.ui.Select;
 
-public class Userstory6_Test2 {
+public class Userstory1 {
     private WebDriver driver;
     private String baseUrl;
     private boolean acceptNextAlert = true;
@@ -23,38 +23,46 @@ public class Userstory6_Test2 {
     }
 
     @Test
-    public void testUserStory6_Test2() throws Exception {
+    public void testUserStory1() throws Exception {
         driver.get(baseUrl + "/");
         driver.findElement(By.id("email")).clear();
         driver.findElement(By.id("email")).sendKeys("admin@admin.nl");
         driver.findElement(By.id("password")).clear();
         driver.findElement(By.id("password")).sendKeys("admin");
         driver.findElement(By.id("login")).click();
-        driver.findElement(By.xpath("(//input[@name='button'])[4]")).click();
+        driver.findElement(By.cssSelector("form.formMainmenu > input[name=\"button\"]")).click();
         try {
             assertEquals("Huidig ingelogde gebruiker: admin.", driver.findElement(By.id("currentuserinfo")).getText());
         } catch (Error e) {
             verificationErrors.append(e.toString());
         }
+        driver.findElement(By.cssSelector("div.container.table > div.right > a > input.button")).click();
         try {
-            assertEquals("Details", driver.findElement(By.cssSelector("span.smalltext")).getText());
+            assertEquals("Gebruiker Toevoegen", driver.findElement(By.cssSelector("legend")).getText());
         } catch (Error e) {
             verificationErrors.append(e.toString());
         }
-        driver.findElement(By.cssSelector("div.container > div.right > a > input.button")).click();
-        driver.findElement(By.id("productname")).clear();
-        driver.findElement(By.id("productname")).sendKeys("Schroeven");
-        driver.findElement(By.id("amount")).clear();
-        driver.findElement(By.id("amount")).sendKeys("drie");
-        driver.findElement(By.id("price")).clear();
-        driver.findElement(By.id("price")).sendKeys("20.00");
-        try {
-            assertEquals("Product Toevoegen", driver.findElement(By.cssSelector("legend")).getText());
-        } catch (Error e) {
-            verificationErrors.append(e.toString());
-        }
+        driver.findElement(By.id("email")).clear();
+        driver.findElement(By.id("email")).sendKeys("test@hotmail.com");
+        driver.findElement(By.id("emailrepeat")).clear();
+        driver.findElement(By.id("emailrepeat")).sendKeys("test@hotmail.com");
+        driver.findElement(By.id("password")).clear();
+        driver.findElement(By.id("password")).sendKeys("12345");
+        driver.findElement(By.id("passwordrepeat")).clear();
+        driver.findElement(By.id("passwordrepeat")).sendKeys("12345");
+        driver.findElement(By.id("realname")).clear();
+        driver.findElement(By.id("realname")).sendKeys("Tester");
+        driver.findElement(By.id("date")).clear();
+        driver.findElement(By.id("date")).sendKeys("2015-06-06");
+        driver.findElement(By.id("address")).clear();
+        driver.findElement(By.id("address")).sendKeys("mijnstraat 123");
+        driver.findElement(By.id("postalcode")).clear();
+        driver.findElement(By.id("postalcode")).sendKeys("3511AA");
+        driver.findElement(By.id("phonenumber")).clear();
+        driver.findElement(By.id("phonenumber")).sendKeys("0612345678");
+        new Select(driver.findElement(By.id("usertype"))).selectByVisibleText("Monteur");
         driver.findElement(By.cssSelector("div.buttonBox > input[name=\"button\"]")).click();
-        driver.findElement(By.name("button")).click();
+
     }
 
     @After

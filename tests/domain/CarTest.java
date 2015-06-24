@@ -11,6 +11,7 @@ import static org.junit.Assert.assertEquals;
  */
 public class CarTest {
     final static String type = "sportwagen" ;
+    final static String typewr = "" ;
     final static String numberPlate = "aa-11-bb";
     private Car car ;
 
@@ -39,6 +40,10 @@ public class CarTest {
         car.setLicensePlate(numberPlate);
         assertEquals("nummerplaat is niet juist gezet",numberPlate, car.getLicensePlate());
 
+    }
+    @Test(expected = AssertionError.class)
+    public void testFoutGetType() throws Exception {
+        assertEquals("type komt niet overeen",typewr, car.getType());
     }
 
 }

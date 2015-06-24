@@ -1,4 +1,4 @@
-package Selenium_test;
+package blackbox;
 
 import java.util.regex.Pattern;
 import java.util.concurrent.TimeUnit;
@@ -9,7 +9,7 @@ import org.openqa.selenium.*;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.support.ui.Select;
 
-public class Userstory1_Test1 {
+public class Userstory8_Test1 {
     private WebDriver driver;
     private String baseUrl;
     private boolean acceptNextAlert = true;
@@ -23,35 +23,38 @@ public class Userstory1_Test1 {
     }
 
     @Test
-    public void testUserstory1Test1() throws Exception {
-        driver.get(baseUrl + "/secure/admin.jsp");
+    public void testUserstory8_Test1() throws Exception {
+        driver.get(baseUrl + "/");
         driver.findElement(By.id("email")).clear();
         driver.findElement(By.id("email")).sendKeys("admin@admin.nl");
         driver.findElement(By.id("password")).clear();
         driver.findElement(By.id("password")).sendKeys("admin");
         driver.findElement(By.id("login")).click();
-        driver.findElement(By.xpath("(//input[@name='button'])[3]")).click();
-        driver.findElement(By.xpath("//input[@value='Gebruiker Toevoegen']")).click();
-        driver.findElement(By.id("email")).clear();
-        driver.findElement(By.id("email")).sendKeys("test@hotmail.com");
-        driver.findElement(By.id("emailrepeat")).clear();
-        driver.findElement(By.id("emailrepeat")).sendKeys("test@hotmail.com");
-        driver.findElement(By.id("password")).clear();
-        driver.findElement(By.id("password")).sendKeys("12345");
-        driver.findElement(By.id("passwordrepeat")).clear();
-        driver.findElement(By.id("passwordrepeat")).sendKeys("12345");
-        driver.findElement(By.id("realname")).clear();
-        driver.findElement(By.id("realname")).sendKeys("tester");
-        driver.findElement(By.id("date")).clear();
-        driver.findElement(By.id("date")).sendKeys("2015-06-01");
-        driver.findElement(By.id("address")).clear();
-        driver.findElement(By.id("address")).sendKeys("mijnstraat 123");
-        driver.findElement(By.id("postalcode")).clear();
-        driver.findElement(By.id("postalcode")).sendKeys("3511AA");
-        driver.findElement(By.id("phonenumber")).clear();
-        driver.findElement(By.id("phonenumber")).sendKeys("0612345678");
-        new Select(driver.findElement(By.id("usertype"))).selectByVisibleText("Monteur");
-        driver.findElement(By.cssSelector("div.p > input[name=\"button\"]")).click();
+        try {
+            assertEquals("Welkom admin,", driver.findElement(By.cssSelector("h2")).getText());
+        } catch (Error e) {
+            verificationErrors.append(e.toString());
+        }
+        driver.findElement(By.xpath("(//input[@name='button'])[8]")).click();
+        try {
+            assertEquals("Verwijder", driver.findElement(By.xpath("//th[6]/span")).getText());
+        } catch (Error e) {
+            verificationErrors.append(e.toString());
+        }
+        driver.findElement(By.cssSelector("div.container > div.right > a > input.button")).click();
+        driver.findElement(By.id("productname")).clear();
+        driver.findElement(By.id("productname")).sendKeys("Banden");
+        driver.findElement(By.id("amount")).clear();
+        driver.findElement(By.id("amount")).sendKeys("4");
+        driver.findElement(By.id("price")).clear();
+        driver.findElement(By.id("price")).sendKeys("3.00");
+        driver.findElement(By.cssSelector("div.buttonBox > input[name=\"button\"]")).click();
+        try {
+            assertEquals("Verwijder", driver.findElement(By.xpath("//th[6]/span")).getText());
+        } catch (Error e) {
+            verificationErrors.append(e.toString());
+        }
+        driver.findElement(By.xpath("(//input[@name='button'])[12]")).click();
     }
 
     @After

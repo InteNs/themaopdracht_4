@@ -9,7 +9,7 @@ import org.openqa.selenium.*;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.support.ui.Select;
 
-public class Userstory6_Test2 {
+public class Userstory6 {
     private WebDriver driver;
     private String baseUrl;
     private boolean acceptNextAlert = true;
@@ -23,7 +23,7 @@ public class Userstory6_Test2 {
     }
 
     @Test
-    public void testUserStory6_Test2() throws Exception {
+    public void testUserStory6() throws Exception {
         driver.get(baseUrl + "/");
         driver.findElement(By.id("email")).clear();
         driver.findElement(By.id("email")).sendKeys("admin@admin.nl");
@@ -45,7 +45,7 @@ public class Userstory6_Test2 {
         driver.findElement(By.id("productname")).clear();
         driver.findElement(By.id("productname")).sendKeys("Schroeven");
         driver.findElement(By.id("amount")).clear();
-        driver.findElement(By.id("amount")).sendKeys("drie");
+        driver.findElement(By.id("amount")).sendKeys("3");
         driver.findElement(By.id("price")).clear();
         driver.findElement(By.id("price")).sendKeys("20.00");
         try {

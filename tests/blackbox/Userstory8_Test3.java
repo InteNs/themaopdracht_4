@@ -1,4 +1,4 @@
-package Selenium_test;
+package blackbox;
 
 import java.util.regex.Pattern;
 import java.util.concurrent.TimeUnit;
@@ -9,7 +9,7 @@ import org.openqa.selenium.*;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.support.ui.Select;
 
-public class Userstory7_Test1 {
+public class Userstory8_Test3 {
     private WebDriver driver;
     private String baseUrl;
     private boolean acceptNextAlert = true;
@@ -23,23 +23,38 @@ public class Userstory7_Test1 {
     }
 
     @Test
-    public void testUserstory7Test1() throws Exception {
+    public void testUserstory8_Test3() throws Exception {
         driver.get(baseUrl + "/");
         driver.findElement(By.id("email")).clear();
         driver.findElement(By.id("email")).sendKeys("admin@admin.nl");
         driver.findElement(By.id("password")).clear();
         driver.findElement(By.id("password")).sendKeys("admin");
         driver.findElement(By.id("login")).click();
-        driver.findElement(By.xpath("(//input[@name='button'])[4]")).click();
-        driver.findElement(By.xpath("//input[@value='Product Toevoegen']")).click();
+        try {
+            assertEquals("Welkom admin,", driver.findElement(By.cssSelector("h2")).getText());
+        } catch (Error e) {
+            verificationErrors.append(e.toString());
+        }
+        driver.findElement(By.xpath("(//input[@name='button'])[8]")).click();
+        try {
+            assertEquals("Verwijder", driver.findElement(By.xpath("//th[6]/span")).getText());
+        } catch (Error e) {
+            verificationErrors.append(e.toString());
+        }
+        driver.findElement(By.cssSelector("div.container > div.right > a > input.button")).click();
         driver.findElement(By.id("productname")).clear();
         driver.findElement(By.id("productname")).sendKeys("Banden");
         driver.findElement(By.id("amount")).clear();
-        driver.findElement(By.id("amount")).sendKeys("2");
+        driver.findElement(By.id("amount")).sendKeys("4");
         driver.findElement(By.id("price")).clear();
-        driver.findElement(By.id("price")).sendKeys("13.00");
-        driver.findElement(By.cssSelector("div.p > input[name=\"button\"]")).click();
-        driver.findElement(By.xpath("(//input[@name='button'])[5]")).click();
+        driver.findElement(By.id("price")).sendKeys("drie");
+        driver.findElement(By.cssSelector("div.buttonBox > input[name=\"button\"]")).click();
+        try {
+            assertEquals("Verwijder", driver.findElement(By.xpath("//th[6]/span")).getText());
+        } catch (Error e) {
+            verificationErrors.append(e.toString());
+        }
+        driver.findElement(By.xpath("(//input[@name='button'])[12]")).click();
     }
 
     @After

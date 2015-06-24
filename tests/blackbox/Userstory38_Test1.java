@@ -1,4 +1,4 @@
-package Selenium_test;
+package blackbox;
 
 import java.util.regex.Pattern;
 import java.util.concurrent.TimeUnit;
@@ -9,7 +9,7 @@ import org.openqa.selenium.*;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.support.ui.Select;
 
-public class Userstory3_Test1 {
+public class Userstory38_Test1 {
     private WebDriver driver;
     private String baseUrl;
     private boolean acceptNextAlert = true;
@@ -23,36 +23,54 @@ public class Userstory3_Test1 {
     }
 
     @Test
-    public void Userstory3_Test1() throws Exception {
+    public void testUserstory38_Test1() throws Exception {
         driver.get(baseUrl + "/");
+        driver.findElement(By.cssSelector("div.p > a > input.button")).click();
+        try {
+            assertEquals("Registreren", driver.findElement(By.cssSelector("legend")).getText());
+        } catch (Error e) {
+            verificationErrors.append(e.toString());
+        }
         driver.findElement(By.id("email")).clear();
-        driver.findElement(By.id("email")).sendKeys("admin@admin.nl");
-        driver.findElement(By.id("password")).clear();
-        driver.findElement(By.id("password")).sendKeys("admin");
-        driver.findElement(By.id("login")).click();
-        driver.findElement(By.xpath("(//input[@name='button'])[3]")).click();
-        driver.findElement(By.xpath("//input[@value='Gebruiker Toevoegen']")).click();
-        driver.findElement(By.id("email")).clear();
-        driver.findElement(By.id("email")).sendKeys("test@hotmail.com");
+        driver.findElement(By.id("email")).sendKeys("m@m.nl");
         driver.findElement(By.id("emailrepeat")).clear();
-        driver.findElement(By.id("emailrepeat")).sendKeys("test@hotmail.com");
+        driver.findElement(By.id("emailrepeat")).sendKeys("m@m.nl");
         driver.findElement(By.id("password")).clear();
         driver.findElement(By.id("password")).sendKeys("12345");
         driver.findElement(By.id("passwordrepeat")).clear();
         driver.findElement(By.id("passwordrepeat")).sendKeys("12345");
         driver.findElement(By.id("realname")).clear();
-        driver.findElement(By.id("realname")).sendKeys("tester");
+        driver.findElement(By.id("realname")).sendKeys("m");
         driver.findElement(By.id("date")).clear();
         driver.findElement(By.id("date")).sendKeys("2015-06-01");
         driver.findElement(By.id("address")).clear();
-        driver.findElement(By.id("address")).sendKeys("mijnstraat 123");
+        driver.findElement(By.id("address")).sendKeys("dreefstraat 123");
         driver.findElement(By.id("postalcode")).clear();
         driver.findElement(By.id("postalcode")).sendKeys("3511AA");
         driver.findElement(By.id("phonenumber")).clear();
         driver.findElement(By.id("phonenumber")).sendKeys("0612345678");
-        driver.findElement(By.cssSelector("div.p > input[name=\"button\"]")).click();
-        driver.findElement(By.xpath("(//input[@name='button'])[15]")).click();
-        driver.findElement(By.xpath("(//input[@name='button'])[2]")).click();
+        driver.findElement(By.cssSelector("div.buttonBox > input[name=\"button\"]")).click();
+        try {
+            assertEquals("Inloggen", driver.findElement(By.cssSelector("legend")).getText());
+        } catch (Error e) {
+            verificationErrors.append(e.toString());
+        }
+        driver.findElement(By.id("email")).clear();
+        driver.findElement(By.id("email")).sendKeys("m@m.nl");
+        driver.findElement(By.id("password")).clear();
+        driver.findElement(By.id("password")).sendKeys("12345");
+        driver.findElement(By.id("login")).click();
+        try {
+            assertEquals("Welkom m,", driver.findElement(By.cssSelector("h2")).getText());
+        } catch (Error e) {
+            verificationErrors.append(e.toString());
+        }
+        driver.findElement(By.cssSelector("#contact > input[name=\"button\"]")).click();
+        try {
+            assertEquals("Contact", driver.findElement(By.cssSelector("h2.center-align")).getText());
+        } catch (Error e) {
+            verificationErrors.append(e.toString());
+        }
     }
 
     @After
