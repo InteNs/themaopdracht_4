@@ -16,11 +16,13 @@ public class UserTest {
     private final static String EMAIL = "test@test.com";
     private final static String PASSWORD = "test";
     private final static String REAL_NAME = "test";
-    private final static String ADDRESS = "test";
-    private final static String PHONE_NUMBER = "test";
-    private final static String POSTAL = "test";
+    private final static String ADDRESS = "test 35";
+    private final static String PHONE_NUMBER = "0612345678";
+    private final static String POSTAL = "3452AA";
     private final static LocalDate DATE_OF_BIRTH = LocalDate.of(2015,5,18);
-    private final static String EMAIL_1 = "test1@test1.com";
+
+
+    private final static String EMAIL_1 = " ";
     private final static String PASSWORD_1 = "test1";
     private final static String REAL_NAME_1 = "test1";
     private final static String ADDRESS_1 = "test1";
@@ -76,43 +78,49 @@ public class UserTest {
     @Test
     public void testSetEmail() throws Exception {
         user.setEmail(EMAIL_1);
-        assertEquals("email is niet juist gezet",EMAIL_1, user.getEmail());
+        assertEquals("email is niet juist gezet",EMAIL, user.getEmail());
 
     }
 
     @Test
     public void testSetPassword() throws Exception {
         user.setPassword(PASSWORD_1);
-        assertEquals("wachtwoord is niet juist gezet",PASSWORD_1, user.getPassword());
+        assertEquals("wachtwoord is niet juist gezet",PASSWORD, user.getPassword());
     }
 
     @Test
     public void testSetRealName() throws Exception {
         user.setRealName(REAL_NAME_1);
-        assertEquals("echte naam is niet juist gezet",REAL_NAME_1, user.getRealName());
+        assertEquals("echte naam is niet juist gezet",REAL_NAME, user.getRealName());
     }
 
     @Test
     public void testSetAddress() throws Exception {
         user.setAddress(ADDRESS_1);
-        assertEquals("adres is niet juist gezet",ADDRESS_1, user.getAddress());
+        assertEquals("adres is niet juist gezet",ADDRESS, user.getAddress());
     }
 
     @Test
     public void testSetDateOfBirth() throws Exception {
-        user.setDateOfBirth(DATE_OF_BIRTH_1);
+        user.setDateOfBirth(DATE_OF_BIRTH);
         assertEquals("geboortedatum is niet juist gezet",DATE_OF_BIRTH_1, user.getDateOfBirth());
     }
 
     @Test
     public void testSetPhoneNumber() throws Exception {
-        user.setPhoneNumber(PHONE_NUMBER_1);
+        user.setPhoneNumber(PHONE_NUMBER);
         assertEquals("telefoonnummer is niet juist gezet",PHONE_NUMBER_1, user.getPhoneNumber());
     }
 
     @Test
     public void testSetPostal() throws Exception {
-        user.setPostal(POSTAL_1);
+        user.setPostal(POSTAL);
         assertEquals("postcode is niet juist gezet",POSTAL_1, user.getPostal());
     }
+
+    @Test(expected = AssertionError.class)
+    public void testFoutGetEmail() throws Exception {
+        assertEquals("type komt overeen",EMAIL_1, user.getEmail());
+    }
+
 }
