@@ -1,0 +1,56 @@
+.button {
+    transition: all 0.5s ease;
+    min-width: 132px;
+    background: #ebebeb;
+    border-radius: 3px;
+    -webkit-box-shadow: 0px 2px 2px #666666;
+    -moz-box-shadow: 0px 2px 2px #666666;
+    box-shadow: 0px 2px 2px #666666;
+    color: #7a1f8c;
+    font-size: small;
+    padding: 5px 10px 5px 10px;
+    border: solid #701f82 1px;
+    text-decoration: none;
+}
+
+.buttonsmall {
+    transition: all 0.5s ease;
+    min-width: 35px;
+    min-height: 35px;
+    background: #ebebeb;
+    border-radius: 3px;
+    -webkit-box-shadow: 0px 2px 2px #666666;
+    -moz-box-shadow: 0px 2px 2px #666666;
+    box-shadow: 0px 2px 2px #666666;
+    color: #7a1f8c;
+    font-size: small;
+    padding: 5px 10px 5px 10px;
+    border: solid #701f82 1px;
+    text-decoration: none;
+}
+
+.navigationmenu {
+    min-width: 65px;
+    padding: 2px 5px 2px 5px;
+    font-size: x-small;
+}
+
+.button:hover {
+    background: #7a1f8c;
+    color: #ebebeb;
+    font-weight: 200;
+    -webkit-box-shadow: 0px 1px 6px #666666;
+    -moz-box-shadow: 0px 1px 6px #666666;
+    box-shadow: 0px 1px 6px #666666;
+    text-decoration: none;
+}
+.buttonsmall:hover {
+    background: #7a1f8c;
+    color: #ebebeb;
+    font-weight: 200;
+    -webkit-box-shadow: 0px 1px 6px #666666;
+    -moz-box-shadow: 0px 1px 6px #666666;
+    box-shadow: 0px 1px 6px #666666;
+    text-decoration: none;
+}
+
