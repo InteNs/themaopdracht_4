@@ -5296,3 +5296,15 @@
   <thread>14</thread>
   <message>data found, loading...</message>
 </record>
+<record>
+  <date>2015-06-30T14:49:01</date>
+  <millis>1435668541676</millis>
+  <sequence>43</sequence>
+  <logger>listener.SessionCounterListener</logger>
+  <level>INFO</level>
+  <class>listeners.ServerContextListener</class>
+  <method>contextDestroyed</method>
+  <thread>48</thread>
+  <message>data saved to file</message>
+</record>
+</log>
