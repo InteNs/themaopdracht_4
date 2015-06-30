@@ -5116,3 +5116,183 @@
   <thread>14</thread>
   <message>customer account created</message>
 </record>
+<record>
+  <date>2015-06-24T20:23:39</date>
+  <millis>1435170219785</millis>
+  <sequence>59</sequence>
+  <logger>listener.SessionCounterListener</logger>
+  <level>INFO</level>
+  <class>listeners.ServerContextListener</class>
+  <method>contextDestroyed</method>
+  <thread>46</thread>
+  <message>data saved to file</message>
+</record>
+</log>
+<?xml version="1.0" encoding="windows-1252" standalone="no"?>
+<!DOCTYPE log SYSTEM "logger.dtd">
+<log>
+<record>
+  <date>2015-06-24T23:22:33</date>
+  <millis>1435180953589</millis>
+  <sequence>34</sequence>
+  <logger>listener.SessionCounterListener</logger>
+  <level>INFO</level>
+  <class>listeners.ServerContextListener</class>
+  <method>contextInitialized</method>
+  <thread>16</thread>
+  <message>Logger initialized</message>
+</record>
+<record>
+  <date>2015-06-24T23:22:33</date>
+  <millis>1435180953590</millis>
+  <sequence>35</sequence>
+  <logger>listener.SessionCounterListener</logger>
+  <level>INFO</level>
+  <class>listeners.ServerContextListener</class>
+  <method>contextInitialized</method>
+  <thread>16</thread>
+  <message>reading data...</message>
+</record>
+<record>
+  <date>2015-06-24T23:22:33</date>
+  <millis>1435180953620</millis>
+  <sequence>36</sequence>
+  <logger>listener.SessionCounterListener</logger>
+  <level>INFO</level>
+  <class>listeners.ServerContextListener</class>
+  <method>contextInitialized</method>
+  <thread>16</thread>
+  <message>data found, loading...</message>
+</record>
+<?xml version="1.0" encoding="windows-1252" standalone="no"?>
+<!DOCTYPE log SYSTEM "logger.dtd">
+<log>
+<record>
+  <date>2015-06-26T17:09:13</date>
+  <millis>1435331353896</millis>
+  <sequence>34</sequence>
+  <logger>listener.SessionCounterListener</logger>
+  <level>INFO</level>
+  <class>listeners.ServerContextListener</class>
+  <method>contextInitialized</method>
+  <thread>14</thread>
+  <message>Logger initialized</message>
+</record>
+<record>
+  <date>2015-06-26T17:09:13</date>
+  <millis>1435331353897</millis>
+  <sequence>35</sequence>
+  <logger>listener.SessionCounterListener</logger>
+  <level>INFO</level>
+  <class>listeners.ServerContextListener</class>
+  <method>contextInitialized</method>
+  <thread>14</thread>
+  <message>reading data...</message>
+</record>
+<record>
+  <date>2015-06-26T17:09:13</date>
+  <millis>1435331353931</millis>
+  <sequence>36</sequence>
+  <logger>listener.SessionCounterListener</logger>
+  <level>INFO</level>
+  <class>listeners.ServerContextListener</class>
+  <method>contextInitialized</method>
+  <thread>14</thread>
+  <message>data found, loading...</message>
+</record>
+<record>
+  <date>2015-06-26T17:40:53</date>
+  <millis>1435333253588</millis>
+  <sequence>45</sequence>
+  <logger>listener.SessionCounterListener</logger>
+  <level>INFO</level>
+  <class>listeners.ServerContextListener</class>
+  <method>contextDestroyed</method>
+  <thread>47</thread>
+  <message>data saved to file</message>
+</record>
+</log>
+<?xml version="1.0" encoding="windows-1252" standalone="no"?>
+<!DOCTYPE log SYSTEM "logger.dtd">
+<log>
+<record>
+  <date>2015-06-26T17:41:02</date>
+  <millis>1435333262104</millis>
+  <sequence>34</sequence>
+  <logger>listener.SessionCounterListener</logger>
+  <level>INFO</level>
+  <class>listeners.ServerContextListener</class>
+  <method>contextInitialized</method>
+  <thread>14</thread>
+  <message>Logger initialized</message>
+</record>
+<record>
+  <date>2015-06-26T17:41:02</date>
+  <millis>1435333262105</millis>
+  <sequence>35</sequence>
+  <logger>listener.SessionCounterListener</logger>
+  <level>INFO</level>
+  <class>listeners.ServerContextListener</class>
+  <method>contextInitialized</method>
+  <thread>14</thread>
+  <message>reading data...</message>
+</record>
+<record>
+  <date>2015-06-26T17:41:02</date>
+  <millis>1435333262134</millis>
+  <sequence>36</sequence>
+  <logger>listener.SessionCounterListener</logger>
+  <level>INFO</level>
+  <class>listeners.ServerContextListener</class>
+  <method>contextInitialized</method>
+  <thread>14</thread>
+  <message>data found, loading...</message>
+</record>
+<record>
+  <date>2015-06-26T17:42:55</date>
+  <millis>1435333375784</millis>
+  <sequence>43</sequence>
+  <logger>listener.SessionCounterListener</logger>
+  <level>INFO</level>
+  <class>listeners.ServerContextListener</class>
+  <method>contextDestroyed</method>
+  <thread>46</thread>
+  <message>data saved to file</message>
+</record>
+</log>
+<?xml version="1.0" encoding="windows-1252" standalone="no"?>
+<!DOCTYPE log SYSTEM "logger.dtd">
+<log>
+<record>
+  <date>2015-06-30T14:46:27</date>
+  <millis>1435668387331</millis>
+  <sequence>34</sequence>
+  <logger>listener.SessionCounterListener</logger>
+  <level>INFO</level>
+  <class>listeners.ServerContextListener</class>
+  <method>contextInitialized</method>
+  <thread>14</thread>
+  <message>Logger initialized</message>
+</record>
+<record>
+  <date>2015-06-30T14:46:27</date>
+  <millis>1435668387333</millis>
+  <sequence>35</sequence>
+  <logger>listener.SessionCounterListener</logger>
+  <level>INFO</level>
+  <class>listeners.ServerContextListener</class>
+  <method>contextInitialized</method>
+  <thread>14</thread>
+  <message>reading data...</message>
+</record>
+<record>
+  <date>2015-06-30T14:46:27</date>
+  <millis>1435668387365</millis>
+  <sequence>36</sequence>
+  <logger>listener.SessionCounterListener</logger>
+  <level>INFO</level>
+  <class>listeners.ServerContextListener</class>
+  <method>contextInitialized</method>
+  <thread>14</thread>
+  <message>data found, loading...</message>
+</record>
